@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="dropGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#16a7e4"/>
+      <stop offset="100%" stop-color="#0b5d9a"/>
+    </linearGradient>
+    <linearGradient id="crystal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#d4efff" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <!-- Капля -->
+  <path d="M100 12 C100 12 40 90 40 130 C40 163 67 190 100 190 C133 190 160 163 160 130 C160 90 100 12 100 12Z" fill="url(#dropGrad)"/>
+  <!-- Кристалл внутри -->
+  <polygon points="100,45 142,110 100,155 58,110" fill="url(#crystal)" opacity="0.65"/>
+  <polygon points="100,45 100,155 58,110" fill="url(#crystal)" opacity="0.5"/>
+  <!-- Блик -->
+  <ellipse cx="80" cy="75" rx="18" ry="12" fill="white" opacity="0.2" transform="rotate(-20 80 75)"/>
+</svg>

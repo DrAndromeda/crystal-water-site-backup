@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://crystalwater.kiev.ua/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://crystalwater.kiev.ua/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://crystalwater.kiev.ua/ua/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/" />
+  </url>
+  <url>
+    <loc>https://crystalwater.kiev.ua/prices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://crystalwater.kiev.ua/prices.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://crystalwater.kiev.ua/ua/prices.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/prices.html" />
+  </url>
+  <url>
+    <loc>https://crystalwater.kiev.ua/tech.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://crystalwater.kiev.ua/tech.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://crystalwater.kiev.ua/ua/tech.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/tech.html" />
+  </url>
+  <url>
+    <loc>https://crystalwater.kiev.ua/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://crystalwater.kiev.ua/about.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://crystalwater.kiev.ua/ua/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/about.html" />
+  </url>
+  <url>
+    <loc>https://crystalwater.kiev.ua/ua/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://crystalwater.kiev.ua/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://crystalwater.kiev.ua/ua/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/" />
+  </url>
+  <url>
+    <loc>https://crystalwater.kiev.ua/ua/prices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://crystalwater.kiev.ua/prices.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://crystalwater.kiev.ua/ua/prices.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/prices.html" />
+  </url>
+  <url>
+    <loc>https://crystalwater.kiev.ua/ua/tech.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://crystalwater.kiev.ua/tech.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://crystalwater.kiev.ua/ua/tech.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/tech.html" />
+  </url>
+  <url>
+    <loc>https://crystalwater.kiev.ua/ua/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://crystalwater.kiev.ua/about.html" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://crystalwater.kiev.ua/ua/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/about.html" />
+  </url>
+  <url><loc>https://crystalwater.kiev.ua/zachem-voda-butilirovannaya-nuzhna-v-raczione.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/63-voda-optom.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/dostavka-pitevoj-vodyi-ot-proizvoditelya.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/uznaj-kakaya-voda-nuzhna-tvoemu-organizmu.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/ochishhennaya-voda-polza-ot-upotrebleniya.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/butilirovannaya-voda-nuzhna-dlya-poxudeniya.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/49-ochistka-vody-protsess-umyagcheniya-vody.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/43-chistaya-voda-izbavlennaya-ot-khlora.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/esli-nuzhno-kupit-vodu-v-eko-tare.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/pochemu-pitevaya-voda-nuzhna-sportsmenam.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/obratnyij-osmos-i-ego-ispolzovanie.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/35-ochishchenaya-voda-po-sisteme-ozonovaya-sterilizatsiya.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/33-voda-i-kalcij.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/vazhnyie-prichinyi-dlya-togo-chtobyi-regulyarno-pit-vodu.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/ochistka-vodyi-obratnyij-osmos-otlichie-distilyaczii.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/3-znachenie-vody-v-zhizni-cheloveka.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/kakie-vidyi-vodyi-sushhestvuyut-na-zemle.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/filtryi-dlya-vodyi-krishtalevo-chista-pitna-voda.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/articles.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/chishhe-voda-tolko-posle-ochistki.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/esli-pitevaya-voda-soderzhit-ximicheskie-dobavki.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://crystalwater.kiev.ua/voda-h2o-stati/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>

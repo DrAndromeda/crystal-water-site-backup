@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доставка воды в Бровары и Киев ❘ Crystal Water</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #164c72 url('images/water_bg.min.png') top center no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+    }
+    .header {
+      background: linear-gradient(145deg, #1a6bb0, #277fc4);
+      padding: 16px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+    }
+    .logo span { color: #00c2e6; }
+    .nav a {
+      color: #d6edff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav a:hover { color: white; }
+    .hero {
+      padding: 80px 0 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+      line-height: 1.1;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .hero h1 span { color: #00c2e6; text-shadow: 0 2px 6px rgba(0,194,230,0.4); }
+    .hero p {
+      font-size: 18px;
+      color: #c8e2f5;
+      max-width: 680px;
+      margin: 0 auto 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: #00c2e6;
+      color: #164c72;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 17px;
+      box-shadow: 0 8px 24px rgba(0,194,230,0.25);
+    }
+    .btn:hover { background: #0ad0f0; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,194,230,0.35); }
+    .btn { transition: all 0.3s ease; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 24px;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,0.14);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.2);
+    }
+    .card h3 { margin-top: 0; color: #00c2e6; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 60px 0;
+      text-align: center;
+    }
+    .stat {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 30px 20px;
+      transition: all 0.3s ease;
+    }
+    .stat:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+    }
+    .stat .number {
+      font-size: 48px;
+      font-weight: 800;
+      color: #00c2e6;
+      display: block;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 60px 0;
+    }
+    .step {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .step:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .step .num {
+      font-size: 40px;
+      color: #00c2e6;
+      font-weight: 800;
+    }
+    .product {
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      max-width: 500px;
+      margin: 60px auto;
+      transition: all 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.14);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+    }
+    .product .title {
+      font-size: 32px;
+      color: #00c2e6;
+    }
+    .banners {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 60px 0;
+    }
+    .banner {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+    .banner:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    }
+    /* Технологии блоки */
+    .tech-block {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+    .tech-block:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+    }
+    footer {
+      background: linear-gradient(145deg, #1a6bb0, #277fc4);
+      padding: 40px 0 20px;
+      margin-top: 60px;
+      color: #d6edff;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .cards, .stats, .steps, .banners { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 36px; }
+      .nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="/" style="display:flex;align-items:center;gap:8px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" style="flex-shrink:0;">
+          <path d="M8,4 L8,20 C8,21 10,22 12,22 C14,22 16,21 16,20 L16,4 L16,2 C16,1 14,0 12,0 C10,0 8,1 8,2 Z" fill="#00c2e6" />
+          <rect x="9" y="6" width="6" height="12" fill="rgba(255,255,255,0.3)" rx="1" />
+          <circle cx="11" cy="14" r="1" fill="rgba(255,255,255,0.6)" />
+          <circle cx="13" cy="12" r="1.2" fill="rgba(255,255,255,0.6)" />
+        </svg>
+        Crystal<span>Water</span>
+      </a>
+      <nav class="nav">
+        <a href="/">Доставка воды</a>
+        <a href="prices.html">Цены</a>
+        <a href="tech.html">Технологии</a>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">Контакты</a>
+        <a href="ua.html">UA</a>
+      </nav>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;">
+        <a href="tel:+380637886880" style="color:white;font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          +38 (063) 788-68-80
+        </a>
+        <a href="tel:+380635304050" style="color:white;font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          +38 (063) 530-40-50
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="position:relative;">
+    <div class="container">
+      <div style="position:relative;z-index:2;background:rgba(0,0,0,0.35);padding:40px;border-radius:24px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);">
+        <div style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:300px;">
+            <h1 style="margin-top:0;">Доставка питьевой воды<br>в <span>Бровары и Киев</span></h1>
+            <p style="margin-bottom:24px;">Чистая вода премиум-класса. 8 ступеней очистки, идеальный вкус, доставка на дом и в офис.<br>Первая бутыль — бесплатно!</p>
+            <a class="btn" href="tel:+380637886880">🚚 Заказать воду</a>
+          </div>
+          <div style="flex:1;min-width:300px;text-align:center;">
+            <img src="images/crystalwater/bottle/bottle_real.png" alt="Бутыль Crystal Water 19 л" style="width:auto;height:400px;filter: drop-shadow(0 16px 32px rgba(0,0,0,0.4));" />
+            <div style="margin-top:12px;color:#c8e2f5;font-size:14px;">Бутыль 19 л · кристально чистая вода</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Оригинальный текстовый контент -->
+    <div style="background: rgba(255,255,255,0.08); border-radius: 20px; padding: 40px; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.12);">
+      <h2 style="color: #00c2e6; margin-top: 0; text-align: center;">🚚 Доставка воды Бровары</h2>
+      <p style="color: #d6edff; font-size: 16px; line-height: 1.6;">Доставка воды на дом и в офис по городу Бровары. "Кришталево-чиста питна вода" это очищенная вода высокого качества в городе Бровары, которая подходит для регулярного употребления и приготовления пищи. Ее ежедневное употребление нормализирует общее состояние тела человека и восстанавливает организм на клеточном уровне. Инновационные технологии очистки создают идеальный сбалансированный состав, поэтому вода обладает отличным вкусом, не имеет запаха и положительно влияет на здоровье человека.</p>
+      <p style="color: #d6edff; font-size: 16px; line-height: 1.6;">Удобный сервис доставки воды в квартиры, офисы, рестораны и частные дома города Бровары и Киев. Для Вашего комфорта доставка воды в Бровары, проходит в вечернее время после 20.00.</p>
+      <p style="color: #d6edff; font-size: 16px; line-height: 1.6;">Оптовым клиентам производим розлив воды по специальным ценам!</p>
+
+      <h3 style="color: #00c2e6; margin-top: 30px;">🏆 Наша доставка воды в Броварах признана лучшей поскольку:</h3>
+      <ul style="color: #d6edff; font-size: 16px; line-height: 1.6; padding-left: 20px;">
+        <li>🔬 Проходит 8 этапов очистки и контроля качества воды.</li>
+        <li>⚖️ Вода восстанавливает естественный водно-соленой баланс организма человека.</li>
+        <li>👨👩👧👦 Рекомендована для регулярного употребления детям, старикам и людям ведущим активный или малоподвижный образ жизни.</li>
+        <li>❄️ Наша чистая, вкусная вода по вкусовым качествам схожа с талой водой.</li>
+      </ul>
+
+      <p style="color: #d6edff; font-size: 16px; line-height: 1.6;">Оформите заказ воды на дом в Броварах в любое комфортное для Вас время +380637886880 / +380635304050</p>
+
+      <p style="color: #d6edff; font-size: 16px; line-height: 1.6;">"Кришталево-чиста питна вода" очищенная по технологиям обратный осмос и озоновая стерилизация, способствует естественному оздоровлению организма и стимуляции иммунитета человека. Это лучшая бутилированная вода которая не содержит в себе никаких вредных веществ и примесей, а ее состав идеален для кислотно-щелочного баланса организма. "Кришталево-чиста" навсегда устраняет проблемы со здоровьем, которые не могли пройти годами!</p>
+
+      <p style="color: #d6edff; font-size: 16px; line-height: 1.6;">Вода "Кришталево-чиста" благодаря высокому уровню очистки, обладает отличными вкусовыми показателями и имеет идеальный для организма человека кислотно-щелочной баланс (уровень ph).</p>
+
+      <h3 style="color: #00c2e6; margin-top: 30px;">⚙️ Мы обеспечиваем лучшую очистку воды самыми востребованными мировыми технологиями:</h3>
+      <ul style="color: #d6edff; font-size: 16px; line-height: 1.6; padding-left: 20px;">
+        <li>💧 Система обратного осмоса (обратно остматическая);</li>
+        <li>🌀 Озоновая стерилизация (озонирование).</li>
+      </ul>
+    </div>
+
+    <!-- Акцент: 18+ лет на рынке -->
+    <div style="background: linear-gradient(145deg, #00c2e6, #1a6bb0); border-radius: 20px; padding: 30px; margin: 40px 0; text-align: center; box-shadow: 0 12px 32px rgba(0,194,230,0.3); border: 3px solid rgba(255,255,255,0.2);">
+      <div style="font-size: clamp(32px, 5vw, 48px); font-weight: 900; color: white; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">🏆 18+ лет на рынке</div>
+      <div style="font-size: 18px; color: #d6edff; max-width: 600px; margin: 0 auto;">⏳ Более 18 лет мы доставляем кристально чистую воду в Броварах и Киеве. Опыт, качество, надёжность.</div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🏆 Высокое качество</h3>
+        <p>Лучшая европейская технология очистки создаёт идеальный сбалансированный состав воды.</p>
+      </div>
+      <div class="card">
+        <h3>💰 Доступная стоимость</h3>
+        <p>При первом заказе <strong>1 бутыль бесплатно</strong>. Далее цена - <strong>100 грн</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>🚚 Оперативная доставка</h3>
+        <p>Работаем в удобное вечерное время. Доставка воды в Броварах после 20:00.</p>
+      </div>
+    </div>
+
+    <!-- Статистика -->
+    <div class="stats">
+      <div class="stat">
+        <span class="number">1500+</span>
+        <span>довольных клиентов</span>
+      </div>
+      <div class="stat">
+        <span class="number">50 000+</span>
+        <span>бутылей доставлено</span>
+      </div>
+      <div class="stat">
+        <span class="number">18+</span>
+        <span>лет на рынке</span>
+      </div>
+    </div>
+
+    <!-- 8 этапов очистки -->
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Механическая очистка</h3>
+        <p>Удаление песка, ржавчины, взвесей</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Угольный фильтр</h3>
+        <p>Устранение хлора, органики</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Обратный осмос</h3>
+        <p>Удаление 99,8% примесей</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Озоновая стерилизация</h3>
+        <p>Уничтожение бактерий, вирусов</p>
+      </div>
+      <div class="step">
+        <div class="num">5</div>
+        <h3>Обогащение кислородом</h3>
+        <p>Насыщение O2 для свежести</p>
+      </div>
+      <div class="step">
+        <div class="num">6</div>
+        <h3>Минерализация</h3>
+        <p>Оптимальный состав Mg, Ca, K</p>
+      </div>
+      <div class="step">
+        <div class="num">7</div>
+        <h3>Контроль pH</h3>
+        <p>pH 7,5 - идеальный баланс</p>
+      </div>
+      <div class="step">
+        <div class="num">8</div>
+        <h3>УФ-финиш</h3>
+        <p>Окончательная стерилизация</p>
+      </div>
+    </div>
+
+    <!-- Товар 19 литров -->
+    <div class="product" style="max-width:800px;">
+      <div style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:center;">
+        <div style="flex:1;min-width:250px;">
+          <div class="title">💧 19 литров</div>
+          <p>Идеально для кулеров, офисов, семейного использования. Экологичная многоразовая тара. Цена <strong>100 грн</strong> за бутыль.</p>
+          <div style="font-size:48px;font-weight:800;color:#00c2e6;margin:20px 0;">100 грн</div>
+          <a class="btn" href="tel:+380637886880">Заказать</a>
+        </div>
+        <div style="flex:1;min-width:250px;text-align:center;">
+          <!-- Векторная бутыль для кулеров -->
+          <svg width="180" height="300" viewBox="0 0 180 300" style="filter: drop-shadow(0 12px 24px rgba(0,0,0,0.3));">
+            <defs>
+              <linearGradient id="bottleGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#00c2e6" stop-opacity="0.85" />
+                <stop offset="100%" stop-color="#1a6bb0" stop-opacity="0.9" />
+              </linearGradient>
+              <linearGradient id="waterGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="rgba(255,255,255,0.35)" />
+                <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+              </linearGradient>
+            </defs>
+            
+            <!-- Форма бутыли (более компактная) -->
+            <path d="M60,30 L60,270 C60,285 75,290 90,290 C105,290 120,285 120,270 L120,30 L120,20 C120,10 105,5 90,5 C75,5 60,10 60,20 Z" 
+                  fill="url(#bottleGradient2)" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" />
+            
+            <!-- Вода -->
+            <rect x="65" y="80" width="50" height="170" fill="url(#waterGradient2)" rx="3" />
+            
+            <!-- Этикетка для кулеров -->
+            <rect x="70" y="130" width="40" height="60" fill="#00c2e6" rx="5" stroke="white" stroke-width="1" />
+            <text x="90" y="155" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">19 L</text>
+            <text x="90" y="170" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">WATER</text>
+            
+            <!-- Горлышко -->
+            <rect x="78" y="25" width="24" height="10" fill="#1a6bb0" rx="1.5" />
+            
+            <!-- Пузырьки -->
+            <circle cx="80" cy="220" r="2.5" fill="rgba(255,255,255,0.6)" />
+            <circle cx="100" cy="200" r="3" fill="rgba(255,255,255,0.6)" />
+          </svg>
+          
+          <div style="margin-top:12px;color:#c8e2f5;font-size:14px;">Бутыль 19 л для кулеров</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Баннеры -->
+    <div class="banners">
+      <div class="banner">
+        <h3>🔄 Как работаем</h3>
+        <p>Вы оставляете заявку → мы доставляем воду после 20:00 → первая бутыль бесплатно.</p>
+      </div>
+      <div class="banner">
+        <h3>📜 Сертификаты качества</h3>
+        <p>Вся продукция имеет сертификаты соответствия и заключения СЭС.</p>
+      </div>
+      <div class="banner">
+        <h3>💎 Качество воды</h3>
+        <p>Сбалансированный минеральный состав, отсутствие хлора и тяжёлых металлов.</p>
+      </div>
+      <div class="banner">
+        <h3>🧪 Состав</h3>
+        <p>Mg, Ca, K в оптимальных пропорциях, pH 7,5, обогащённая кислородом.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin:60px auto 40px;">
+    <h2 style="color:#fff;font-size:clamp(28px,4vw,38px);margin:0 0 16px;text-align:center;">Полезные статьи о воде</h2>
+    <p style="color:#c8e2f5;text-align:center;max-width:640px;margin:0 auto 30px;font-size:16px;">Читайте материалы о качестве воды, очистке и здоровом образе жизни</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:40px;">
+      <a href="zachem-voda-butilirovannaya-nuzhna-v-raczione.html" class="article-card" style="display:block;padding:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;text-decoration:none;color:#fff;transition:transform 0.2s, background 0.2s;">
+        <h3 style="margin:0 0 6px;font-size:15px;color:#00c2e6;">Бутилированная вода в рационе</h3>
+        <p style="margin:0;font-size:13px;color:#c8e2f5;">Почему бутилированная вода - лучший выбор для здоровья</p>
+      </a>
+      <a href="63-voda-optom.html" class="article-card" style="display:block;padding:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;text-decoration:none;color:#fff;transition:transform 0.2s, background 0.2s;">
+        <h3 style="margin:0 0 6px;font-size:15px;color:#00c2e6;">Вода оптом</h3>
+        <p style="margin:0;font-size:13px;color:#c8e2f5;">Купить воду оптом в Броварах и Киеве от производителя</p>
+      </a>
+      <a href="dostavka-pitevoj-vodyi-ot-proizvoditelya.html" class="article-card" style="display:block;padding:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;text-decoration:none;color:#fff;transition:transform 0.2s, background 0.2s;">
+        <h3 style="margin:0 0 6px;font-size:15px;color:#00c2e6;">Доставка воды от производителя</h3>
+        <p style="margin:0;font-size:13px;color:#c8e2f5;">Как выбрать компанию по доставке питьевой воды</p>
+      </a>
+      <a href="uznaj-kakaya-voda-nuzhna-tvoemu-organizmu.html" class="article-card" style="display:block;padding:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;text-decoration:none;color:#fff;transition:transform 0.2s, background 0.2s;">
+        <h3 style="margin:0 0 6px;font-size:15px;color:#00c2e6;">Какая вода нужна организму</h3>
+        <p style="margin:0;font-size:13px;color:#c8e2f5;">Полезная и вредная вода для здорового организма</p>
+      </a>
+      <a href="ochishhennaya-voda-polza-ot-upotrebleniya.html" class="article-card" style="display:block;padding:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;text-decoration:none;color:#fff;transition:transform 0.2s, background 0.2s;">
+        <h3 style="margin:0 0 6px;font-size:15px;color:#00c2e6;">Очищенная вода лечит</h3>
+        <p style="margin:0;font-size:13px;color:#c8e2f5;">Как очищенная вода помогает при различных заболеваниях</p>
+      </a>
+      <a href="butilirovannaya-voda-nuzhna-dlya-poxudeniya.html" class="article-card" style="display:block;padding:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;text-decoration:none;color:#fff;transition:transform 0.2s, background 0.2s;">
+        <h3 style="margin:0 0 6px;font-size:15px;color:#00c2e6;">Вода для похудения</h3>
+        <p style="margin:0;font-size:13px;color:#c8e2f5;">Ученые доказали - очищенная вода помогает худеть</p>
+      </a>
+      <a href="49-ochistka-vody-protsess-umyagcheniya-vody.html" class="article-card" style="display:block;padding:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;text-decoration:none;color:#fff;transition:transform 0.2s, background 0.2s;">
+        <h3 style="margin:0 0 6px;font-size:15px;color:#00c2e6;">Умягчение воды</h3>
+        <p style="margin:0;font-size:13px;color:#c8e2f5;">Процесс удаления солей жесткости из воды</p>
+      </a>
+      <a href="43-chistaya-voda-izbavlennaya-ot-khlora.html" class="article-card" style="display:block;padding:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;text-decoration:none;color:#fff;transition:transform 0.2s, background 0.2s;">
+        <h3 style="margin:0 0 6px;font-size:15px;color:#00c2e6;">Вода без хлора</h3>
+        <p style="margin:0;font-size:13px;color:#c8e2f5;">Как избавиться от хлора и получить чистую воду</p>
+      </a>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="articles.html" style="display:inline-block;background:transparent;color:#00c2e6;padding:12px 24px;border:2px solid #00c2e6;border-radius:999px;font-weight:600;text-decoration:none;">Все статьи →</a>
+    </div>
+  </div>
+
+  <!-- Оптовым клиентам -->
+  <div class="container" style="margin: 60px auto 40px;">
+    <div style="background: linear-gradient(145deg, #1a6bb0, #277fc4); border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 16px 32px rgba(0,0,0,0.3);">
+      <h2 style="font-size: clamp(28px, 4vw, 38px); margin-top: 0; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Оптовым клиентам</h2>
+      <p style="font-size: 18px; color: #d6edff; max-width: 680px; margin: 0 auto 24px;">Производим розлив воды по <strong>специальным ценам</strong> для ресторанов, офисов, учреждений. Большие объемы — выгодные условия.</p>
+      <a class="btn" href="tel:+380637886880" style="background: #00c2e6; color: #164c72; padding: 14px 32px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 17px; box-shadow: 0 8px 24px rgba(0,194,230,0.25);">📞 Обсудить опт</a>
+    </div>
+  </div>
+
+  <!-- Технологии очистки -->
+  <div class="container" style="margin: 60px auto 40px;">
+    <h2 style="color: #fff; font-size: clamp(28px, 4vw, 38px); margin: 0 0 16px; text-align: center;">Технологии очистки</h2>
+    <p style="color: #c8e2f5; text-align: center; max-width: 640px; margin: 0 auto 30px; font-size: 16px;">Мы используем самые востребованные мировые технологии для идеальной воды</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      <div class="tech-block">
+        <h3 style="color: #00c2e6; margin-top: 0;">🔬 Обратный осмос</h3>
+        <p style="color: #d6edff;">Удаляет 99,8% примесей, солей, тяжёлых металлов, вирусов и бактерий. Вода становится кристально чистой.</p>
+      </div>
+      <div class="tech-block">
+        <h3 style="color: #00c2e6; margin-top: 0;">⚡ Озоновая стерилизация</h3>
+        <p style="color: #d6edff;">Озон убивает все микроорганизмы, не оставляя химических следов. Вода остаётся живой и полезной.</p>
+      </div>
+      <div class="tech-block">
+        <h3 style="color: #00c2e6; margin-top: 0;">🧪 Контроль pH 7,5</h3>
+        <p style="color: #d6edff;">Идеальный кислотно-щелочной баланс для организма. Вода не просто чистая — она здоровая.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Где купить -->
+  <div class="container" style="margin: 60px auto 40px;">
+    <div style="background: rgba(255,255,255,0.08); border-radius: 20px; padding: 40px; text-align: center; border: 2px solid rgba(0,194,230,0.3);">
+      <h2 style="color: #00c2e6; font-size: clamp(28px, 4vw, 38px); margin-top: 0;">Здесь Вы можете купить бутилированную воду с бесплатной доставкой</h2>
+      <p style="color: #c8e2f5; font-size: 18px; max-width: 800px; margin: 0 auto 24px;">Доставка воды <strong>Бровары</strong> на дом или в офис • Доставка воды <strong>Киев</strong> на дом или в офис • Доставка воды в <strong>Броварской район</strong> (при оптовом заказе).</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
+        <a class="btn" href="tel:+380637886880" style="background: #00c2e6; color: #164c72; padding: 14px 32px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 17px; box-shadow: 0 8px 24px rgba(0,194,230,0.25);">🏠 Бровары</a>
+        <a class="btn" href="tel:+380635304050" style="background: #277fc4; color: white; padding: 14px 32px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 17px; box-shadow: 0 8px 24px rgba(39,127,196,0.25);">🏙️ Киев</a>
+        <a class="btn" href="tel:+380637886880" style="background: transparent; color: #00c2e6; padding: 14px 32px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 17px; border: 2px solid #00c2e6;">📦 Опт</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.15);">
+      <div>
+        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;">Crystal Water</div>
+        <div style="color:#a8d5f5;">Доставка питьевой очищенной воды в Броварах и Киеве</div>
+        <div style="margin-top:12px;">
+          <a style="color:#00c2e6;margin-right:12px;" href="prices.html">Цены</a>
+          <a style="color:#00c2e6;margin-right:12px;" href="tech.html">Технологии</a>
+          <a style="color:#00c2e6;margin-right:12px;" href="articles.html">Статьи</a>
+          <a style="color:#00c2e6" href="about.html">Контакты</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;margin-bottom:6px;">Телефоны</div>
+        <a style="color:#fff;font-weight:600;font-size:15px;text-decoration:none;display:block;margin-bottom:4px;" href="tel:+380637886880">+38 (063) 788-68-80</a>
+        <a style="color:#c8e2f5;font-weight:500;font-size:14px;text-decoration:none;display:block;margin-bottom:12px;" href="tel:+380635304050">+38 (063) 530-40-50</a>
+        <div style="font-weight:700;color:#fff;margin-bottom:6px;margin-top:16px;">Telegram</div>
+        <a style="color:#00c2e6;font-weight:500;" href="https://t.me/CrystalWaterBro_bot" target="_blank">@CrystalWaterBro_bot</a>
+      </div>
+      <div>
+        <div style="font-weight:700;color:#fff;margin-bottom:6px;">Адрес и график</div>
+        <div style="color:#c8e2f5;">ул. Кооперативная, 3 А · Бровары</div>
+        <div style="color:#a8d5f5;margin-top:8px;">Ежедневно 08:00-20:00</div>
+        <div style="color:#a8d5f5;">Сб-Вс 09:00-17:00</div>
+        <div style="margin-top:16px;">
+          <a style="color:#00c2e6;margin-right:12px;" href="https://crystalwater.kiev.ua/ua/">UA</a>
+          <a style="color:#00c2e6;margin-right:12px;" href="https://www.instagram.com/crystalwater.brovary/" target="_blank">Instagram</a>
+          <a style="color:#00c2e6" href="https://www.facebook.com/crystalwater.brovary/" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:12px;color:#8bc2f0;">
+      <div>© 2025 Crystal Water. Кришталево-чиста питна вода.</div>
+      <div><a style="color:#8bc2f0;text-decoration:none;" href="https://crystalwater.kiev.ua/sitemap.xml">Карта сайта</a></div>
+    </div>
+  </footer>
+</body>
+</html>
