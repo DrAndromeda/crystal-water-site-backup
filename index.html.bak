@@ -34,12 +34,11 @@
       flex-wrap: wrap;
     }
     .logo {
-      font-size: 24px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 700;
       color: white;
       text-decoration: none;
     }
-    .logo span { color: #00c2e6; }
     .nav a {
       color: #d6edff;
       margin: 0 12px;
@@ -229,14 +228,9 @@
 <body>
   <header class="header">
     <div class="container">
-      <a class="logo" href="/" style="display:flex;align-items:center;gap:8px;">
-        <svg width="24" height="24" viewBox="0 0 24 24" style="flex-shrink:0;">
-          <path d="M8,4 L8,20 C8,21 10,22 12,22 C14,22 16,21 16,20 L16,4 L16,2 C16,1 14,0 12,0 C10,0 8,1 8,2 Z" fill="#00c2e6" />
-          <rect x="9" y="6" width="6" height="12" fill="rgba(255,255,255,0.3)" rx="1" />
-          <circle cx="11" cy="14" r="1" fill="rgba(255,255,255,0.6)" />
-          <circle cx="13" cy="12" r="1.2" fill="rgba(255,255,255,0.6)" />
-        </svg>
-        Crystal<span>Water</span>
+      <a class="logo" href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0;">
+        <div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#78d0ff,#2d89d7);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;box-shadow:0 3px 10px rgba(0,0,0,0.2);">💧</div>
+        <div style="font-size:15px;font-weight:700;color:white;text-transform:none;letter-spacing:0.3px;">Кришталево-чиста питна вода</div>
       </a>
       <nav class="nav">
         <a href="/">Доставка воды</a>

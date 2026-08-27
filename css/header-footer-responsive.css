@@ -1,0 +1,254 @@
+/* ============================================
+   CRYSTAL WATER — адаптивный хедер и футер
+   Палитра ориентирована на оригинал:
+   основной синий/голубой (вода), белый фон,
+   акцент — голубые капли/бутыли как подложка
+   ============================================ */
+
+:root {
+  --cw-blue-dark:   #0a5c8a;   /* основной синий (замените на точный HEX с оригинала, если знаете) */
+  --cw-blue:        #1d8fd1;
+  --cw-blue-light:  #eaf6fc;   /* фон подложки под каплями */
+  --cw-accent:      #ff8a00;   /* акцент для кнопки заказа/телефона, если есть на оригинале */
+  --cw-text:        #2b2b2b;
+  --cw-white:       #ffffff;
+  --cw-header-h:    72px;
+}
+
+/* -------------------- ОБЩИЙ СБРОС ПОД MOBILE-FIRST -------------------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  color: var(--cw-text);
+  background-color: var(--cw-blue-light);
+  /* Подложка с каплями/бутылями — используйте существующее фоновое изображение с оригинала */
+  background-image: url('/images/bg-drops.png');
+  background-repeat: repeat;
+  background-size: 400px auto;
+}
+
+/* -------------------- ХЕДЕР -------------------- */
+.site-header {
+  background: var(--cw-white);
+  box-shadow: 0 2px 8px rgba(10, 92, 138, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 10px 16px;
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cw-blue-dark);
+  text-decoration: none;
+  flex: 1 1 auto;
+}
+
+.site-header__logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Телефоны — на мобильном уходят под лого, кликабельны как кнопки */
+.site-header__phones {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  order: 2;
+}
+
+.site-header__phones a {
+  color: var(--cw-blue-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.site-header__phones a:hover { color: var(--cw-accent); }
+
+/* Языковой переключатель */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  order: 3;
+  margin-left: auto;
+}
+
+.lang-switch a,
+.lang-switch span {
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--cw-blue-dark);
+}
+
+.lang-switch .lang-current {
+  background: var(--cw-blue-light);
+  font-weight: 700;
+}
+
+.lang-switch a {
+  border: 1px solid var(--cw-blue);
+}
+
+.lang-switch a:hover {
+  background: var(--cw-blue);
+  color: var(--cw-white);
+}
+
+/* Бургер-меню для мобильного */
+.nav-toggle {
+  display: block;
+  order: 1;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--cw-blue-dark);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.site-nav {
+  display: none;
+  flex-basis: 100%;
+  order: 4;
+}
+
+.site-nav.is-open {
+  display: block;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid #e2ecf2;
+  padding-top: 10px;
+}
+
+.site-nav a {
+  display: block;
+  padding: 10px 8px;
+  color: var(--cw-text);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.site-nav a:hover,
+.site-nav a.is-active {
+  background: var(--cw-blue-light);
+  color: var(--cw-blue-dark);
+}
+
+/* -------------------- ХЛЕБНЫЕ КРОШКИ -------------------- */
+.breadcrumbs {
+  font-size: 13px;
+  color: #6a7b87;
+  padding: 10px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumbs a { color: var(--cw-blue-dark); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+
+/* -------------------- ФУТЕР -------------------- */
+.site-footer {
+  background: var(--cw-blue-dark);
+  color: var(--cw-white);
+  padding: 24px 16px;
+  margin-top: 40px;
+}
+
+.site-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--cw-white);
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.site-footer a:hover { opacity: 1; text-decoration: underline; }
+
+.site-footer .lang-switch a,
+.site-footer .lang-switch span {
+  color: var(--cw-white);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.site-footer__back-to-top {
+  align-self: flex-end;
+}
+
+/* -------------------- ПЛАНШЕТ / ДЕСКТОП -------------------- */
+@media (min-width: 768px) {
+  .nav-toggle { display: none; }
+
+  .site-header__inner {
+    flex-wrap: nowrap;
+  }
+
+  .site-nav {
+    display: block;
+    flex-basis: auto;
+    order: 2;
+    margin: 0 20px;
+  }
+
+  .site-nav ul {
+    flex-direction: row;
+    border-top: none;
+    padding-top: 0;
+    gap: 4px;
+  }
+
+  .site-header__phones {
+    order: 3;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .lang-switch { order: 4; margin-left: 16px; }
+
+  .site-footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-header { padding: 14px 24px; }
+  .site-header__logo { font-size: 24px; }
+}

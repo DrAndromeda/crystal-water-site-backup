@@ -1,4 +1,21 @@
+# Если сайт остаётся на MODX — раскомментируйте блок ниже
+# и верните оригинальные Disallow-правила движка:
+#
+# Disallow: /assets/backup/
+# Disallow: /assets/cache/
+# Disallow: /assets/docs/
+# Disallow: /assets/export/
+# Disallow: /assets/import/
+# Disallow: /assets/modules/
+# Disallow: /assets/plugins/
+# Disallow: /assets/snippets/
+# Disallow: /install/
+
 User-agent: *
+Allow: /ua/
 Allow: /
 
+Host: https://crystalwater.kiev.ua/ua/
+
 Sitemap: https://crystalwater.kiev.ua/sitemap.xml
+Sitemap: https://crystalwater.kiev.ua/sitemap-ua.xml

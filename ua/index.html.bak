@@ -13,7 +13,7 @@
   <link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/" />
   <meta property="og:title" content="Доставка води в Бровари і Київ | Crystal Water" />
   <meta property="og:description" content="Доставка води Бровари. Замовлення питної води в Броварах на дім, в офіс, в дитячий садок." />
-  <meta property="og:image" content="https://crystalwater.kiev.ua/images/bottle_articles.png" />
+  <meta property="og:image" content="../images/bottle_articles.png" />
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../css/style-remaster.css">
   <script type="application/ld+json">
@@ -62,7 +62,7 @@
         <a href="prices.html">Ціни</a>
         <a href="tech.html">Технології</a>
         <a href="about.html">Про нас</a>
-        <a href="./">RU</a>
+        <a href="/">RU</a>
       </nav>
       <div class="contacts">
         <a href="tel:+380637886880">+38 (063) 788-68-80</a>
