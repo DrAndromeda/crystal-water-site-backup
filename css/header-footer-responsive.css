@@ -43,7 +43,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
@@ -52,12 +53,14 @@ body {
 .site-header__logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--cw-blue-dark);
   text-decoration: none;
-  flex: 1 1 auto;
+  flex-basis: 100%;
+  order: 1;
 }
 
 .site-header__logo img {
@@ -65,12 +68,15 @@ body {
   width: auto;
 }
 
-/* Телефоны — на мобильном уходят под лого, кликабельны как кнопки */
+/* Телефоны — центрированы, в строку, кликабельны как кнопки */
 .site-header__phones {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-basis: 100%;
   order: 2;
 }
 
@@ -84,14 +90,15 @@ body {
 
 .site-header__phones a:hover { color: var(--cw-accent); }
 
-/* Языковой переключатель */
+/* Языковой переключатель — центрирован */
 .lang-switch {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   font-size: 13px;
+  flex-basis: 100%;
   order: 3;
-  margin-left: auto;
 }
 
 .lang-switch a,
@@ -116,51 +123,46 @@ body {
   color: var(--cw-white);
 }
 
-/* Бургер-меню для мобильного */
+/* Бургер-кнопка скрыта — меню всегда статично видно */
 .nav-toggle {
-  display: block;
-  order: 1;
-  background: none;
-  border: none;
-  font-size: 26px;
-  color: var(--cw-blue-dark);
-  cursor: pointer;
-  padding: 4px 8px;
+  display: none;
 }
 
+/* Статичное меню — всегда видимо, центрировано, с переносом строк */
 .site-nav {
-  display: none;
+  display: block;
   flex-basis: 100%;
   order: 4;
-}
-
-.site-nav.is-open {
-  display: block;
+  width: 100%;
 }
 
 .site-nav ul {
   list-style: none;
   margin: 12px 0 0;
-  padding: 0;
+  padding: 10px 0 0;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
   border-top: 1px solid #e2ecf2;
-  padding-top: 10px;
 }
 
 .site-nav a {
   display: block;
-  padding: 10px 8px;
-  color: var(--cw-text);
+  padding: 8px 14px;
+  color: var(--cw-blue-dark);
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 20px;
+  background: var(--cw-blue-light);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .site-nav a:hover,
 .site-nav a.is-active {
-  background: var(--cw-blue-light);
-  color: var(--cw-blue-dark);
+  background: var(--cw-blue);
+  color: var(--cw-white);
 }
 
 /* -------------------- ХЛЕБНЫЕ КРОШКИ -------------------- */
@@ -213,33 +215,58 @@ body {
 
 /* -------------------- ПЛАНШЕТ / ДЕСКТОП -------------------- */
 @media (min-width: 768px) {
-  .nav-toggle { display: none; }
-
   .site-header__inner {
     flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .site-header__logo {
+    flex-basis: auto;
+    justify-content: flex-start;
+    order: 1;
   }
 
   .site-nav {
-    display: block;
     flex-basis: auto;
     order: 2;
     margin: 0 20px;
+    width: auto;
   }
 
   .site-nav ul {
     flex-direction: row;
+    flex-wrap: nowrap;
     border-top: none;
     padding-top: 0;
+    margin-top: 0;
+    justify-content: flex-start;
     gap: 4px;
+  }
+
+  .site-nav a {
+    background: transparent;
+    border-radius: 4px;
+    padding: 8px 10px;
+  }
+
+  .site-nav a:hover,
+  .site-nav a.is-active {
+    background: var(--cw-blue-light);
   }
 
   .site-header__phones {
     order: 3;
+    flex-basis: auto;
     flex-direction: row;
     gap: 14px;
   }
 
-  .lang-switch { order: 4; margin-left: 16px; }
+  .lang-switch {
+    order: 4;
+    flex-basis: auto;
+    margin-left: 16px;
+  }
 
   .site-footer__inner {
     flex-direction: row;
