@@ -41,19 +41,49 @@
 
 <!-- ============================================
      ФУТЕР — вставить перед </body>
+     Структура по ТЗ: Бренд / Навигация / Контакты / Языки
      ============================================ -->
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <div>
-      <p>Crystalwater.kiev.ua — доставка питьевой воды.</p>
-      <a href="https://t.me/CrystalWaterBro_bot" target="_blank" rel="noopener">Telegram-бот заказа воды</a>
+
+    <div class="footer-col footer-col--brand">
+      <h3 class="footer-brand">💧 Crystal Water</h3>
     </div>
 
-    <div class="lang-switch">
+    <nav class="footer-col footer-col--nav" aria-label="Навигация в футере">
+      <a href="./">Доставка воды</a>
+      <a href="/uslugi-i-tseny.html">Цены</a>
+      <a href="/tekhnologii-ochistki.html">Технологии</a>
+      <a href="/voda-h2o-stati/">Статьи</a>
+      <a href="/o-nas.html">Контакты</a>
+    </nav>
+
+    <div class="footer-col footer-col--contacts">
+      <a href="tel:0637886880">📞 (063) 788-68-80</a>
+      <a href="tel:0635304050">📞 (063) 530-40-50</a>
+      <a href="https://t.me/CrystalWaterBro_bot" target="_blank" rel="noopener">💬 Telegram-бот заказа</a>
+      <span class="footer-address">📍 Бровары</span>
+    </div>
+
+    <div class="lang-switch footer-col footer-col--lang">
       <span class="lang-current">RU</span>
-      <a href="/ua/" hreflang="uk">Переключити мову на українську</a>
+      <a href="/ua/" hreflang="uk">UA</a>
     </div>
 
-    <a href="#top" class="site-footer__back-to-top">Наверх ↑</a>
+  </div>
+
+  <div class="site-footer__bottom">
+    <span>© Crystal Water — доставка питьевой воды</span>
   </div>
 </footer>
+
+<!-- ============================================
+     MOBILE STICKY ORDER BAR — вставить перед закрывающим </body>,
+     ПОСЛЕ футера. Видна только на мобильном (скрыта на desktop через CSS).
+     Не забыть добавить класс has-mobile-order-bar на <body>,
+     чтобы контент не перекрывался панелью.
+     ============================================ -->
+<div class="mobile-order-bar">
+  <a href="tel:0637886880" class="call">📞 Позвонить</a>
+  <a href="#order-form" class="order">💧 Заказать</a>
+</div>

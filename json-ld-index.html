@@ -1,0 +1,167 @@
+<!-- ============================================
+     JSON-LD для index.html — вставить в <head> или
+     перед </body>
+     Значения проверены только по контенту, который есть
+     на странице — не добавляй сюда ничего, чего нет
+     видимого пользователю на самой странице (это требование
+     Google, п.7 ТЗ)
+     ============================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Crystal Water",
+  "image": "https://crystalwater.kiev.ua/assets/images/placeholder.png",
+  "telephone": ["+380637886880", "+380635304050"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Кооперативная, 3 А",
+    "addressLocality": "Бровары",
+    "addressCountry": "UA"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "url": "https://crystalwater.kiev.ua/",
+  "sameAs": [
+    "https://www.instagram.com/crystalwater.brovary/",
+    "https://www.facebook.com/crystalwater.brovary/",
+    "https://t.me/CrystalWaterBro_bot"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Crystal Water",
+  "url": "https://crystalwater.kiev.ua/",
+  "logo": "https://crystalwater.kiev.ua/assets/images/placeholder.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+380637886880",
+    "contactType": "customer service",
+    "areaServed": "UA",
+    "availableLanguage": ["Russian", "Ukrainian"]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Вода питьевая Crystal Water, 19 л",
+  "description": "Питьевая очищенная вода в бутыли 19 л с доставкой на дом и в офис в Броварах и Киеве.",
+  "offers": {
+    "@type": "Offer",
+    "price": "100",
+    "priceCurrency": "UAH",
+    "availability": "https://schema.org/InStock",
+    "url": "https://crystalwater.kiev.ua/prices.html"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Доставка питьевой воды",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Crystal Water"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Бровары" },
+    { "@type": "City", "name": "Киев" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Доставка воды",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Доставка воды на дом"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Доставка воды в офис"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- BreadcrumbList — пример для главной, на внутренних страницах
+     дополнить реальными хлебными крошками той страницы -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Доставка воды Бровары",
+      "item": "https://crystalwater.kiev.ua/"
+    }
+  ]
+}
+</script>
+
+<!-- FAQPage — ТОЛЬКО если эти вопросы реально показаны видимым текстом
+     на странице (условие Google). Если на сайте нет видимого FAQ-блока —
+     сначала добавь его в HTML, потом эту разметку. Не публикуй одну
+     разметку без соответствующего видимого текста. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Сколько стоит бутыль воды 19 л?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100 грн за бутыль. При первом заказе первая бутыль бесплатно."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "В какое время доставляете воду?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Доставка в удобное вечернее время, после 20:00."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "В какие города доставляете воду?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Доставляем воду в Бровары и Киев. При оптовом заказе — также в Броварской район."
+      }
+    }
+  ]
+}
+</script>
