@@ -23,7 +23,7 @@
     /* --- COMPACT HEADER --- */
     .site-header {
       background: var(--cw-blue-dark);
-      position: sticky;
+      
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 15px rgba(0,0,0,0.15);
@@ -217,7 +217,7 @@
     .header {
       background: linear-gradient(180deg, #16a7e4 0%, #0f81c7 100%);
       border-bottom: 1px solid #0f6fb0;
-      position: sticky;
+      
       top: 0;
       z-index: 20;
     }
