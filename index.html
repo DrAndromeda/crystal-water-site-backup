@@ -108,12 +108,89 @@
       color: var(--cw-blue-dark);
     }
 
-    /* --- HERO --- */
+    /* --- HOW IT WORKS --- */
+    .how-it-works {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .how-it-works h2 { color: var(--cw-blue-dark); font-size: clamp(28px, 5vw, 38px); margin-bottom: 50px; font-weight: 800; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .how-step { padding: 40px 25px; background: var(--cw-white); border-radius: 30px; box-shadow: var(--shadow-md); border: 1px solid rgba(30,136,199,0.1); transition: var(--cw-transition); }
+    .how-step:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+    .how-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--cw-blue); color: var(--cw-white); display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; margin: 0 auto 20px; }
+    .how-step h3 { color: var(--cw-blue-dark); margin-bottom: 12px; font-size: 20px; }
+    .how-step p { color: var(--cw-text-muted); font-size: 15px; line-height: 1.6; }
+
+    /* --- REVIEWS --- */
+    .reviews {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .reviews h2 { color: var(--cw-blue-dark); font-size: clamp(28px, 5vw, 38px); margin-bottom: 40px; font-weight: 800; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card {
+      background: var(--cw-blue-light);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: left;
+    }
+    .review-stars { color: #ffb800; font-size: 18px; margin-bottom: 10px; }
+    .review-text { color: var(--cw-text-muted); font-size: 15px; line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 10px; }
+    .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--cw-blue); color: var(--cw-white); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+    .review-author span { font-weight: 600; color: var(--cw-blue-dark); }
+
+    /* --- PRODUCT --- */
+    .product { padding: 60px 20px; }
+    .product-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--cw-white);
+      border-radius: 40px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(30,136,199,0.1);
+    }
+    .product-info { flex: 1; }
+    .product-info h2 { color: var(--cw-blue-dark); font-size: 32px; margin-bottom: 12px; }
+    .product-info p { color: var(--cw-text-muted); font-size: 17px; line-height: 1.6; }
+    .product-price { font-size: 36px; font-weight: 900; color: var(--cw-accent); margin: 20px 0; }
+    .product-price span { font-size: 16px; font-weight: 400; color: var(--cw-text-muted); }
+    .product-img { width: 280px; height: auto; object-fit: contain; }
+
+    /* --- INFO GRID --- */
+    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    .info-banner { background: var(--cw-blue-light); border-radius: 20px; padding: 30px; }
+    .info-banner h3 { color: var(--cw-blue-dark); margin-bottom: 10px; font-size: 20px; }
+    .info-banner p { color: var(--cw-text-muted); font-size: 15px; line-height: 1.6; }
+
+    /* --- HEADER --- */
     .hero {
-      background: linear-gradient(rgba(15, 95, 150, 0.6), rgba(15, 95, 150, 0.6)), url('https://crystalwater.kiev.ua/images/water_bg.min.png');
+      background: linear-gradient(rgba(15, 95, 150, 0.65), rgba(15, 95, 150, 0.65)), url('images/water_bg.min.png');
       background-size: cover;
       background-position: center;
       min-height: 650px;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70%;
+      background: url('images/bottle_articles.min.png') no-repeat center bottom;
+      background-size: auto 70%;
+      opacity: 0.25;
+      pointer-events: none;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -375,6 +452,10 @@
 <body class="has-mobile-order-bar">
 
       <header class="site-header">
+    <div class="header-top">
+      <div class="top-left">Бровары &bull; Киев</div>
+      <div class="top-right">RU / <a href="/ua/" style="color:white; text-decoration:none;">UA</a></div>
+    </div>
     <div class="header-main">
       <a href="./" class="site-header__logo">💧 Crystal Water</a>
       <nav class="site-nav">
@@ -427,6 +508,27 @@
     <div class="feature-card">
       <h3>🚚 Оперативный сервис</h3>
       <p>Точная доставка в Броварах и Киеве. Мы ценим ваше время и привозим воду строго по графику.</p>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>Как заказать воду за 1 минуту</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-icon">1</div>
+        <h3>Оставьте заявку</h3>
+        <p>Позвоните нам или напишите в Telegram-бот. Мы подберем удобное время доставки.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-icon">2</div>
+        <h3>Мы привозим воду</h3>
+        <p>Наш курьер доставит бутыли точно в срок прямо в вашу квартиру или офис.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-icon">3</div>
+        <h3>Наслаждайтесь вкусом</h3>
+        <p>Пейте чистую, здоровую воду и чувствуйте прилив энергии каждый день.</p>
+      </div>
     </div>
   </section>
 
@@ -515,7 +617,39 @@
         <div class="product-price">100 грн <span>/ шт.</span></div>
         <a href="tel:+380637886880" class="btn-main">Заказать доставку</a>
       </div>
-      <img src="https://crystalwater.kiev.ua/images/bottle_articles.min.png" alt="Бутыль 19 л" class="product-img">
+      <img src="images/bottle_articles.min.png" alt="Бутыль 19 л" class="product-img">
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="reviews-container">
+      <h2>Что о нас говорят клиенты</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Заказываю воду Crystal Water уже два года. Очень удобно, что привозят вечером — мне как раз подходит по графику работы. Вода действительно вкусная!"</p>
+          <div class="review-author">
+            <div class="avatar">МН</div>
+            <span>Марина Н.</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Лучший сервис в Броварах. Всегда вежливые курьеры, вода чистая, никакой примеси хлора. Дети пьют с удовольствием."</p>
+          <div class="review-author">
+            <div class="avatar">АП</div>
+            <span>Андрей П.</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Пользуемся водой в офисе. Качество стабильное, цена адекватная. Спасибо за оперативность и первую бесплатную бутыль!"</p>
+          <div class="review-author">
+            <div class="avatar">ОК</div>
+            <span>Ольга К.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
