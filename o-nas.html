@@ -23,9 +23,7 @@
     body { margin: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: var(--cw-text); background-color: var(--cw-white); line-height: 1.6; }
 
     /* --- HEADER --- */
-    .site-header { background: var(--cw-blue-dark); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .header-top { background: rgba(0,0,0,0.15); color: var(--cw-white); font-size: 13px; padding: 6px 20px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-    .header-main { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 20px; gap: 20px; }
+    .site-header { background: var(--cw-blue-dark); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }    .header-main { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 20px; gap: 20px; }
     .site-header__logo { color: var(--cw-white); text-decoration: none; font-weight: 800; font-size: 22px; display: flex; align-items: center; gap: 8px; }
     .site-header__phones { display: flex; gap: 15px; align-items: center; }
     .site-header__phones a { color: var(--cw-white); text-decoration: none; font-weight: 700; font-size: 16px; transition: var(--cw-transition); }
@@ -40,27 +38,28 @@
 
     /* --- ABOUT HERO --- */
     .about-hero {
-      background: linear-gradient(rgba(15, 95, 150, 0.8), rgba(15, 95, 150, 0.8)), url('https://crystalwater.kiev.ua/images/water_bg.min.png');
+      background: linear-gradient(rgba(15, 95, 150, 0.7), rgba(15, 95, 150, 0.7)), url('images/water_bg.min.png');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
-      padding: 100px 20px;
+      padding: 50px 20px;
+      position: relative;
     }
-    .about-hero h1 { font-size: clamp(32px, 5vw, 48px); margin: 0 0 20px; }
-    .about-hero p { font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+    .about-hero h1 { font-size: clamp(26px, 4vw, 36px); margin: 0 0 12px; }
+    .about-hero p { font-size: 16px; max-width: 600px; margin: 0 auto; opacity: 0.85; }
 
-    .about-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .about-container { max-width: 960px; margin: 40px auto; padding: 0 20px; }
 
-    .story-section { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; flex-wrap: wrap; }
+    .story-section { display: flex; align-items: center; gap: 40px; margin-bottom: 50px; flex-wrap: wrap; }
     .story-section:nth-child(even) { flex-direction: row-reverse; }
     .story-text { flex: 1; min-width: 300px; }
-    .story-text h2 { color: var(--cw-blue-dark); font-size: 28px; margin-bottom: 20px; }
-    .story-text p { font-size: 17px; color: #444; margin-bottom: 15px; }
+    .story-text h2 { color: var(--cw-blue-dark); font-size: 24px; margin-bottom: 16px; }
+    .story-text p { font-size: 16px; color: #444; margin-bottom: 12px; }
     .story-image { flex: 1; min-width: 300px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     .story-image img { width: 100%; height: auto; display: block; }
 
-    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 60px 0; }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 40px 0; }
     .value-card { padding: 30px; background: var(--cw-blue-light); border-radius: 20px; text-align: center; transition: var(--cw-transition); border: 1px solid rgba(30, 136, 199, 0.1); }
     .value-card:hover { transform: translateY(-10px); background: var(--cw-white); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
     .value-card .icon { font-size: 40px; margin-bottom: 15px; display: block; }
@@ -69,12 +68,12 @@
 
     .contact-block {
       background: #f8fafc;
-      padding: 60px 20px;
-      border-radius: 32px;
+      padding: 40px 20px;
+      border-radius: 24px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 60px;
+      gap: 30px;
+      margin-top: 40px;
     }
     .contact-details h2 { color: var(--cw-blue-dark); font-size: 32px; margin-bottom: 24px; }
     .contact-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-size: 17px; }
@@ -140,7 +139,7 @@
   <section class="about-hero">
     <div class="about-hero">
       <h1>О компании Crystal Water</h1>
-      <p>Мы создаем стандарт чистоты, которому можно доверять. Более 18 лет безупречного качества и заботы о каждом клиенте в Броварах и Киеве.</p>
+      <p>Более 18 лет безупречного качества и заботы о каждом клиенте в Броварах и Киеве</p>
     </div>
   </section>
 
@@ -167,7 +166,7 @@
       </div>
     </section>
 
-    <h2 style="text-align:center; color:var(--cw-blue-dark); margin: 60px 0 30px; font-size:32px;">Наши ценности</h2>
+    <h2 style="text-align:center; color:var(--cw-blue-dark); margin: 40px 0 24px; font-size:26px;">Наши ценности</h2>
     <div class="values-grid">
       <div class="value-card">
         <span class="icon">🛡️</span>
