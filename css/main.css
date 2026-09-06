@@ -787,3 +787,4 @@ p.lead { font-size: 18px; max-width: 680px; margin: 0 auto 30px; }
   .promo-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+/* force rebuild */
