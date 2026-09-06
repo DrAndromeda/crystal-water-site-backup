@@ -1,34 +1,28 @@
 <!-- ============================================
      ХЕДЕР — вставить в начало <body>
      ============================================ -->
-<header class="site-header">
-  <div class="site-header__inner">
-    <a href="/" class="site-header__logo">
-      <img src="/images/logo-bottle.png" alt="Crystal Water — Кришталево-чиста питна вода" class="site-header__logo-img">
-      <span>Crystal Water</span>
-    </a>
-
-    <div class="site-header__phones">
-      <a href="tel:0637886880">(063) 788-68-80</a>
-      <a href="tel:0635304050">(063) 530-40-50</a>
+    <header class="site-header">
+    <div class="header-top">
+      <div class="top-left">Бровары • Киев</div>
+      <div class="top-right">RU / <a href="/ua/" style="color:white; text-decoration:none;">UA</a></div>
     </div>
-
-    <div class="lang-switch">
-      <span class="lang-current">RU</span>
-      <a href="/ua/" hreflang="uk">UA</a>
+    <div class="header-main">
+      <a href="./" class="site-header__logo">💧 Crystal Water</a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="./">Доставка воды</a></li>
+          <li><a href="uslugi-i-tseny.html">Цены</a></li>
+          <li><a href="tekhnologii-ochistki.html">Технологии</a></li>
+          <li><a href="articles.html">Статьи</a></li>
+          <li><a href="o-nas.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__phones">
+        <a href="tel:+380637886880">(063) 788-68-80</a>
+        <a href="tel:+380635304050">(063) 530-40-50</a>
+      </div>
     </div>
-
-    <nav class="site-nav">
-      <ul>
-        <li><a href="/">Доставка воды</a></li>
-        <li><a href="/uslugi-i-tseny.html">Цены</a></li>
-        <li><a href="/tekhnologii-ochistki.html">Технологии очистки</a></li>
-        <li><a href="/voda-h2o-stati/">Статьи о воде</a></li>
-        <li><a href="/o-nas.html">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
 
 <!-- ============================================
      ХЛЕБНЫЕ КРОШКИ — вставить под хедером на внутренних страницах
@@ -44,39 +38,40 @@
      ФУТЕР — вставить перед </body>
      Структура по ТЗ: Бренд / Навигация / Контакты / Языки
      ============================================ -->
-<footer class="site-footer">
-  <div class="site-footer__inner">
-
-    <div class="footer-col footer-col--brand">
-      <h3 class="footer-brand">💧 Crystal Water</h3>
+    <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Crystal Water</h3>
+        <p>Доставка премиальной очищенной воды в Броварах и Киеве. Забота о здоровье в каждой капле.</p>
+        <div style="display:flex; gap:10px; margin-top:15px;">
+          <a href="./">Главная</a>
+          <a href="uslugi-i-tseny.html">Цены</a>
+          <a href="tekhnologii-ochistki.html">Технологии</a>
+          <a href="articles.html">Статьи</a>
+          <a href="o-nas.html">Контакты</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Свяжитесь с нами</h3>
+        <a href="tel:+380637886880">📞 +38 (063) 788-68-80</a>
+        <a href="tel:+380635304050">📞 +38 (063) 530-40-50</a>
+        <a href="https://t.me/CrystalWaterBro_bot" target="_blank">✈️ Telegram: @CrystalWaterBro_bot</a>
+      </div>
+      <div class="footer-col">
+        <h3>Адрес и график</h3>
+        <p>ул. Кооперативная, 3 А, Бровары</p>
+        <p>Пн-Пт: 08:00 - 20:00</p>
+        <p>Сб-Вс: 09:00 - 17:00</p>
+        <div style="display:flex; gap:10px; margin-top:10px;">
+          <a href="https://www.instagram.com/crystalwater.brovary/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/crystalwater.brovary/" target="_blank">Facebook</a>
+        </div>
+      </div>
     </div>
-
-    <nav class="footer-col footer-col--nav" aria-label="Навигация в футере">
-      <a href="./">Доставка воды</a>
-      <a href="/uslugi-i-tseny.html">Цены</a>
-      <a href="/tekhnologii-ochistki.html">Технологии</a>
-      <a href="/voda-h2o-stati/">Статьи</a>
-      <a href="/o-nas.html">Контакты</a>
-    </nav>
-
-    <div class="footer-col footer-col--contacts">
-      <a href="tel:0637886880">📞 (063) 788-68-80</a>
-      <a href="tel:0635304050">📞 (063) 530-40-50</a>
-      <a href="https://t.me/CrystalWaterBro_bot" target="_blank" rel="noopener">💬 Telegram-бот заказа</a>
-      <span class="footer-address">📍 Бровары</span>
+    <div class="footer-bottom">
+      © 2025 Crystal Water. Кришталево-чиста питна вода. Все права защищены.
     </div>
-
-    <div class="lang-switch footer-col footer-col--lang">
-      <span class="lang-current">RU</span>
-      <a href="/ua/" hreflang="uk">UA</a>
-    </div>
-
-  </div>
-
-  <div class="site-footer__bottom">
-    <span>© Crystal Water — доставка питьевой воды</span>
-  </div>
-</footer>
+  </footer>
 
 <!-- ============================================
      MOBILE STICKY ORDER BAR — вставить перед закрывающим </body>,
@@ -84,7 +79,7 @@
      Не забыть добавить класс has-mobile-order-bar на <body>,
      чтобы контент не перекрывался панелью.
      ============================================ -->
-<div class="mobile-order-bar">
-  <a href="tel:0637886880" class="call">📞 Позвонить</a>
-  <a href="#order-form" class="order">💧 Заказать</a>
-</div>
+    <div class="mobile-order-bar">
+    <a href="tel:+380637886880" class="mob-call">📞 Позвонить</a>
+    <a href="https://t.me/CrystalWaterBro_bot" class="mob-tg" target="_blank">✈️ Telegram</a>
+  </div>

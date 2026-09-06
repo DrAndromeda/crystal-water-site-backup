@@ -654,35 +654,28 @@ body.has-mobile-order-bar {
   <!-- ============================================
      ХЕДЕР — вставить в начало <body>
      ============================================ -->
-<header class="site-header">
-  <div class="site-header__inner">
-    <button class="nav-toggle" aria-label="Меню" aria-expanded="false" onclick="document.querySelector('.site-nav').classList.toggle('is-open'); this.setAttribute('aria-expanded', document.querySelector('.site-nav').classList.contains('is-open'))">☰</button>
-
-    <a href="./" class="site-header__logo">
-      💧 Crystal Water
-    </a>
-
-    <div class="site-header__phones" style="display:flex;flex-direction:column;gap:2px;">
-      <a href="tel:+380637886880">(063) 788-68-80</a>
-      <a href="tel:+380635304050">(063) 530-40-50</a>
+    <header class="site-header">
+    <div class="header-top">
+      <div class="top-left">Бровары • Киев</div>
+      <div class="top-right">RU / <a href="/ua/" style="color:white; text-decoration:none;">UA</a></div>
     </div>
-
-    <div class="lang-switch">
-      <span class="lang-current">RU</span>
-      <a href="/ua/" hreflang="uk">UA</a>
+    <div class="header-main">
+      <a href="./" class="site-header__logo">💧 Crystal Water</a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="./">Доставка воды</a></li>
+          <li><a href="uslugi-i-tseny.html">Цены</a></li>
+          <li><a href="tekhnologii-ochistki.html">Технологии</a></li>
+          <li><a href="articles.html">Статьи</a></li>
+          <li><a href="o-nas.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__phones">
+        <a href="tel:+380637886880">(063) 788-68-80</a>
+        <a href="tel:+380635304050">(063) 530-40-50</a>
+      </div>
     </div>
-
-    <nav class="site-nav">
-      <ul>
-        <li><a href="./">Доставка воды</a></li>
-        <li><a href="prices.html">Цены</a></li>
-        <li><a href="tech.html">Технологии очистки</a></li>
-        <li><a href="articles.html">Статьи о воде</a></li>
-        <li><a href="about.html">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
 <nav class="breadcrumbs" aria-label="breadcrumb"><a href="./">Доставка воды Бровары</a> &raquo; <span>Статья</span></nav>
   <main>
     <section class="hero"><div class="container" style="padding:20px 0;">
@@ -717,42 +710,44 @@ body.has-mobile-order-bar {
     </div></section>
   </main>
   <!-- ============================================
-     ФУТЕР — вставить перед </body>
+     ФУТЕР — вставить перед     <div class="mobile-order-bar">
+    <a href="tel:+380637886880" class="mob-call">📞 Позвонить</a>
+    <a href="https://t.me/CrystalWaterBro_bot" class="mob-tg" target="_blank">✈️ Telegram</a>
+  </div>
+</body>
      ============================================ -->
-<footer>
-    <div class="container" style="display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.15);">
-      <div>
-        <div style="font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;">Crystal Water</div>
-        <div style="color:#a8d5f5;">Доставка питьевой очищенной воды в Броварах и Киеве</div>
-        <div style="margin-top:12px;">
-          <a style="color:#00c2e6;margin-right:12px;" href="prices.html">Цены</a>
-          <a style="color:#00c2e6;margin-right:12px;" href="tech.html">Технологии</a>
-          <a style="color:#00c2e6;margin-right:12px;" href="articles.html">Статьи</a>
-          <a style="color:#00c2e6" href="about.html">Контакты</a>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Crystal Water</h3>
+        <p>Доставка премиальной очищенной воды в Броварах и Киеве. Забота о здоровье в каждой капле.</p>
+        <div style="display:flex; gap:10px; margin-top:15px;">
+          <a href="./">Главная</a>
+          <a href="uslugi-i-tseny.html">Цены</a>
+          <a href="tekhnologii-ochistki.html">Технологии</a>
+          <a href="articles.html">Статьи</a>
+          <a href="o-nas.html">Контакты</a>
         </div>
       </div>
-      <div>
-        <div style="font-weight:700;color:#fff;margin-bottom:6px;">Телефоны</div>
-        <a style="color:#fff;font-weight:600;font-size:15px;text-decoration:none;display:block;margin-bottom:4px;" href="tel:+380637886880">+38 (063) 788-68-80</a>
-        <a style="color:#c8e2f5;font-weight:500;font-size:14px;text-decoration:none;display:block;margin-bottom:12px;" href="tel:+380635304050">+38 (063) 530-40-50</a>
-        <div style="font-weight:700;color:#fff;margin-bottom:6px;margin-top:16px;">Telegram</div>
-        <a style="color:#00c2e6;font-weight:500;" href="https://t.me/CrystalWaterBro_bot" target="_blank">@CrystalWaterBro_bot</a>
+      <div class="footer-col">
+        <h3>Свяжитесь с нами</h3>
+        <a href="tel:+380637886880">📞 +38 (063) 788-68-80</a>
+        <a href="tel:+380635304050">📞 +38 (063) 530-40-50</a>
+        <a href="https://t.me/CrystalWaterBro_bot" target="_blank">✈️ Telegram: @CrystalWaterBro_bot</a>
       </div>
-      <div>
-        <div style="font-weight:700;color:#fff;margin-bottom:6px;">Адрес и график</div>
-        <div style="color:#c8e2f5;">ул. Кооперативная, 3 А · Бровары</div>
-        <div style="color:#a8d5f5;margin-top:8px;">Пн-Пт 08:00-20:00</div>
-        <div style="color:#a8d5f5;">Сб-Вс 09:00-17:00</div>
-        <div style="margin-top:16px;">
-          <a style="color:#00c2e6;margin-right:12px;" href="https://crystalwater.kiev.ua/ua/">UA</a>
-          <a style="color:#00c2e6;margin-right:12px;" href="https://www.instagram.com/crystalwater.brovary/" target="_blank">Instagram</a>
-          <a style="color:#00c2e6" href="https://www.facebook.com/crystalwater.brovary/" target="_blank">Facebook</a>
+      <div class="footer-col">
+        <h3>Адрес и график</h3>
+        <p>ул. Кооперативная, 3 А, Бровары</p>
+        <p>Пн-Пт: 08:00 - 20:00</p>
+        <p>Сб-Вс: 09:00 - 17:00</p>
+        <div style="display:flex; gap:10px; margin-top:10px;">
+          <a href="https://www.instagram.com/crystalwater.brovary/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/crystalwater.brovary/" target="_blank">Facebook</a>
         </div>
       </div>
     </div>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:12px;color:#8bc2f0;">
-      <div>© 2025 Crystal Water. Кришталево-чиста питна вода.</div>
-      <div><a style="color:#8bc2f0;text-decoration:none;" href="https://crystalwater.kiev.ua/sitemap.xml">Карта сайта</a></div>
+    <div class="footer-bottom">
+      © 2025 Crystal Water. Кришталево-чиста питна вода. Все права защищены.
     </div>
   </footer>
 
@@ -761,5 +756,9 @@ body.has-mobile-order-bar {
       document.getElementById('nav').classList.toggle('open');
     });
   </script>
+  <div class="mobile-order-bar">
+    <a href="tel:+380637886880" class="mob-call">📞 Позвонить</a>
+    <a href="https://t.me/CrystalWaterBro_bot" class="mob-tg" target="_blank">✈️ Telegram</a>
+  </div>
 </body>
 </html>
