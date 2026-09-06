@@ -103,14 +103,10 @@ body {
   font-weight: 700;
   color: var(--cw-white);
   text-decoration: none;
-  flex-basis: 100%;
-  order: 1;
-}
-
-.site-header__logo img {
+  .site-header__logo img {
   height: 40px;
   width: auto;
-}
+
 
 .site-header__phones {
   display: flex;
@@ -119,20 +115,15 @@ body {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  flex-basis: 100%;
-  order: 2;
-}
-
-.site-header__phones { flex-direction: column !important; gap: 2px; }
+  .site-header__phones { flex-direction: column !important; gap: 2px; 
 .site-header__phones a {
   color: var(--cw-white);
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
   white-space: nowrap;
-}
 
-.site-header__phones a:hover { color: var(--cw-accent); }
+
 
 .lang-switch {
   display: flex;
@@ -331,15 +322,11 @@ body.has-mobile-order-bar {
   .site-header__logo {
     flex-basis: auto;
     justify-content: flex-start;
-    order: 1;
-  }
-
-  .site-nav {
+    .site-nav {
     flex-basis: auto;
-    order: 2;
     margin: 0 20px;
     width: auto;
-  }
+  
 
   .site-nav ul {
     flex-direction: row;
@@ -363,17 +350,15 @@ body.has-mobile-order-bar {
   }
 
   .site-header__phones {
-    order: 3;
     flex-basis: auto;
     flex-direction: row;
     gap: 14px;
-  }
+  
 
   .lang-switch {
-    order: 4;
     flex-basis: auto;
     margin-left: 16px;
-  }
+  
 
   .site-footer__inner {
     flex-direction: row;
@@ -404,8 +389,8 @@ body.has-mobile-order-bar {
 
 @media (min-width: 1024px) {
   .site-header { padding: 14px 24px; }
-  .site-header__logo { font-size: 24px; }
-}
+  .site-header__logo { font-size: 24px; 
+
 
 .hero__inner {
   max-width: 700px;
