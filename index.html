@@ -353,9 +353,10 @@
     }
 
     @media (max-width: 768px) {
-      .header-main { flex-direction: column; gap: 15px; padding: 15px 20px; }
-      .site-nav ul { flex-direction: column; align-items: center; gap: 8px; }
-      .site-nav a { width: 100%; text-align: center; padding: 10px; }
+      .site-header { padding: 8px 12px !important; }
+      .header-main { flex-direction: row !important; gap: 6px; padding: 6px 12px; flex-wrap: wrap; justify-content: center; }
+      .site-nav ul { flex-direction: row !important; flex-wrap: wrap; justify-content: center; gap: 4px; }
+      .site-nav a { font-size: 12px; padding: 5px 10px; white-space: nowrap; }
       .hero { min-height: 500px; }
       .product-card { text-align: center; justify-content: center; flex-direction: column; padding: 30px 20px; }
       .product-img { width: 240px; }
@@ -366,6 +367,7 @@
       body { padding-bottom: 75px; }
     }
   </style>
+  <link rel="stylesheet" href="css/style-remaster.css">
 </head>
 <body class="has-mobile-order-bar">
 
@@ -387,6 +389,7 @@
         <a href="tel:+380635304050">(063) 530-40-50</a>
       </div>
     </div>
+        <a href="ua/index.html" class="header__ua-btn">UA</a>
   </header>
 
   <section class="hero">

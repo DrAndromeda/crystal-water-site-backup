@@ -23,21 +23,8 @@
     /* --- COMPACT HEADER --- */
     .site-header {
       background: var(--cw-blue-dark);
-      
-      top: 0;
       z-index: 1000;
       box-shadow: 0 2px 15px rgba(0,0,0,0.15);
-    }
-    .header-top {
-      background: rgba(0,0,0,0.2);
-      color: var(--cw-white);
-      font-size: 13px;
-      padding: 8px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
     }
     .header-main {
       display: flex;
@@ -913,3 +900,14 @@
       .floating-telegram { left: 16px; justify-content: center; }
     }
   /* force rebuild */
+
+/* --- MOBILE: компактный хедер --- */
+@media (max-width: 768px) {
+  .site-header { padding: 4px 10px !important; }
+  .header-main { flex-direction: row !important; gap: 4px; padding: 4px 10px; flex-wrap: wrap; justify-content: center; }
+  .site-header__logo { font-size: 16px !important; }
+  .site-nav ul { flex-direction: row !important; flex-wrap: wrap; justify-content: center; gap: 3px; }
+  .site-nav a { font-size: 11px; padding: 4px 8px; white-space: nowrap; border-radius: 10px; }
+  .site-header__phones { gap: 4px; }
+  .site-header__phones a { font-size: 12px; padding: 3px 8px; }
+}

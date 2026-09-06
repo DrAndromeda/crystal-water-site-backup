@@ -334,8 +334,17 @@ body {
 body.has-mobile-order-bar {
   padding-bottom: 60px;
 }
-
-/* -------------------- ПЛАНШЕТ / ДЕСКТОП -------------------- */
+/* --- МОБИЛЬНАЯ: компактный хедер --- */
+@media (max-width: 767px) {
+  .site-header { padding: 6px 10px !important; }
+  .site-header__inner { flex-direction: row !important; gap: 4px; flex-wrap: wrap; justify-content: center; }
+  .site-header__logo { font-size: 16px !important; }
+  .site-nav ul { flex-direction: row !important; flex-wrap: wrap; justify-content: center; gap: 3px; }
+  .site-nav a { font-size: 11px; padding: 4px 6px; white-space: nowrap; }
+  .site-header__phones { flex-direction: row !important; gap: 4px; }
+  .site-header__phones a { font-size: 12px; }
+}
+/* --- ПЛАНШЕТ / ДЕСКТОП --- */
 @media (min-width: 768px) {
   .site-header__inner {
     flex-wrap: nowrap;
@@ -654,6 +663,7 @@ body.has-mobile-order-bar {
         <a href="tel:+380635304050">(063) 530-40-50</a>
       </div>
     </div>
+        <a href="ua/index.html" class="header__ua-btn">UA</a>
   </header>
 <nav class="breadcrumbs" aria-label="breadcrumb"><a href="./">Доставка воды Бровары</a> &raquo; <span>Статьи о воде</span></nav>
   <main>
