@@ -5,11 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Технологии очистки воды Crystal Water | Обратный осмос и Озонирование</title>
   <meta name="description" content="Узнайте, как мы создаем эталонную чистоту. Подробный разбор 8 этапов очистки, системы обратного осмоса и озоновой стерилизации." />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://crystalwater.kiev.ua/images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/style-remaster.css">
   <link rel="canonical" href="https://crystalwater.kiev.ua/tekhnologii-ochistki.html" />
+  <style>
+    :root {
+      --cw-blue-dark: #0f5f96;
+      --cw-blue: #1e88c7;
+      --cw-blue-light: #eaf6fc;
+      --cw-accent: #00c2e6;
+      --cw-accent-dark: #0ad0f0;
+      --cw-text: #1a1a1a;
+      --cw-text-muted: #526d84;
+      --cw-white: #ffffff;
+      --cw-transition: all 0.3s ease;
+    }
+    body { margin: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: var(--cw-text); background-color: var(--cw-white); line-height: 1.6; }
+
+    /* --- HEADER --- */
+    .site-header { background: var(--cw-blue-dark); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .header-top { background: rgba(0,0,0,0.15); color: var(--cw-white); font-size: 13px; padding: 6px 20px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .header-main { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 20px; gap: 20px; }
+    .site-header__logo { color: var(--cw-white); text-decoration: none; font-weight: 800; font-size: 22px; display: flex; align-items: center; gap: 8px; }
+    .site-header__phones { display: flex; gap: 15px; align-items: center; }
+    .site-header__phones a { color: var(--cw-white); text-decoration: none; font-weight: 700; font-size: 16px; transition: var(--cw-transition); }
+    .site-header__phones a:hover { color: var(--cw-accent); }
+    .site-nav { display: flex; gap: 10px; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 5px; }
+    .site-nav a { color: var(--cw-white); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; transition: var(--cw-transition); }
+    .site-nav a:hover, .site-nav a.is-active { background: var(--cw-white); color: var(--cw-blue-dark); }
+
+    .breadcrumbs { font-size: 13px; color: #6a7b87; padding: 10px 16px; max-width: 1200px; margin: 0 auto; }
+    .breadcrumbs a { color: var(--cw-blue-dark); text-decoration: none; }
+
+    /* --- HERO --- */
+    .tech-hero {
+      background: linear-gradient(rgba(15, 95, 150, 0.8), rgba(15, 95, 150, 0.8)), url('https://crystalwater.kiev.ua/images/water_bg.min.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .tech-hero h1 { font-size: clamp(28px, 5vw, 42px); margin-bottom: 20px; line-height: 1.2; }
+    .tech-hero p { font-size: 18px; max-width: 800px; margin: 0 auto; opacity: 0.9; }
+
+    /* --- MAIN CONTENT --- */
+    .tech-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .tech-intro { text-align: center; margin-bottom: 60px; }
+    .tech-intro h2 { color: var(--cw-blue-dark); font-size: 32px; margin-bottom: 20px; }
+    .tech-intro p { font-size: 18px; color: var(--cw-text-muted); max-width: 800px; margin: 0 auto; }
+
+    /* --- TECH DETAIL BLOCK (Inspired by backup) --- */
+    .tech-detail {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 30px;
+      background: #fff;
+      border: 1px solid #d6e8f7;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(6,48,84,0.06);
+      margin-bottom: 60px;
+      transition: var(--cw-transition);
+    }
+    .tech-detail:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(6,48,84,0.1); }
+    .tech-detail .text-col { padding: 40px; }
+    .tech-detail .text-col h2 { margin: 0 0 20px; color: var(--cw-blue-dark); font-size: 26px; }
+    .tech-detail .text-col p { color: var(--cw-text); line-height: 1.7; margin: 0 0 20px; font-size: 16px; }
+    .tech-detail .text-col ul { padding-left: 20px; color: var(--cw-text); line-height: 1.7; font-size: 16px; }
+    .tech-detail .text-col ul li { margin-bottom: 12px; }
+    .tech-detail .img-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: var(--cw-blue-light);
+      border-left: 1px solid #e6f0f8;
+    }
+    .tech-detail .img-col img { max-width: 100%; height: auto; border-radius: 12px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); }
+
+    /* --- COMPARISON TABLE --- */
+    .comparison { margin: 80px 0; padding: 40px 20px; background: #f8fafc; border-radius: 24px; }
+    .comparison h2 { text-align: center; color: var(--cw-blue-dark); margin-bottom: 30px; font-size: 28px; }
+    .comp-table-wrapper { overflow-x: auto; }
+    .comp-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); min-width: 600px; }
+    .comp-table th, .comp-table td { padding: 18px 20px; text-align: left; border-bottom: 1px solid #eee; }
+    .comp-table th { background: var(--cw-blue-dark); color: white; font-weight: 600; font-size: 16px; }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .check-icon { color: #2ecc71; font-weight: 800; margin-right: 5px; }
+    .cross-icon { color: #e74c3c; font-weight: 800; margin-right: 5px; }
+
+    /* --- CTA --- */
+    .cta-block { background: var(--cw-blue-light); border: 2px solid var(--cw-blue); border-radius: 24px; padding: 50px; text-align: center; margin: 80px 0; }
+    .cta-block h2 { color: var(--cw-blue-dark); margin-bottom: 20px; font-size: 32px; }
+    .btn-cta { display: inline-block; padding: 18px 36px; background: var(--cw-accent); color: var(--cw-white); text-decoration: none; font-weight: 700; border-radius: 12px; font-size: 20px; transition: var(--cw-transition); }
+    .btn-cta:hover { background: var(--cw-accent-dark); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+    /* --- FOOTER --- */
+    .site-footer { background: var(--cw-blue-dark); color: var(--cw-white); padding: 60px 20px 20px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-col h3 { color: var(--cw-white); font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid var(--cw-accent); display: inline-block; padding-bottom: 5px; }
+    .footer-col p, .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; display: block; margin-bottom: 10px; transition: var(--cw-transition); }
+    .footer-col a:hover { color: var(--cw-accent); padding-left: 5px; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; opacity: 0.6; }
+
+    @media (max-width: 768px) {
+      .header-main { flex-direction: column; gap: 15px; padding: 15px 20px; }
+      .site-nav ul { flex-direction: column; align-items: center; gap: 8px; }
+      .site-nav a { width: 100%; text-align: center; padding: 10px; }
+      .tech-detail { grid-template-columns: 1fr; }
+      .tech-detail .img-col { border-left: none; border-top: 1px solid #e6f0f8; padding: 20px; }
+      .footer-grid { text-align: center; }
+      .footer-col { display: flex; flex-direction: column; align-items: center; }
+    }
+  </style>
 </head>
-<body class="has-mobile-order-bar">
+<body>
 
   <header class="site-header">
     <div class="header-top">
@@ -22,7 +134,7 @@
         <ul>
           <li><a href="./">Доставка воды</a></li>
           <li><a href="uslugi-i-tseny.html">Цены</a></li>
-          <li class="is-active"><a href="tekhnologii-ochistki.html" class="is-active">Технологии</a class="is-active"></li class="is-active">
+          <li><a href="tekhnologii-ochistki.html" class="is-active">Технологии</a></li>
           <li><a href="articles.html">Статьи</a></li>
           <li><a href="o-nas.html">Контакты</a></li>
         </ul>
@@ -39,7 +151,7 @@
   </nav>
 
   <section class="tech-hero">
-    <div class="hero__content">
+    <div class="tech-hero">
       <h1>Наука чистоты в каждом глотке</h1>
       <p>Мы объединили передовые инженерные решения и строгий контроль качества, чтобы создать воду, которая превосходит природные источники по чистоте и безопасности.</p>
     </div>
@@ -59,7 +171,7 @@
         <p><strong>Результат:</strong> Полное удаление взвесей и химических загрязнителей.</p>
       </div>
       <div class="img-col">
-        <img src="images/metodi-ochistki-vodi.png" alt="Схема фильтрации">
+        <img src="https://crystalwater.kiev.ua/assets/images/metodi-ochistki-vodi.png" alt="Схема фильтрации">
       </div>
     </div>
 
@@ -71,7 +183,7 @@
         <p><strong>Результат:</strong> 99.9% чистоты. Вода становится абсолютно безопасной для людей с любой чувствительностью организма.</p>
       </div>
       <div class="img-col">
-        <img src="images/obratnij-osmos.png" alt="Обратный осмос">
+        <img src="https://crystalwater.kiev.ua/assets/images/obratnij-osmos.png" alt="Обратный осмос">
       </div>
     </div>
 
@@ -83,11 +195,11 @@
         <p><strong>Результат:</strong> Кристальная прозрачность и природная свежесть.</p>
       </div>
       <div class="img-col">
-        <img src="images/ochishhennaya-voda.png" alt="Озонирование">
+        <img src="https://crystalwater.kiev.ua/assets/images/ochishhennaya-voda.png" alt="Озонирование">
       </div>
     </div>
 
-    <section class="comparison">
+    <div class="comparison">
       <h2>Сравнение методов очистки</h2>
       <div class="comp-table-wrapper">
         <table class="comp-table">
@@ -127,7 +239,7 @@
           </tbody>
         </table>
       </div>
-    </section>
+    </div>
 
     <div class="cta-block">
       <h2>Почувствуйте разницу с эталонной водой</h2>
@@ -144,7 +256,6 @@
         <div style="display:flex; gap:10px; margin-top:15px;">
           <a href="./">Главная</a>
           <a href="uslugi-i-tseny.html">Цены</a>
-          <a href="tekhnologii-ochistki.html">Технологии</a>
           <a href="articles.html">Статьи</a>
           <a href="o-nas.html">Контакты</a>
         </div>
@@ -170,9 +281,5 @@
       © 2025 Crystal Water. Кришталево-чиста питна вода. Все права защищены.
     </div>
   </footer>
-<div class="mobile-order-bar">
-    <a href="tel:+380637886880" class="call">📞 Позвонить</a>
-    <a href="https://t.me/CrystalWaterBro_bot" class="order">🛒 Заказать в TG</a>
-  </div>
 </body>
 </html>

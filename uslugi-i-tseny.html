@@ -5,9 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Цены на доставку воды в Броварах и Киеве | Crystal Water</title>
   <meta name="description" content="Актуальные цены на доставку очищенной питьевой воды. Выгодные тарифы для частных лиц и оптовые предложения для бизнеса. Закажите первую бутыль бесплатно!" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://crystalwater.kiev.ua/images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/style-remaster.css">
   <link rel="canonical" href="https://crystalwater.kiev.ua/uslugi-i-tseny.html" />
+  <style>
+    :root {
+      --cw-blue-dark: #0f5f96;
+      --cw-blue: #1e88c7;
+      --cw-blue-light: #eaf6fc;
+      --cw-accent: #00c2e6;
+      --cw-accent-dark: #0ad0f0;
+      --cw-text: #1a1a1a;
+      --cw-text-muted: #526d84;
+      --cw-white: #ffffff;
+      --cw-transition: all 0.3s ease;
+    }
+    body { margin: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: var(--cw-text); background-color: var(--cw-white); line-height: 1.6; }
+
+    /* --- HEADER --- */
+    .site-header { background: var(--cw-blue-dark); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .header-top { background: rgba(0,0,0,0.15); color: var(--cw-white); font-size: 13px; padding: 6px 20px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .header-main { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 20px; gap: 20px; }
+    .site-header__logo { color: var(--cw-white); text-decoration: none; font-weight: 800; font-size: 22px; display: flex; align-items: center; gap: 8px; }
+    .site-header__phones { display: flex; gap: 15px; align-items: center; }
+    .site-header__phones a { color: var(--cw-white); text-decoration: none; font-weight: 700; font-size: 16px; transition: var(--cw-transition); }
+    .site-header__phones a:hover { color: var(--cw-accent); }
+    .site-nav { display: flex; gap: 10px; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 5px; }
+    .site-nav a { color: var(--cw-white); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; transition: var(--cw-transition); }
+    .site-nav a:hover, .site-nav a.is-active { background: var(--cw-white); color: var(--cw-blue-dark); }
+
+    .breadcrumbs { font-size: 13px; color: #6a7b87; padding: 10px 16px; max-width: 1200px; margin: 0 auto; }
+    .breadcrumbs a { color: var(--cw-blue-dark); text-decoration: none; }
+
+    /* --- PAGE HEADER --- */
+    .page-header {
+      background: linear-gradient(rgba(15, 95, 150, 0.9), rgba(15, 95, 150, 0.9)), url('https://crystalwater.kiev.ua/images/water_bg.min.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .page-header h1 { font-size: clamp(28px, 5vw, 42px); margin-bottom: 15px; }
+    .page-header p { font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+
+    /* --- PRICE CONTAINER --- */
+    .price-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .price-card {
+      background: var(--cw-white);
+      border: 2px solid var(--cw-blue-light);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: var(--cw-transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .price-card:hover { border-color: var(--cw-accent); transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+    .price-card h3 { color: var(--cw-blue-dark); font-size: 26px; margin-bottom: 15px; }
+    .price-value { font-size: 42px; font-weight: 800; color: var(--cw-accent); margin-bottom: 20px; }
+    .price-value span { font-size: 18px; font-weight: 400; color: var(--cw-text); }
+    .price-features { list-style: none; padding: 0; margin: 0 0 30px; text-align: left; flex-grow: 1; }
+    .price-features li { padding: 12px 0; border-bottom: 1px solid #eee; font-size: 16px; display: flex; align-items: center; }
+    .price-features li::before { content: '✓'; color: var(--cw-accent); margin-right: 12px; font-weight: 800; }
+    .btn-order {
+      display: block;
+      padding: 16px;
+      background: var(--cw-blue);
+      color: var(--cw-white);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      transition: var(--cw-transition);
+    }
+    .btn-order:hover { background: var(--cw-blue-dark); }
+
+    /* --- HOW IT WORKS --- */
+    .how-it-works { padding: 80px 20px; background: #f8fafc; border-top: 1px solid #eee; }
+    .section-title { text-align: center; color: var(--cw-blue-dark); font-size: 32px; margin-bottom: 40px; }
+    .steps-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .step-item { text-align: center; padding: 20px; }
+    .step-num {
+      width: 50px; height: 50px; background: var(--cw-accent); color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 24px; font-weight: 800; margin: 0 auto 20px;
+    }
+    .step-item h4 { font-size: 20px; color: var(--cw-blue-dark); margin-bottom: 10px; }
+    .step-item p { font-size: 15px; color: var(--cw-text-muted); }
+
+    /* --- INFO SECTION --- */
+    .info-section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .info-block h3 { color: var(--cw-blue-dark); font-size: 24px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+    .info-block p { font-size: 16px; color: var(--cw-text-muted); margin-bottom: 10px; }
+
+    /* --- FAQ --- */
+    .faq { padding: 80px 20px; background: var(--cw-blue-light); }
+    .faq-container { max-width: 800px; margin: 0 auto; }
+    .faq-item { background: var(--cw-white); border-radius: 12px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+    .faq-item h4 { margin: 0 0 10px; color: var(--cw-blue-dark); font-size: 18px; }
+    .faq-item p { margin: 0; font-size: 15px; color: var(--cw-text-muted); }
+
+    /* --- FOOTER --- */
+    .site-footer { background: var(--cw-blue-dark); color: var(--cw-white); padding: 60px 20px 20px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-col h3 { color: var(--cw-white); font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid var(--cw-accent); display: inline-block; padding-bottom: 5px; }
+    .footer-col p, .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; display: block; margin-bottom: 10px; transition: var(--cw-transition); }
+    .footer-col a:hover { color: var(--cw-accent); padding-left: 5px; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; opacity: 0.6; }
+
+    @media (max-width: 768px) {
+      .header-main { flex-direction: column; gap: 15px; padding: 15px 20px; }
+      .site-nav ul { flex-direction: column; align-items: center; gap: 8px; }
+      .site-nav a { width: 100%; text-align: center; padding: 10px; }
+      .price-grid { grid-template-columns: 1fr; }
+      .info-section { grid-template-columns: 1fr; gap: 40px; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .page-header h1 { font-size: 28px; }
+      .footer-grid { text-align: center; }
+      .footer-col { display: flex; flex-direction: column; align-items: center; }
+    }
+  </style>
 </head>
 <body class="has-mobile-order-bar">
 
@@ -21,7 +148,7 @@
       <nav class="site-nav">
         <ul>
           <li><a href="./">Доставка воды</a></li>
-          <li class="is-active"><a href="uslugi-i-tseny.html" class="is-active">Цены</a class="is-active"></li class="is-active">
+          <li><a href="uslugi-i-tseny.html" class="is-active">Цены</a></li>
           <li><a href="tekhnologii-ochistki.html">Технологии</a></li>
           <li><a href="articles.html">Статьи</a></li>
           <li><a href="o-nas.html">Контакты</a></li>
@@ -47,7 +174,7 @@
     <div class="price-grid">
       <div class="price-card">
         <h3>Розничный тариф</h3>
-        <div class="price-value">120 <span>грн / бутыль</span></div>
+        <div class="price-value">От 120 <span>грн / бутыль</span></div>
         <ul class="price-features">
           <li>Доставка по Броварам и Киеву</li>
           <li>Очистка обратным осмосом</li>
@@ -58,8 +185,7 @@
         <a href="tel:+380637886880" class="btn-order">Заказать доставку</a>
       </div>
 
-      <div class="price-card" style="border-color: var(--cw-accent); position: relative;">
-        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--cw-accent); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 800; text-transform: uppercase;">Для бизнеса</div>
+      <div class="price-card">
         <h3>Оптовый тариф (B2B)</h3>
         <div class="price-value">Спеццена <span>за объем</span></div>
         <ul class="price-features">
@@ -75,61 +201,55 @@
   </main>
 
   <section class="how-it-works">
-    <h2>Как заказать воду за 3 простых шага</h2>
-    <div class="how-grid">
-      <div class="how-step">
-        <div class="how-icon">1</div>
-        <h3>Оставьте заявку</h3>
+    <h2 class="section-title">Как заказать воду за 3 простых шага</h2>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <h4>Оставьте заявку</h4>
         <p>Позвоните нам или напишите в Telegram. Мы уточним ваш адрес и количество бутылей.</p>
       </div>
-      <div class="how-step">
-        <div class="how-icon">2</div>
-        <h3>Согласуйте время</h3>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <h4>Согласуйте время</h4>
         <p>Мы предложим удобный интервал доставки. В Броварах работаем в вечернее время после 20:00.</p>
       </div>
-      <div class="how-step">
-        <div class="how-icon">3</div>
-        <h3>Получите воду</h3>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <h4>Получите воду</h4>
         <p>Наш курьер привезет воду, поможет установить бутыль в кулер и примет оплату.</p>
       </div>
     </div>
   </section>
 
-  <section class="info-grid">
-    <div class="info-banner">
+  <section class="info-section">
+    <div class="info-block">
       <h3>🚚 Особенности доставки</h3>
       <p>Мы осуществляем ежедневную доставку по Броварам и Киеву. Наша логистика настроена так, чтобы вы никогда не оставались без воды.</p>
-      <p><strong>Бровары:</strong> Доставка осуществляется преимущественно в вечернее время (после 20:00).</p>
+      <p><strong>Бровары:</strong> Доставка осуществляется преимущественно в вечернее время (после 20:00), что удобно для большинства жителей города.</p>
       <p><strong>Киев:</strong> Гибкий график поставок в зависимости от вашего района и объема заказа.</p>
     </div>
-    <div class="info-banner">
+    <div class="info-block">
       <h3>💳 Оплата и условия</h3>
-      <p>Мы принимаем оплату любым удобным способом: наличными курьеру или безналичный расчет для юрлиц.</p>
+      <p>Мы принимаем оплату любым удобным для вас способом: наличными курьеру или безналичный расчет для юридических лиц.</p>
       <p><strong>Первый заказ:</strong> Для новых клиентов действует акция — первая бутыль воды бесплатно!</p>
-      <p><strong>Тара:</strong> Используем многоразовые бутыли из пищевого пластика с тщательной санитарной обработкой.</p>
+      <p><strong>Тара:</strong> Мы используем многоразовые бутыли из высококачественного пищевого пластика, которые проходят тщательную санитарную обработку.</p>
     </div>
   </section>
 
-  <section class="reviews" style="background: #f8fafc;">
-    <div class="reviews-container">
-      <h2>Что говорят о нашем сервисе</h2>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Очень удобная доставка в Броварах. Привозят поздно вечером, когда я уже дома с работы. Цена отличная!"</p>
-          <div class="review-author">
-            <div class="avatar">ИВ</div>
-            <span>Игорь В.</span>
-          </div>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Заказываем в офис. Все четко, вовремя, документы предоставляют. Вода на вкус идеальная."</p>
-          <div class="review-author">
-            <div class="avatar">СМ</div>
-            <span>Светлана М.</span>
-          </div>
-        </div>
+  <section class="faq">
+    <div class="faq-container">
+      <h2 class="section-title">Часто задаваемые вопросы</h2>
+      <div class="faq-item">
+        <h4>Сколько стоит доставка?</h4>
+        <p>Доставка входит в стоимость бутыли при соблюдении минимального заказа. Подробности уточняйте у оператора.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Что делать, если у меня нет кулера?</h4>
+        <p>Мы можем проконсультировать вас по выбору подходящего кулера или предложить варианты заказа воды в другой таре.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Как часто нужно менять воду?</h4>
+        <p>Это зависит от вашего потребления. В среднем, семья из 3-4 человек заказывает новую бутыль раз в 5-7 дней.</p>
       </div>
     </div>
   </section>
@@ -141,7 +261,6 @@
         <p>Доставка премиальной очищенной воды в Броварах и Киеве. Забота о здоровье в каждой капле.</p>
         <div style="display:flex; gap:10px; margin-top:15px;">
           <a href="./">Главная</a>
-          <a href="uslugi-i-tseny.html">Цены</a>
           <a href="tekhnologii-ochistki.html">Технологии</a>
           <a href="articles.html">Статьи</a>
           <a href="o-nas.html">Контакты</a>
@@ -168,9 +287,11 @@
       © 2025 Crystal Water. Кришталево-чиста питна вода. Все права защищены.
     </div>
   </footer>
-<div class="mobile-order-bar">
+
+  <div class="mobile-order-bar">
     <a href="tel:+380637886880" class="call">📞 Позвонить</a>
     <a href="https://t.me/CrystalWaterBro_bot" class="order">🛒 Заказать в TG</a>
   </div>
+
 </body>
 </html>
