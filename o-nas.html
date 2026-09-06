@@ -5,113 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>О компании Crystal Water | Доставка воды Бровары и Киев</title>
   <meta name="description" content="Узнайте больше о Crystal Water: наша история, ценности, команда и стандарты качества очистки воды. Контакты и адрес в Броварах." />
-  <link rel="icon" href="https://crystalwater.kiev.ua/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/style-remaster.css">
   <link rel="canonical" href="https://crystalwater.kiev.ua/o-nas.html" />
-  <style>
-    :root {
-      --cw-blue-dark: #0f5f96;
-      --cw-blue: #1e88c7;
-      --cw-blue-light: #eaf6fc;
-      --cw-accent: #00c2e6;
-      --cw-accent-dark: #0ad0f0;
-      --cw-text: #1a1a1a;
-      --cw-text-muted: #526d84;
-      --cw-white: #ffffff;
-      --cw-transition: all 0.3s ease;
-    }
-    body { margin: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: var(--cw-text); background-color: var(--cw-white); line-height: 1.6; }
-
-    /* --- HEADER --- */
-    .site-header { background: var(--cw-blue-dark); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .header-top { background: rgba(0,0,0,0.15); color: var(--cw-white); font-size: 13px; padding: 6px 20px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-    .header-main { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 20px; gap: 20px; }
-    .site-header__logo { color: var(--cw-white); text-decoration: none; font-weight: 800; font-size: 22px; display: flex; align-items: center; gap: 8px; }
-    .site-header__phones { display: flex; gap: 15px; align-items: center; }
-    .site-header__phones a { color: var(--cw-white); text-decoration: none; font-weight: 700; font-size: 16px; transition: var(--cw-transition); }
-    .site-header__phones a:hover { color: var(--cw-accent); }
-    .site-nav { display: flex; gap: 10px; }
-    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 5px; }
-    .site-nav a { color: var(--cw-white); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; transition: var(--cw-transition); }
-    .site-nav a:hover, .site-nav a.is-active { background: var(--cw-white); color: var(--cw-blue-dark); }
-
-    .breadcrumbs { font-size: 13px; color: #6a7b87; padding: 10px 16px; max-width: 1200px; margin: 0 auto; }
-    .breadcrumbs a { color: var(--cw-blue-dark); text-decoration: none; }
-
-    /* --- ABOUT HERO --- */
-    .about-hero {
-      background: linear-gradient(rgba(15, 95, 150, 0.8), rgba(15, 95, 150, 0.8)), url('https://crystalwater.kiev.ua/images/water_bg.min.png');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    .about-hero h1 { font-size: clamp(32px, 5vw, 48px); margin: 0 0 20px; }
-    .about-hero p { font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9; }
-
-    .about-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-
-    .story-section { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; flex-wrap: wrap; }
-    .story-section:nth-child(even) { flex-direction: row-reverse; }
-    .story-text { flex: 1; min-width: 300px; }
-    .story-text h2 { color: var(--cw-blue-dark); font-size: 28px; margin-bottom: 20px; }
-    .story-text p { font-size: 17px; color: #444; margin-bottom: 15px; }
-    .story-image { flex: 1; min-width: 300px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-    .story-image img { width: 100%; height: auto; display: block; }
-
-    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 60px 0; }
-    .value-card { padding: 30px; background: var(--cw-blue-light); border-radius: 20px; text-align: center; transition: var(--cw-transition); border: 1px solid rgba(30, 136, 199, 0.1); }
-    .value-card:hover { transform: translateY(-10px); background: var(--cw-white); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    .value-card .icon { font-size: 40px; margin-bottom: 15px; display: block; }
-    .value-card h3 { color: var(--cw-blue-dark); margin-bottom: 10px; }
-    .value-card p { font-size: 15px; color: var(--cw-text-muted); }
-
-    .contact-block {
-      background: #f8fafc;
-      padding: 60px 20px;
-      border-radius: 32px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 60px;
-    }
-    .contact-details h2 { color: var(--cw-blue-dark); font-size: 32px; margin-bottom: 24px; }
-    .contact-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-size: 17px; }
-    .contact-item .icon { width: 40px; height: 40px; background: var(--cw-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 800; }
-    .contact-item a { color: var(--cw-text); text-decoration: none; transition: var(--cw-transition); }
-    .contact-item a:hover { color: var(--cw-blue); }
-    .contact-map {
-      background: #eee;
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid #ddd;
-      min-height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #888;
-      font-weight: 600;
-    }
-
-    .site-footer { background: var(--cw-blue-dark); color: var(--cw-white); padding: 60px 20px 20px; }
-    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-    .footer-col h3 { color: var(--cw-white); font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid var(--cw-accent); display: inline-block; padding-bottom: 5px; }
-    .footer-col p, .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; display: block; margin-bottom: 10px; transition: var(--cw-transition); }
-    .footer-col a:hover { color: var(--cw-accent); padding-left: 5px; }
-    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; opacity: 0.6; }
-
-    @media (max-width: 768px) {
-      .header-main { flex-direction: column; gap: 15px; padding: 15px 20px; }
-      .site-nav ul { flex-direction: column; align-items: center; gap: 8px; }
-      .site-nav a { width: 100%; text-align: center; padding: 10px; }
-      .story-section { flex-direction: column !important; text-align: center; }
-      .story-image { order: -1; }
-      .contact-block { grid-template-columns: 1fr; }
-      .footer-grid { text-align: center; }
-      .footer-col { display: flex; flex-direction: column; align-items: center; }
-    }
-  </style>
 </head>
 <body class="has-mobile-order-bar">
 
@@ -128,7 +24,7 @@
           <li><a href="uslugi-i-tseny.html">Цены</a></li>
           <li><a href="tekhnologii-ochistki.html">Технологии</a></li>
           <li><a href="articles.html">Статьи</a></li>
-          <li><a href="o-nas.html" class="is-active">Контакты</a></li>
+          <li class="is-active"><a href="o-nas.html" class="is-active">Контакты</a class="is-active"></li class="is-active">
         </ul>
       </nav>
       <div class="site-header__phones">
@@ -143,7 +39,7 @@
   </nav>
 
   <section class="about-hero">
-    <div class="about-hero">
+    <div class="hero__content">
       <h1>О компании Crystal Water</h1>
       <p>Мы создаем стандарт чистоты, которому можно доверять. Более 18 лет безупречного качества и заботы о каждом клиенте в Броварах и Киеве.</p>
     </div>
@@ -157,13 +53,13 @@
         <p>Сегодня мы — один из ведущих поставщиков очищенной воды в регионе. Наша миссия — сделать премиальную воду доступной для каждой семьи, обеспечивая её абсолютную безопасность и идеальный вкус.</p>
       </div>
       <div class="story-image">
-        <img src="https://crystalwater.kiev.ua/assets/images/pompa.png" alt="Производство Crystal Water">
+        <img src="images/pompa.png" alt="Производство Crystal Water">
       </div>
     </section>
 
     <section class="story-section">
       <div class="story-image">
-        <img src="https://crystalwater.kiev.ua/assets/images/butilirovannaya-voda.png" alt="Качество Crystal Water">
+        <img src="images/butilirovannaya-voda.png" alt="Качество Crystal Water">
       </div>
       <div class="story-text">
         <h2>Почему выбирают нас?</h2>
@@ -172,7 +68,7 @@
       </div>
     </section>
 
-    <h2 style="text-align:center; color:var(--cw-blue-dark); margin: 60px 0 30px; font-size:32px;">Наши ценности</h2>
+    <h2 style="text-align:center; color:var(--cw-blue-dark); margin: 60px 0 30px; font-size:32px; font-weight: 800;">Наши ценности</h2>
     <div class="values-grid">
       <div class="value-card">
         <span class="icon">🛡️</span>
@@ -191,7 +87,7 @@
       </div>
       <div class="value-card">
         <span class="icon">🚚</span>
-        <h3>Сервис</p>
+        <h3>Сервис</h3>
         <p>Забота о клиенте от первого звонка до установки бутыли в ваш кулер. Мы ценим ваше время.</p>
       </div>
     </div>
@@ -235,6 +131,7 @@
           <a href="uslugi-i-tseny.html">Цены</a>
           <a href="tekhnologii-ochistki.html">Технологии</a>
           <a href="articles.html">Статьи</a>
+          <a href="o-nas.html">Контакты</a>
         </div>
       </div>
       <div class="footer-col">
@@ -258,11 +155,9 @@
       © 2025 Crystal Water. Кришталево-чиста питна вода. Все права защищены.
     </div>
   </footer>
-
-  <div class="mobile-order-bar">
+<div class="mobile-order-bar">
     <a href="tel:+380637886880" class="call">📞 Позвонить</a>
     <a href="https://t.me/CrystalWaterBro_bot" class="order">🛒 Заказать в TG</a>
   </div>
-
 </body>
 </html>
