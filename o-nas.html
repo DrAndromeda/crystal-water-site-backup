@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>О компании Crystal Water | Доставка воды Бровары и Киев</title>
-  <meta name="description" content="Узнайте больше о Crystal Water: наша история, ценности, команда и стандарты качества очистки воды. Контакты и адрес в Броварах." />
-  <link rel="icon" href="https://crystalwater.kiev.ua/images/favicon.ico" type="image/x-icon" />
+  <title>Контакты | Доставка воды Crystal Water — Бровары и Киев</title>
+  <meta name="description" content="Контакты Crystal Water: адрес в Броварах, телефоны, график работы. Закажите доставку питьевой воды по телефону или Telegram." />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/style-remaster.css">
   <link rel="canonical" href="https://crystalwater.kiev.ua/o-nas.html" />
   <style>
@@ -14,107 +14,136 @@
       --cw-blue: #1e88c7;
       --cw-blue-light: #eaf6fc;
       --cw-accent: #00c2e6;
-      --cw-accent-dark: #0ad0f0;
       --cw-text: #1a1a1a;
       --cw-text-muted: #526d84;
       --cw-white: #ffffff;
       --cw-transition: all 0.3s ease;
     }
-    body { margin: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: var(--cw-text); background-color: var(--cw-white); line-height: 1.6; }
+    body { margin: 0; font-family: 'Segoe UI', Roboto, system-ui, sans-serif; color: var(--cw-text); background: var(--cw-white); line-height: 1.6; }
 
-    /* --- HEADER --- */
-    .site-header { background: var(--cw-blue-dark); padding: 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }    .header-main { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 20px; gap: 20px; }
-    .site-header__logo { color: var(--cw-white); text-decoration: none; font-weight: 800; font-size: 22px; display: flex; align-items: center; gap: 8px; }
-    .site-header__phones { display: flex; gap: 15px; align-items: center; }
-    .site-header__phones a { color: var(--cw-white); text-decoration: none; font-weight: 700; font-size: 16px; transition: var(--cw-transition); }
-    .site-header__phones a:hover { color: var(--cw-accent); }
-    .site-nav { display: flex; gap: 10px; }
-    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 5px; }
-    .site-nav a { color: var(--cw-white); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; transition: var(--cw-transition); }
-    .site-nav a:hover, .site-nav a.is-active { background: var(--cw-white); color: var(--cw-blue-dark); }
-
-    .breadcrumbs { font-size: 13px; color: #6a7b87; padding: 10px 16px; max-width: 1200px; margin: 0 auto; }
-    .breadcrumbs a { color: var(--cw-blue-dark); text-decoration: none; }
-
-    /* --- ABOUT HERO --- */
-    .about-hero {
+    /* --- HERO (компактный) --- */
+    .page-hero {
       background: linear-gradient(rgba(15, 95, 150, 0.7), rgba(15, 95, 150, 0.7)), url('images/water_bg.min.png');
       background-size: cover;
       background-position: center;
       color: white;
       text-align: center;
-      padding: 50px 20px;
-      position: relative;
+      padding: 60px 20px;
     }
-    .about-hero h1 { font-size: clamp(26px, 4vw, 36px); margin: 0 0 12px; }
-    .about-hero p { font-size: 16px; max-width: 600px; margin: 0 auto; opacity: 0.85; }
+    .page-hero h1 { font-size: clamp(28px, 4vw, 38px); margin: 0 0 12px; }
+    .page-hero p { font-size: 17px; max-width: 600px; margin: 0 auto; opacity: 0.9; }
 
-    .about-container { max-width: 960px; margin: 40px auto; padding: 0 20px; }
+    /* --- КОНТАКТНЫЙ БЛОК (белый фон) --- */
+    .contact-page {
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    .contact-page h2 {
+      color: var(--cw-blue-dark);
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-    .story-section { display: flex; align-items: center; gap: 40px; margin-bottom: 50px; flex-wrap: wrap; }
-    .story-section:nth-child(even) { flex-direction: row-reverse; }
-    .story-text { flex: 1; min-width: 300px; }
-    .story-text h2 { color: var(--cw-blue-dark); font-size: 24px; margin-bottom: 16px; }
-    .story-text p { font-size: 16px; color: #444; margin-bottom: 12px; }
-    .story-image { flex: 1; min-width: 300px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-    .story-image img { width: 100%; height: auto; display: block; }
-
-    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 40px 0; }
-    .value-card { padding: 30px; background: var(--cw-blue-light); border-radius: 20px; text-align: center; transition: var(--cw-transition); border: 1px solid rgba(30, 136, 199, 0.1); }
-    .value-card:hover { transform: translateY(-10px); background: var(--cw-white); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    .value-card .icon { font-size: 40px; margin-bottom: 15px; display: block; }
-    .value-card h3 { color: var(--cw-blue-dark); margin-bottom: 10px; }
-    .value-card p { font-size: 15px; color: var(--cw-text-muted); }
-
-    .contact-block {
-      background: #f8fafc;
-      padding: 40px 20px;
-      border-radius: 24px;
+    .contact-cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
     }
-    .contact-details h2 { color: var(--cw-blue-dark); font-size: 32px; margin-bottom: 24px; }
-    .contact-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-size: 17px; }
-    .contact-item .icon { width: 40px; height: 40px; background: var(--cw-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 800; }
-    .contact-item a { color: var(--cw-text); text-decoration: none; transition: var(--cw-transition); }
-    .contact-item a:hover { color: var(--cw-blue); }
-    .contact-map {
+    .contact-card {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      border: 1px solid rgba(30, 136, 199, 0.08);
+      transition: var(--cw-transition);
+    }
+    .contact-card:hover {
+      background: var(--cw-white);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transform: translateY(-4px);
+    }
+    .contact-card .icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .contact-card h3 {
+      color: var(--cw-blue-dark);
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .contact-card p, .contact-card a {
+      color: var(--cw-text);
+      font-size: 15px;
+      text-decoration: none;
+      line-height: 1.7;
+    }
+    .contact-card a:hover {
+      color: var(--cw-blue);
+    }
+
+    .map-block {
       background: #eee;
-      border-radius: 24px;
+      border-radius: 20px;
       overflow: hidden;
-      border: 1px solid #ddd;
-      min-height: 300px;
+      min-height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #888;
       font-weight: 600;
+      border: 1px solid #ddd;
+      margin-bottom: 50px;
     }
 
-    .site-footer { background: var(--cw-blue-dark); color: var(--cw-white); padding: 60px 20px 20px; }
-    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-    .footer-col h3 { color: var(--cw-white); font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid var(--cw-accent); display: inline-block; padding-bottom: 5px; }
-    .footer-col p, .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; display: block; margin-bottom: 10px; transition: var(--cw-transition); }
-    .footer-col a:hover { color: var(--cw-accent); padding-left: 5px; }
-    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; opacity: 0.6; }
+    .social-block {
+      text-align: center;
+      padding: 30px;
+      background: var(--cw-blue-light);
+      border-radius: 20px;
+    }
+    .social-block h3 {
+      color: var(--cw-blue-dark);
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .social-links a {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 12px;
+      background: var(--cw-white);
+      color: var(--cw-blue-dark);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      border: 1px solid rgba(30, 136, 199, 0.15);
+      transition: var(--cw-transition);
+    }
+    .social-links a:hover {
+      background: var(--cw-blue-dark);
+      color: var(--cw-white);
+    }
 
     @media (max-width: 768px) {
-      .header-main { flex-direction: column; gap: 15px; padding: 15px 20px; }
-      .site-nav ul { flex-direction: column; align-items: center; gap: 8px; }
-      .site-nav a { width: 100%; text-align: center; padding: 10px; }
-      .story-section { flex-direction: column !important; text-align: center; }
-      .story-image { order: -1; }
-      .contact-block { grid-template-columns: 1fr; }
-      .footer-grid { text-align: center; }
-      .footer-col { display: flex; flex-direction: column; align-items: center; }
+      .page-hero { padding: 40px 20px; }
+      .contact-cards { grid-template-columns: 1fr; }
+      .contact-card { padding: 20px; }
     }
   </style>
 </head>
 <body class="has-mobile-order-bar">
 
-      <header class="site-header"><div class="header-main">
+  <header class="site-header">
+    <div class="header-main">
       <a href="./" class="site-header__logo">💧 Crystal Water</a>
       <nav class="site-nav">
         <ul>
@@ -122,7 +151,8 @@
           <li><a href="uslugi-i-tseny.html">Цены</a></li>
           <li><a href="tekhnologii-ochistki.html">Технологии</a></li>
           <li><a href="articles.html">Статьи</a></li>
-          <li class="is-active"><a href="o-nas.html">О нас</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li class="is-active"><a href="o-nas.html">Контакты</a></li>
         </ul>
       </nav>
       <div class="site-header__phones">
@@ -133,93 +163,70 @@
   </header>
 
   <nav class="breadcrumbs">
-    <a href="./">Доставка воды Бровары</a> &raquo; <span>О нас и контакты</span>
+    <a href="./">Доставка воды Бровары</a> &raquo; <span>Контакты</span>
   </nav>
 
-  <section class="about-hero">
-    <div class="about-hero__inner">
-      <h1>О компании Crystal Water</h1>
-      <p>Более 18 лет безупречного качества и заботы о каждом клиенте в Броварах и Киеве</p>
-    </div>
+  <section class="page-hero">
+    <h1>Свяжитесь с нами</h1>
+    <p>Мы всегда готовы ответить на ваши вопросы и принять заказ</p>
   </section>
 
-  <div class="about-container">
-    <section class="story-section">
-      <div class="story-text">
-        <h2>Наша история и миссия</h2>
-        <p>Crystal Water началась с простой идеи: каждый человек должен иметь доступ к воде, которая не просто утоляет жажду, но и приносит пользу здоровью. Мы понимаем, что вода — это основа жизни, поэтому инвестировали годы в изучение технологий фильтрации.</p>
-        <p>Сегодня мы — один из ведущих поставщиков очищенной воды в регионе. Наша миссия — сделать премиальную воду доступной для каждой семьи, обеспечивая её абсолютную безопасность и идеальный вкус.</p>
-      </div>
-      <div class="story-image">
-        <img src="https://crystalwater.kiev.ua/assets/images/pompa.png" alt="Производство Crystal Water">
-      </div>
-    </section>
+  <div class="contact-page">
+    <h2>Как с нами связаться</h2>
 
-    <section class="story-section">
-      <div class="story-image">
-        <img src="https://crystalwater.kiev.ua/assets/images/butilirovannaya-voda.png" alt="Качество Crystal Water">
+    <div class="contact-cards">
+      <div class="contact-card">
+        <span class="icon">📍</span>
+        <h3>Адрес</h3>
+        <p>
+          <a href="https://www.google.com/maps/search/Бровары+ул+Кооперативная+3А" target="_blank">
+            ул. Кооперативная, 3 А<br>г. Бровары
+          </a>
+        </p>
       </div>
-      <div class="story-text">
-        <h2>Почему выбирают нас?</h2>
-        <p>Мы не используем дешевые аналоги или упрощенные схемы очистки. Наш завод оснащен промышленными системами обратного осмоса и озоновыми стерилизаторами, которые удаляют даже те примеси, с которыми не справляются обычные бытовые фильтры.</p>
-        <p>Мы строго контролируем каждую партию воды, следим за санитарным состоянием тары и обеспечиваем оперативную доставку, чтобы ваша вода всегда была свежей.</p>
+      <div class="contact-card">
+        <span class="icon">📞</span>
+        <h3>Телефоны</h3>
+        <p>
+          <a href="tel:+380637886880">+38 (063) 788-68-80</a><br>
+          <a href="tel:+380635304050">+38 (063) 530-40-50</a>
+        </p>
       </div>
-    </section>
-
-    <h2 style="text-align:center; color:var(--cw-blue-dark); margin: 40px 0 24px; font-size:26px;">Наши ценности</h2>
-    <div class="values-grid">
-      <div class="value-card">
-        <span class="icon">🛡️</span>
-        <h3>Безопасность</h3>
-        <p>Мы гарантируем отсутствие вредных примесей, бактерий и хлора. Ваше здоровье — наш главный приоритет.</p>
+      <div class="contact-card">
+        <span class="icon">⏰</span>
+        <h3>График работы</h3>
+        <p>
+          Пн—Пт: 08:00 – 20:00<br>
+          Сб—Вс: 09:00 – 17:00
+        </p>
       </div>
-      <div class="value-card">
-        <span class="icon">💎</span>
-        <h3>Качество</h3>
-        <p>Использование эталонных технологий очистки и постоянный контроль pH и минерального состава.</p>
-      </div>
-      <div class="value-card">
-        <span class="icon">🤝</span>
-        <h3>Честность</h3>
-        <p>Прозрачное ценообразование, честные сроки доставки и открытость в вопросах технологий очистки.</p>
-      </div>
-      <div class="value-card">
-        <span class="icon">🚚</span>
-        <h3>Сервис</p>
-        <p>Забота о клиенте от первого звонка до установки бутыли в ваш кулер. Мы ценим ваше время.</p>
+      <div class="contact-card">
+        <span class="icon">✈️</span>
+        <h3>Telegram</h3>
+        <p>
+          <a href="https://t.me/CrystalWaterBro_bot" target="_blank">@CrystalWaterBro_bot</a>
+        </p>
       </div>
     </div>
 
-    <div class="contact-block">
-      <div class="contact-details">
-        <h2>Свяжитесь с нами</h2>
-        <div class="contact-item">
-          <div class="icon">📍</div>
-          <div><strong>Адрес:</strong><br><a href="https://www.google.com/maps/search/Бровары+ул+Кооперативная+3А" target="_blank">ул. Кооперативная, 3 А, г. Бровары</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="icon">📞</div>
-          <div><strong>Телефоны:</strong><br><a href="tel:+380637886880">+38 (063) 788-68-80</a><br><a href="tel:+380635304050">+38 (063) 530-40-50</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="icon">⏰</div>
-          <div><strong>График работы:</strong><br>Пн-Пт: 08:00 - 20:00<br>Сб-Вс: 09:00 - 17:00</div>
-        </div>
-        <div class="contact-item">
-          <div class="icon">✈️</div>
-          <div><strong>Telegram:</strong><br><a href="https://t.me/CrystalWaterBro_bot" target="_blank">@CrystalWaterBro_bot</a></div>
-        </div>
+    <div class="map-block">
+      <div style="text-align:center;">
+        <p>📍 ул. Кооперативная, 3 А, г. Бровары</p>
+        <p style="font-size:13px; margin-top:8px;">(Карта загружается...)</p>
       </div>
-      <div class="contact-map">
-        <div style="text-align:center;">
-          <p>Карта расположения офиса</p>
-          <p style="font-size:12px;">(Интерактивная карта загружается...)</p>
-        </div>
+    </div>
+
+    <div class="social-block">
+      <h3>Мы в соцсетях</h3>
+      <div class="social-links">
+        <a href="https://www.instagram.com/crystalwater.brovary/" target="_blank">📸 Instagram</a>
+        <a href="https://www.facebook.com/crystalwater.brovary/" target="_blank">👍 Facebook</a>
+        <a href="https://t.me/CrystalWaterBro_bot" target="_blank">✈️ Telegram</a>
       </div>
     </div>
   </div>
 
-      <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-col">
         <h3>Crystal Water</h3>
@@ -229,20 +236,21 @@
           <a href="uslugi-i-tseny.html">Цены</a>
           <a href="tekhnologii-ochistki.html">Технологии</a>
           <a href="articles.html">Статьи</a>
-          <a href="o-nas.html">О нас</a>
+          <a href="about.html">О нас</a>
+          <a href="o-nas.html">Контакты</a>
         </div>
       </div>
       <div class="footer-col">
         <h3>Свяжитесь с нами</h3>
         <a href="tel:+380637886880">📞 +38 (063) 788-68-80</a>
         <a href="tel:+380635304050">📞 +38 (063) 530-40-50</a>
-        <a href="https://t.me/CrystalWaterBro_bot" target="_blank">✈️ Telegram: @CrystalWaterBro_bot</a>
+        <a href="https://t.me/CrystalWaterBro_bot" target="_blank">✈️ Telegram</a>
       </div>
       <div class="footer-col">
         <h3>Адрес и график</h3>
         <p>ул. Кооперативная, 3 А, Бровары</p>
-        <p>Пн-Пт: 08:00 - 20:00</p>
-        <p>Сб-Вс: 09:00 - 17:00</p>
+        <p>Пн—Пт: 08:00 – 20:00</p>
+        <p>Сб—Вс: 09:00 – 17:00</p>
         <div style="display:flex; gap:10px; margin-top:10px;">
           <a href="https://www.instagram.com/crystalwater.brovary/" target="_blank">Instagram</a>
           <a href="https://www.facebook.com/crystalwater.brovary/" target="_blank">Facebook</a>
@@ -254,10 +262,10 @@
     </div>
   </footer>
 
-      <div class="mobile-order-bar">
-    <a href="tel:+380637886880" class="mob-call">📞 Позвонить</a>
-    <a href="https://t.me/CrystalWaterBro_bot" class="mob-tg" target="_blank">✈️ Telegram</a>
+  <div class="mobile-order-bar">
+    <a href="tel:+380637886880" class="call">📞 Позвонить</a>
+    <a href="https://t.me/CrystalWaterBro_bot" class="order">🛒 Заказать в TG</a>
   </div>
-
 </body>
 </html>
+</｜DSML｜tool_calls>
