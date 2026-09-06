@@ -4,97 +4,586 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Доставка очищенной питьевой воды в Броварах и Киеве | Crystal Water</title>
-  <meta name="description" content="Закажите кристально чистую питьевую воду с доставкой на дом и в офис в Броварах и Киеве. Профессиональная очистка обратным осмосом и озонированием." />
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="css/style-remaster.css">
+  <meta name="description" content="Закажите кристально чистую питьевую воду с доставкой на дом и в офис в Броварах и Киеве. 8 этапов очистки, обратный осмос и озонирование. Первая бутыль — бесплатно!" />
+  <link rel="icon" href="https://crystalwater.kiev.ua/images/favicon.ico" type="image/x-icon" />
   <link rel="canonical" href="https://crystalwater.kiev.ua/" />
   <style>
     :root {
-      --cw-blue-dark: #0f5f96; --cw-blue: #1e88c7; --cw-blue-light: #eaf6fc;
-      --cw-accent: #17bfd4; --cw-text: #1a1a1a; --cw-white: #ffffff;
+      --cw-blue-dark: #0f5f96;
+      --cw-blue: #1e88c7;
+      --cw-blue-light: #eaf6fc;
+      --cw-accent: #00c2e6;
+      --cw-accent-dark: #0ad0f0;
+      --cw-text: #1a1a1a;
+      --cw-text-muted: #526d84;
+      --cw-white: #ffffff;
+      --cw-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+      --shadow-lg: 0 20px 50px rgba(0,0,0,0.12);
     }
-    body { margin: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: var(--cw-text); background-color: var(--cw-white); }
-    .site-header { background: var(--cw-blue-dark); padding: 10px 16px; position: sticky; top: 0; z-index: 100; }
-    .site-header__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; max-width: 1200px; margin: 0 auto; }
-    .site-header__logo { color: var(--cw-white); text-decoration: none; font-weight: 700; font-size: 18px; flex-basis: 100%; text-align: center; }
-    .site-header__phones { display: flex; flex-direction: column; gap: 2px; align-items: center; flex-basis: 100%; }
-    .site-header__phones a { color: var(--cw-white); text-decoration: none; font-weight: 600; font-size: 14px; }
-    .site-nav { width: 100%; text-align: center; }
-    .site-nav ul { list-style: none; padding: 10px 0 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; border-top: 1px solid rgba(255,255,255,0.2); }
-    .site-nav a { color: var(--cw-white); text-decoration: none; padding: 8px 14px; border-radius: 20px; background: rgba(255,255,255,0.12); font-size: 13px; font-weight: 600; }
 
-    .hero { background-color: var(--cw-blue); background-image: url('./images/water_bg.min.png'); background-size: cover; background-position: center top; min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--cw-white); position: relative; }
-    .hero__content { max-width: 800px; padding: 0 20px; }
-    .hero h1 { font-size: clamp(32px, 5vw, 48px); margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-    .hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
-    .btn-main { display: inline-block; padding: 18px 36px; background: var(--cw-accent); color: var(--cw-white); text-decoration: none; font-weight: 700; border-radius: 8px; font-size: 20px; transition: transform 0.3s, background 0.3s; }
-    .btn-main:hover { transform: scale(1.05); background: var(--cw-accent-dark); }
+    * { box-sizing: border-box; }
 
-    .features { padding: 60px 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .feature-card { padding: 30px; background: var(--cw-blue-light); border-radius: 16px; text-align: center; transition: transform 0.3s; }
-    .feature-card:hover { transform: translateY(-10px); }
-    .feature-card h3 { color: var(--cw-blue-dark); margin-bottom: 15px; font-size: 22px; }
-    .feature-card p { font-size: 15px; color: #526d84; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      color: var(--cw-text);
+      background-color: var(--cw-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-    .site-footer { background: var(--cw-blue-dark); color: var(--cw-white); padding: 40px 16px; text-align: center; }
-    .footer-links { margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-    .footer-links a { color: #00c2e6; text-decoration: none; font-size: 14px; }
-    .footer-bottom { font-size: 12px; opacity: 0.7; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* --- HEADER --- */
+    .site-header {
+      background: var(--cw-blue-dark);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    }
+    .header-top {
+      background: rgba(0,0,0,0.2);
+      color: var(--cw-white);
+      font-size: 13px;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      gap: 20px;
+    }
+    .site-header__logo {
+      color: var(--cw-white);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+    .site-header__phones {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .site-header__phones a {
+      color: var(--cw-white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 17px;
+      transition: var(--cw-transition);
+      padding: 5px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    .site-header__phones a:hover { background: rgba(255,255,255,0.1); color: var(--cw-accent); }
+
+    .site-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 8px;
+    }
+    .site-nav a {
+      color: var(--cw-white);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      font-size: 14px;
+      font-weight: 600;
+      transition: var(--cw-transition);
+      white-space: nowrap;
+    }
+    .site-nav a:hover, .site-nav a.is-active {
+      background: var(--cw-white);
+      color: var(--cw-blue-dark);
+    }
+
+    /* --- HERO --- */
+    .hero {
+      background: linear-gradient(rgba(15, 95, 150, 0.6), rgba(15, 95, 150, 0.6)), url('https://crystalwater.kiev.ua/images/water_bg.min.png');
+      background-size: cover;
+      background-position: center;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--cw-white);
+      padding: 60px 20px;
+    }
+    .hero__content { max-width: 1000px; width: 100%; }
+    .hero h1 {
+      font-size: clamp(32px, 7vw, 68px);
+      margin-bottom: 25px;
+      line-height: 1.1;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      font-weight: 900;
+    }
+    .hero p {
+      font-size: clamp(18px, 3vw, 24px);
+      margin-bottom: 40px;
+      opacity: 0.95;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+    .btn-main {
+      display: inline-block;
+      padding: 22px 48px;
+      background: var(--cw-accent);
+      color: var(--cw-white);
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 50px;
+      font-size: 24px;
+      box-shadow: 0 15px 30px rgba(0, 194, 230, 0.4);
+      transition: var(--cw-transition);
+    }
+    .btn-main:hover {
+      transform: translateY(-5px);
+      background: var(--cw-accent-dark);
+      box-shadow: 0 20px 40px rgba(0, 194, 230, 0.5);
+    }
+
+    /* --- INTRO --- */
+    .intro { padding: 100px 20px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .intro h2 { color: var(--cw-blue-dark); font-size: clamp(28px, 5vw, 38px); margin-bottom: 25px; font-weight: 800; }
+    .intro p { font-size: 20px; color: var(--cw-text-muted); margin-bottom: 25px; line-height: 1.8; }
+
+    /* --- TRUST BANNER --- */
+    .trust-banner {
+      background: linear-gradient(135deg, var(--cw-accent), var(--cw-blue));
+      color: var(--cw-white);
+      padding: 60px 20px;
+      text-align: center;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .trust-banner h2 { font-size: clamp(32px, 6vw, 56px); margin: 0; font-weight: 900; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+    .trust-banner p { font-size: 22px; margin: 15px 0 0; opacity: 0.9; }
+
+    /* --- FEATURES --- */
+    .features {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .feature-card {
+      padding: 50px 35px;
+      background: var(--cw-blue-light);
+      border-radius: 30px;
+      text-align: center;
+      transition: var(--cw-transition);
+      border: 1px solid rgba(30, 136, 199, 0.1);
+    }
+    .feature-card:hover {
+      transform: translateY(-15px);
+      background: var(--cw-white);
+      box-shadow: var(--shadow-lg);
+    }
+    .feature-card h3 { color: var(--cw-blue-dark); margin-bottom: 20px; font-size: 26px; font-weight: 800; }
+    .feature-card p { font-size: 17px; color: var(--cw-text-muted); line-height: 1.6; }
+
+    /* --- STATS --- */
+    .stats {
+      background: var(--cw-blue-dark);
+      color: var(--cw-white);
+      padding: 100px 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+    .stat-item .number {
+      display: block;
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--cw-accent);
+      margin-bottom: 10px;
+    }
+    .stat-item .label { font-size: 22px; opacity: 0.8; font-weight: 500; }
+
+    /* --- PURIFICATION --- */
+    .purification { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+    .purification h2 { text-align: center; color: var(--cw-blue-dark); font-size: clamp(28px, 4vw, 36px); margin-bottom: 50px; font-weight: 800; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .step-card {
+      padding: 30px 24px;
+      background: var(--cw-white);
+      border: 1px solid var(--cw-blue-light);
+      border-radius: 20px;
+      display: flex;
+      gap: 15px;
+      transition: var(--cw-transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .step-card:hover { border-color: var(--cw-accent); background: var(--cw-blue-light); transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .step-num {
+      background: var(--cw-blue);
+      color: var(--cw-white);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+      font-size: 16px;
+    }
+    .step-text h4 { margin: 0 0 8px; color: var(--cw-blue-dark); font-size: 18px; font-weight: 700; }
+    .step-text p { margin: 0; font-size: 14px; color: var(--cw-text-muted); line-height: 1.5; }
+
+    /* --- PRODUCT --- */
+    .product {
+      padding: 120px 20px;
+      background: var(--cw-blue-light);
+      display: flex;
+      justify-content: center;
+    }
+    .product-card {
+      background: var(--cw-white);
+      padding: 60px;
+      border-radius: 40px;
+      max-width: 950px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      box-shadow: var(--shadow-lg);
+      flex-wrap: wrap;
+    }
+    .product-info { flex: 1; min-width: 300px; }
+    .product-info h2 { color: var(--cw-blue-dark); font-size: 42px; margin-bottom: 20px; font-weight: 800; }
+    .product-price { font-size: 56px; font-weight: 900; color: var(--cw-accent); margin: 25px 0; }
+    .product-price span { font-size: 24px; font-weight: 400; color: var(--cw-text-muted); }
+    .product-img { width: 380px; height: auto; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.15)); }
+
+    /* --- INFO BANNERS --- */
+    .info-grid {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    .info-banner {
+      padding: 40px;
+      background: #f8fafc;
+      border-radius: 24px;
+      border-left: 8px solid var(--cw-blue);
+      transition: var(--cw-transition);
+    }
+    .info-banner:hover { background: var(--cw-blue-light); transform: translateX(10px); box-shadow: var(--shadow-md); }
+    .info-banner h3 { color: var(--cw-blue-dark); margin: 0 0 15px; font-size: 24px; font-weight: 800; }
+    .info-banner p { margin: 0; font-size: 17px; color: var(--cw-text-muted); line-height: 1.7; }
+
+    /* --- FOOTER --- */
+    .site-footer {
+      background: var(--cw-blue-dark);
+      color: var(--cw-white);
+      padding: 80px 20px 20px;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+    .footer-col h3 { color: var(--cw-white); font-size: 22px; margin-bottom: 25px; border-bottom: 2px solid var(--cw-accent); display: inline-block; padding-bottom: 5px; font-weight: 800; }
+    .footer-col p, .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 16px; display: block; margin-bottom: 12px; transition: var(--cw-transition); }
+    .footer-col a:hover { color: var(--cw-accent); padding-left: 5px; }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    /* --- MOBILE ORDER BAR --- */
+    .mobile-order-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2000;
+      display: none;
+      box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
+    }
+    .mobile-order-bar a {
+      flex: 1;
+      text-align: center;
+      padding: 18px;
+      font-weight: 800;
+      font-size: 17px;
+      text-decoration: none;
+      color: var(--cw-white);
+      transition: var(--cw-transition);
+    }
+    .mobile-order-bar .call { background: var(--cw-blue-dark); }
+    .mobile-order-bar .order { background: var(--cw-accent); }
+    .mobile-order-bar a:active { opacity: 0.8; transform: scale(0.98); }
+
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 1024px) {
+      .features, .stats, .steps-grid, .info-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .header-main { flex-direction: column; gap: 15px; padding: 15px 20px; }
+      .site-nav ul { flex-direction: column; align-items: center; gap: 8px; }
+      .site-nav a { width: 100%; text-align: center; padding: 10px; }
+      .hero { min-height: 500px; }
+      .product-card { text-align: center; justify-content: center; flex-direction: column; padding: 30px 20px; }
+      .product-img { width: 240px; }
+      .features, .stats, .steps-grid, .info-grid { grid-template-columns: 1fr; }
+      .footer-grid { text-align: center; }
+      .footer-col { display: flex; flex-direction: column; align-items: center; }
+      .mobile-order-bar { display: flex; }
+      body { padding-bottom: 75px; }
+    }
   </style>
 </head>
-<body>
+<body class="has-mobile-order-bar">
+
   <header class="site-header">
-    <div class="site-header__inner">
+    <div class="header-top">
+      <div class="top-left">Бровары &bull; Киев</div>
+      <div class="top-right">RU / <a href="/ua/" style="color:white; text-decoration:none;">UA</a></div>
+    </div>
+    <div class="header-main">
       <a href="./" class="site-header__logo">💧 Crystal Water</a>
-      <div class="site-header__phones">
-        <a href="tel:+380637886880">(063) 788-68-80</a>
-        <a href="tel:+380635304050">(063) 530-40-50</a>
-      </div>
       <nav class="site-nav">
         <ul>
           <li><a href="./" class="is-active">Доставка воды</a></li>
           <li><a href="uslugi-i-tseny.html">Цены</a></li>
-          <li><a href="tekhnologii-ochistki.html">Технологии очистки</a></li>
-          <li><a href="articles.html">Статьи о воде</a></li>
+          <li><a href="tekhnologii-ochistki.html">Технологии</a></li>
+          <li><a href="articles.html">Статьи</a></li>
           <li><a href="o-nas.html">Контакты</a></li>
         </ul>
       </nav>
+      <div class="site-header__phones">
+        <a href="tel:+380637886880">(063) 788-68-80</a>
+        <a href="tel:+380635304050">(063) 530-40-50</a>
+      </div>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero__content">
-      <h1>Кристально чистая вода с доставкой в Бровары и Киев</h1>
-      <p>Профессиональная многоступенчатая очистка, обратный осмос и озонирование. Забота о вашем здоровье в каждой капле.</p>
-      <a href="uslugi-i-tseny.html" class="btn-main">Заказать воду сейчас</a>
+      <h1>Кристально чистая вода с доставкой в <span style="color:var(--cw-accent)">Бровары и Киев</span></h1>
+      <p>Премиальная вода с 8-ступенчатой системой очистки. Идеальный вкус, абсолютная безопасность и доставка прямо к вашей двери.</p>
+      <a href="uslugi-i-tseny.html" class="btn-main">Заказать первую бутыль бесплатно!</a>
     </div>
   </section>
 
+  <section class="intro">
+    <h2>Доставка чистой питьевой воды на дом и в офис</h2>
+    <p>Мы предлагаем воду высокого качества, которая проходит через систему обратного осмоса и озоновую стерилизацию. Это гарантирует отсутствие вредных примесей, хлора и бактерий.</p>
+    <p>Удобный сервис доставки по городу Бровары и Киеву. Работаем в вечернее время (после 20:00), чтобы вы могли получить заказ в самое удобное время.</p>
+  </section>
+
+  <div class="trust-banner">
+    <h2>🏆 18+ лет на рынке</h2>
+    <p>Тысячи довольных клиентов доверяют нам здоровье своих семей на протяжении почти двух десятилетий.</p>
+  </div>
+
   <section class="features">
     <div class="feature-card">
-      <h3>Эталонная чистота</h3>
-      <p>Используем систему обратного осмоса и озоновую стерилизацию, удаляя 99.9% всех загрязнений, бактерий и вирусов.</p>
+      <h3>💎 Высокое качество</h3>
+      <p>Многоступенчатая очистка гарантирует стабильный состав и природную мягкость воды.</p>
     </div>
     <div class="feature-card">
-      <h3>Польза в каждой капле</h3>
-      <p>Восстанавливаем правильный минеральный баланс, чтобы вода была не только чистой, но и полезной для вашего организма.</p>
+      <h3>💰 Выгодная цена</h3>
+      <p>Доступная стоимость при высочайшем стандарте очистки. Первая бутыль для новых клиентов — в подарок!</p>
     </div>
     <div class="feature-card">
-      <h3>Быстрая доставка</h3>
-      <p>Налаженная логистика по Броварам и Киеву. Привезем воду точно в срок, чтобы ваши кулеры никогда не пустовали.</p>
+      <h3>🚚 Оперативный сервис</h3>
+      <p>Точная доставка в Броварах и Киеве. Мы ценим ваше время и привозим воду строго по графику.</p>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-item">
+      <span class="number">1500+</span>
+      <span class="label">Постоянных клиентов</span>
+    </div>
+    <div class="stat-item">
+      <span class="number">50 000+</span>
+      <span class="label">Бутылей доставлено</span>
+    </div>
+    <div class="stat-item">
+      <span class="number">18+</span>
+      <span class="label">Лет опыта</span>
+    </div>
+  </section>
+
+  <section class="purification">
+    <h2>8 ступеней идеальной очистки</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h4>Механика</h4>
+          <p>Удаление песка, ржавчины и крупных взвесей.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h4>Угольный фильтр</h4>
+          <p>Полное удаление хлора и органических соединений.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h4>Обратный осмос</h4>
+          <p>Удаление 99% всех растворенных примесей и солей.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <h4>Озонирование</h4>
+          <p>Мощная стерилизация от вирусов и бактерий.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-text">
+          <h4>Кислород</h4>
+          <p>Насыщение воды O2 для свежести и вкуса.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">6</div>
+        <div class="step-text">
+          <h4>Минерализация</h4>
+          <p>Возврат необходимых Mg, Ca и K в точной дозе.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">7</div>
+        <div class="step-text">
+          <h4>Баланс pH</h4>
+          <p>Установка идеального уровня pH 7.5.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">8</div>
+        <div class="step-text">
+          <h4>УФ-финиш</h4>
+          <p>Финальная стерилизация перед розливом.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="product-card">
+      <div class="product-info">
+        <h2>💧 Бутыль 19 литров</h2>
+        <p>Оптимальный выбор для дома и офиса. Экологичная многоразовая тара, идеально подходящая для любого кулера.</p>
+        <div class="product-price">100 грн <span>/ шт.</span></div>
+        <a href="tel:+380637886880" class="btn-main">Заказать доставку</a>
+      </div>
+      <img src="https://crystalwater.kiev.ua/images/bottle_articles.min.png" alt="Бутыль 19 л" class="product-img">
+    </div>
+  </section>
+
+  <section class="info-grid">
+    <div class="info-banner">
+      <h3>🔄 Как мы работаем</h3>
+      <p>Оставьте заявку &rarr; Мы привозим воду в удобное время (после 20:00 в Броварах) &rarr; Вы наслаждаетесь чистотой.</p>
+    </div>
+    <div class="info-banner">
+      <h3>📜 Гарантия качества</h3>
+      <p>Вся наша продукция сертифицирована СЭС и соответствует государственным стандартам качества.</p>
+    </div>
+    <div class="info-banner">
+      <h3>💎 Чистота состава</h3>
+      <p>Никакого хлора, тяжелых металлов или посторонних запахов. Только чистая H2O.</p>
+    </div>
+    <div class="info-banner">
+      <h3>🧪 Оптимальный pH</h3>
+      <p>Вода с показателем pH 7.5 — идеальный баланс для здоровья вашего организма.</p>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="footer-links">
-      <a href="uslugi-i-tseny.html">Цены</a>
-      <a href="tekhnologii-ochistki.html">Технологии</a>
-      <a href="articles.html">Статьи</a>
-      <a href="o-nas.html">Контакты</a>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Crystal Water</h3>
+        <p>Доставка премиальной очищенной воды в Броварах и Киеве. Забота о здоровье в каждой капле.</p>
+        <div style="display:flex; gap:10px; margin-top:15px;">
+          <a href="./">Главная</a>
+          <a href="uslugi-i-tseny.html">Цены</a>
+          <a href="tekhnologii-ochistki.html">Технологии</a>
+          <a href="articles.html">Статьи</a>
+          <a href="o-nas.html">Контакты</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Свяжитесь с нами</h3>
+        <a href="tel:+380637886880">📞 +38 (063) 788-68-80</a>
+        <a href="tel:+380635304050">📞 +38 (063) 530-40-50</a>
+        <a href="https://t.me/CrystalWaterBro_bot" target="_blank">✈️ Telegram: @CrystalWaterBro_bot</a>
+      </div>
+      <div class="footer-col">
+        <h3>Адрес и график</h3>
+        <p>ул. Кооперативная, 3 А, Бровары</p>
+        <p>Пн-Пт: 08:00 - 20:00</p>
+        <p>Сб-Вс: 09:00 - 17:00</p>
+        <div style="display:flex; gap:10px; margin-top:10px;">
+          <a href="https://www.instagram.com/crystalwater.brovary/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/crystalwater.brovary/" target="_blank">Facebook</a>
+        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-      © 2025 Crystal Water. Кришталево-чиста питна вода.
+      © 2025 Crystal Water. Кришталево-чиста питна вода. Все права защищены.
     </div>
   </footer>
+
+  <div class="mobile-order-bar">
+    <a href="tel:+380637886880" class="call">📞 Позвонить</a>
+    <a href="https://t.me/CrystalWaterBro_bot" class="order">🛒 Заказать в TG</a>
+  </div>
+
 </body>
 </html>
