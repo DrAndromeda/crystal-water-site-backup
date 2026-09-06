@@ -13,7 +13,140 @@
       --shadow: 0 10px 28px rgba(6, 48, 84, 0.16);
       --max: 1160px;
       --radius: 16px;
+      --cw-blue-dark: #0f5f96;
+      --cw-blue: #1e88c7;
+      --cw-accent: #00c2e6;
+      --cw-white: #ffffff;
+      --cw-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    /* --- COMPACT HEADER --- */
+    .site-header {
+      background: var(--cw-blue-dark);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.15);
+    }
+    .header-top {
+      background: rgba(0,0,0,0.2);
+      color: var(--cw-white);
+      font-size: 13px;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      gap: 20px;
+    }
+    .site-header__logo {
+      color: var(--cw-white);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+    .site-header__phones {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .site-header__phones a {
+      color: var(--cw-white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 17px;
+      transition: var(--cw-transition);
+      padding: 5px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    .site-header__phones a:hover { background: rgba(255,255,255,0.1); color: var(--cw-accent); }
+    .site-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 8px;
+    }
+    .site-nav a {
+      color: var(--cw-white);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      font-size: 14px;
+      font-weight: 600;
+      transition: var(--cw-transition);
+      white-space: nowrap;
+    }
+    .site-nav a:hover, .site-nav a.is-active {
+      background: var(--cw-white);
+      color: var(--cw-blue-dark);
+    }
+
+    /* --- COMPACT FOOTER --- */
+    .site-footer {
+      background: var(--cw-blue-dark);
+      color: var(--cw-white);
+      padding: 80px 20px 20px;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+    .footer-col h3 { color: var(--cw-white); font-size: 22px; margin-bottom: 25px; border-bottom: 2px solid var(--cw-accent); display: inline-block; padding-bottom: 5px; font-weight: 800; }
+    .footer-col p, .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 16px; display: block; margin-bottom: 12px; transition: var(--cw-transition); }
+    .footer-col a:hover { color: var(--cw-accent); padding-left: 5px; }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    /* --- MOBILE ORDER BAR --- */
+    .mobile-order-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2000;
+      display: none;
+      box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
+    }
+    .mobile-order-bar a {
+      flex: 1;
+      text-align: center;
+      padding: 18px;
+      font-weight: 800;
+      font-size: 17px;
+      text-decoration: none;
+      color: var(--cw-white);
+      transition: var(--cw-transition);
+    }
+    .mobile-order-bar .mob-call { background: var(--cw-blue-dark); }
+    .mobile-order-bar .mob-tg { background: var(--cw-accent); }
+    .mobile-order-bar a:active { opacity: 0.8; transform: scale(0.98); }
 
     .value-blocks {
       display: grid;
@@ -738,6 +871,12 @@
       .order-grid,
       .info-grid,
       .footer-grid { grid-template-columns: 1fr; }
+      .header-main { flex-direction: column; gap: 15px; padding: 15px 20px; }
+      .site-nav ul { flex-direction: column; align-items: center; gap: 8px; }
+      .site-nav a { width: 100%; text-align: center; padding: 10px; }
+      .footer-grid { text-align: center; }
+      .footer-col { display: flex; flex-direction: column; align-items: center; }
+      .mobile-order-bar { display: flex; }
       .strip,
       .cards,
       .steps,
