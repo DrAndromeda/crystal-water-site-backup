@@ -165,7 +165,41 @@
       .cards, .stats, .steps, .banners { grid-template-columns: 1fr; }
       .hero h1 { font-size: 36px; }
       .nav { display: none; }
+      .hamburger { display: flex; }
+      .header .container { position: relative; }
+      .nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #1a6bb0;
+        padding: 12px 20px;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        z-index: 200;
+      }
+      .nav.open a { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
     }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
   </style>
 
   <meta property="og:title" content="Доставка води в Бровари та Київ ❘ Crystal Water" />
@@ -196,7 +230,10 @@
         <div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#78d0ff,#2d89d7);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;box-shadow:0 3px 10px rgba(0,0,0,0.2);">💧</div>
         <div style="font-size:15px;font-weight:700;color:white;text-transform:none;letter-spacing:0.3px;">Кришталево-чиста питна вода</div>
       </a>
-      <nav class="nav">
+      <button class="hamburger" id="hamburger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
         <a href="/ua/">Головна</a>
         <a href="/ua/prices.html">Ціни</a>
         <a href="/ua/tech.html">Технології</a>
@@ -498,5 +535,24 @@
       <div><a style="color:#8bc2f0;text-decoration:none;" href="/ua/sitemap.xml">Карта сайту</a></div>
     </div>
   </footer>
+</body>
+</html><script>
+  (function() {
+    var burger = document.getElementById('hamburger');
+    var nav = document.getElementById('nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      nav.classList.toggle('open');
+      burger.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !burger.contains(e.target)) {
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+      }
+    });
+  })();
+</script>
 </body>
 </html>
