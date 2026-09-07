@@ -44,9 +44,6 @@
     /* --- HEADER --- */
     .site-header {
       background: var(--cw-blue-dark);
-      
-      
-      0;
       box-shadow: 0 2px 15px rgba(0,0,0,0.15);
     }
     .header-main {
@@ -144,33 +141,7 @@
     .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--cw-blue); color: var(--cw-white); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
     .review-author span { font-weight: 600; color: var(--cw-blue-dark); }
 
-    /* --- PRODUCT --- */
-    .product { padding: 30px 20px; }
-    .product-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--cw-white);
-      border-radius: 40px;
-      padding: 40px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid rgba(30,136,199,0.1);
-    }
-    .product-info { flex: 1; }
-    .product-info h2 { color: var(--cw-blue-dark); font-size: 32px; margin-bottom: 12px; }
-    .product-info p { color: var(--cw-text-muted); font-size: 17px; line-height: 1.6; }
-    .product-price { font-size: 36px; font-weight: 900; color: var(--cw-accent); margin: 20px 0; }
-    .product-price span { font-size: 16px; font-weight: 400; color: var(--cw-text-muted); }
-    .product-img { width: 280px; height: auto; object-fit: contain; }
 
-    /* --- INFO GRID --- */
-    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
-    .info-banner { background: var(--cw-blue-light); border-radius: 16px; padding: 20px; }
-    .info-banner h3 { color: var(--cw-blue-dark); margin-bottom: 10px; font-size: 20px; }
-    .info-banner p { color: var(--cw-text-muted); font-size: 15px; line-height: 1.6; }
 
     /* --- HEADER --- */
     .hero {
@@ -301,6 +272,153 @@
       margin-bottom: 10px;
     }
     .stat-item .label { font-size: 16px; opacity: 0.8; font-weight: 500; }
+
+    /* --- SEO BENEFITS --- */
+    .seo-benefits { padding: 20px 0; }
+    .seo-benefits .seo-sub {
+      text-align: center;
+      font-size: 13px;
+      color: var(--cw-text-muted);
+      margin: 8px 0 20px;
+    }
+    .seo-benefits h2 {
+      font-size: 24px;
+      color: var(--cw-blue-dark);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .seo-benefits ul.seo-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: grid;
+      gap: 12px;
+    }
+    .seo-benefits ul.seo-list li {
+      padding: 12px 16px;
+      background: var(--cw-blue-light);
+      border-radius: 12px;
+      font-size: 16px;
+      color: var(--cw-text);
+    }
+    .seo-benefits .seo-quote {
+      background: var(--cw-white);
+      border: 2px solid var(--cw-blue-light);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .seo-benefits .seo-quote p {
+      font-size: 15px;
+      color: var(--cw-text);
+      line-height: 1.7;
+      font-style: italic;
+    }
+    .seo-benefits .seo-quote p + p { margin-top: 12px; }
+    .seo-benefits .seo-ph-box {
+      background: var(--cw-blue-light);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+    .seo-benefits .seo-ph-box p {
+      font-size: 16px;
+      color: var(--cw-text);
+      line-height: 1.7;
+    }
+    .seo-benefits .seo-tech-box {
+      background: var(--cw-white);
+      border: 2px solid var(--cw-blue-light);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+    .seo-benefits .seo-tech-box h3 {
+      font-size: 18px;
+      color: var(--cw-blue-dark);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .seo-benefits .seo-tech-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+      text-align: center;
+    }
+    .seo-benefits .seo-tech-box ul li {
+      padding: 10px;
+      font-size: 16px;
+      color: var(--cw-text);
+    }
+    .seo-benefits .seo-cta-banner {
+      background: linear-gradient(135deg, var(--cw-accent), var(--cw-blue));
+      border-radius: 16px;
+      padding: 28px;
+      margin: 20px 0;
+      text-align: center;
+      color: var(--cw-white);
+    }
+    .seo-benefits .seo-cta-banner h3 {
+      font-size: 22px;
+      margin: 0 0 12px;
+    }
+    .seo-benefits .seo-cta-banner p {
+      font-size: 16px;
+      margin: 0;
+      opacity: 0.95;
+    }
+    .seo-benefits .seo-cta-banner ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .seo-benefits .seo-cta-banner ul li {
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 10px 18px;
+      font-size: 15px;
+    }
+    .seo-benefits .seo-phone-banner {
+      background: var(--cw-blue-dark);
+      border-radius: 16px;
+      padding: 28px;
+      margin: 20px 0;
+      text-align: center;
+      color: var(--cw-white);
+    }
+    .seo-benefits .seo-phone-banner p {
+      font-size: 20px;
+      margin: 0 0 12px;
+      font-weight: 700;
+    }
+    .seo-benefits .seo-phone-banner .seo-phone {
+      font-size: 26px;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+    .seo-benefits .seo-final {
+      padding: 24px 0;
+      text-align: center;
+    }
+    .seo-benefits .seo-final p {
+      font-size: 16px;
+      color: var(--cw-text);
+      line-height: 1.8;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .seo-benefits .seo-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
     /* --- PURIFICATION --- */
     .purification { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
@@ -437,22 +555,51 @@
       .features, .stats, .steps-grid, .info-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
+    @media (max-width: 900px) {
+      .site-header__phones { display: none; }
+    }
+
     @media (max-width: 768px) {
-      .site-header { padding: 8px 12px !important; }
-      .header-main { flex-direction: row !important; gap: 6px; padding: 6px 12px; flex-wrap: wrap; justify-content: center; }
-      .site-nav ul { flex-direction: row !important; flex-wrap: wrap; justify-content: center; gap: 4px; }
-      .site-nav a { font-size: 12px; padding: 5px 10px; white-space: nowrap; }
-      .hero { min-height: 500px; }
-      .product-card { text-align: center; justify-content: center; flex-direction: column; padding: 30px 20px; }
-      .product-img { width: 240px; }
+      .site-header { padding: 6px 10px !important; }
+      .header-main { flex-direction: row !important; gap: 4px; padding: 4px 8px; flex-wrap: wrap; justify-content: center; }
+      .site-header__logo { font-size: 18px; white-space: nowrap; }
+      .site-nav ul { flex-direction: row !important; flex-wrap: wrap; justify-content: center; gap: 3px; }
+      .site-nav a { font-size: 11px; padding: 4px 8px; white-space: nowrap; }
+      .hero { min-height: 400px; padding: 40px 16px; }
+      .hero__bottle { width: 160px; }
+      .hero h1 { font-size: clamp(22px, 5vw, 32px); }
+      .btn-main { padding: 14px 28px; font-size: 16px; }
+      .product-card { text-align: center; justify-content: center; flex-direction: column; padding: 20px 16px; }
+      .product-card .product-price { font-size: 32px; }
+      .product-img { width: 180px; }
+      .how-grid { grid-template-columns: 1fr; gap: 16px; }
+      .how-step { padding: 16px 16px; }
       .features, .stats, .steps-grid, .info-grid { grid-template-columns: 1fr; }
+      .purification { padding: 30px 16px; }
+      .step-card { padding: 16px 16px; }
       .site-footer { padding: 30px 16px 16px; }
       .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 24px; margin-bottom: 20px; }
       .footer-col { display: flex; flex-direction: column; align-items: center; }
       .footer-col h3 { font-size: 18px; margin-bottom: 12px; }
       .footer-col p, .footer-col a { font-size: 14px; }
       .mobile-order-bar { display: flex; }
-      body { padding-bottom: 60px; }
+      .mobile-order-bar a { font-size: 14px; padding: 14px; }
+      body { padding-bottom: 56px; }
+    }
+
+    @media (max-width: 480px) {
+      .site-header__logo { font-size: 15px; }
+      .site-nav a { font-size: 10px; padding: 3px 6px; }
+      .hero { min-height: 340px; }
+      .hero__bottle { width: 120px; }
+      .hero h1 { font-size: clamp(18px, 5vw, 24px); }
+      .hero p { font-size: clamp(14px, 3vw, 16px); }
+      .btn-main { padding: 12px 20px; font-size: 14px; }
+      .product-info h2 { font-size: 24px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .review-card { padding: 16px; }
+      .stats { grid-template-columns: 1fr; gap: 16px; }
+      .stat-item .number { font-size: 32px; }
     }
   </style>
   <link rel="stylesheet" href="css/style-remaster.css">
@@ -522,62 +669,55 @@
 
 
   <section class="seo-benefits">
-    <div class="container" style="max-width:1100px;margin:0 auto;padding:0 20px;">
-      <!-- Quality banner -->
-      <p style="text-align:center;font-size:13px;color:var(--cw-text-muted);margin:8px 0 20px;">качество воды для доставки в Броварах</p>
+    <div class="seo-container">
+      <p class="seo-sub">качество воды для доставки в Броварах</p>
 
-      <h2 style="font-size:24px;color:var(--cw-blue-dark);text-align:center;margin-bottom:16px;">НАША ДОСТАВКА ВОДЫ В БРОВАРАХ ПРИЗНАНА ЛУЧШЕЙ ПОСКОЛЬКУ:</h2>
-      <ul style="list-style:none;padding:0;margin:0 0 24px;display:grid;gap:12px;">
-        <li style="padding:12px 16px;background:var(--cw-blue-light);border-radius:12px;font-size:16px;color:var(--cw-text);">✅ Проходит <strong>8 этапов очистки и контроля качества воды</strong>.</li>
-        <li style="padding:12px 16px;background:var(--cw-blue-light);border-radius:12px;font-size:16px;color:var(--cw-text);">✅ Вода восстанавливает естественный <strong>водно-соленой баланс</strong> организма человека.</li>
-        <li style="padding:12px 16px;background:var(--cw-blue-light);border-radius:12px;font-size:16px;color:var(--cw-text);">✅ Рекомендована для регулярного употребления <strong>детям, старикам и людям ведущим активный или малоподвижный образ жизни</strong>.</li>
-        <li style="padding:12px 16px;background:var(--cw-blue-light);border-radius:12px;font-size:16px;color:var(--cw-text);">✅ Наша чистая, вкусная вода по вкусовым качествам <strong>схожа с талой водой</strong>.</li>
+      <h2>НАША ДОСТАВКА ВОДЫ В БРОВАРАХ ПРИЗНАНА ЛУЧШЕЙ ПОСКОЛЬКУ:</h2>
+      <ul class="seo-list">
+        <li>✅ Проходит <strong>8 этапов очистки и контроля качества воды</strong>.</li>
+        <li>✅ Вода восстанавливает естественный <strong>водно-соленой баланс</strong> организма человека.</li>
+        <li>✅ Рекомендована для регулярного употребления <strong>детям, старикам и людям ведущим активный или малоподвижный образ жизни</strong>.</li>
+        <li>✅ Наша чистая, вкусная вода по вкусовым качествам <strong>схожа с талой водой</strong>.</li>
       </ul>
 
-      <div style="background:var(--cw-white);border:2px solid var(--cw-blue-light);border-radius:16px;padding:24px;margin:20px 0;text-align:center;">
-        <p style="font-size:15px;color:var(--cw-text);line-height:1.7;font-style:italic;">
-          «Кришталево-чиста питна вода» очищенная по технологиям <strong>обратный осмос и озоновая стерилизация</strong>, способствует естественному оздоровлению организма и стимуляции иммунитета человека. Это лучшая бутилированная вода которая не содержит в себе никаких вредных веществ и примесей, а ее состав идеален для <strong>кислотно-щелочного баланса</strong> организма.
-        </p>
-        <p style="font-size:15px;color:var(--cw-text);line-height:1.7;font-style:italic;margin-top:12px;">
-          «Кришталево-чиста» навсегда устраняет проблемы со здоровьем, которые не могли пройти годами!
-        </p>
+      <div class="seo-quote">
+        <p>«Кришталево-чиста питна вода» очищенная по технологиям <strong>обратный осмос и озоновая стерилизация</strong>, способствует естественному оздоровлению организма и стимуляции иммунитета человека. Это лучшая бутилированная вода которая не содержит в себе никаких вредных веществ и примесей, а ее состав идеален для <strong>кислотно-щелочного баланса</strong> организма.</p>
+        <p>«Кришталево-чиста» навсегда устраняет проблемы со здоровьем, которые не могли пройти годами!</p>
       </div>
 
-      <p style="text-align:center;font-size:13px;color:var(--cw-text-muted);margin:20px 0 10px;">состав воды и доставка воды Бровары</p>
+      <p class="seo-sub">состав воды и доставка воды Бровары</p>
 
-      <div style="background:var(--cw-blue-light);border-radius:16px;padding:24px;margin:20px 0;">
-        <p style="font-size:16px;color:var(--cw-text);line-height:1.7;">
-          Вода «Кришталево-чиста» благодаря <strong>высокому уровню очистки</strong>, обладает отличными вкусовыми показателями и имеет идеальный для организма человека <strong>кислотно-щелочной баланс (уровень pH)</strong>.
-        </p>
+      <div class="seo-ph-box">
+        <p>Вода «Кришталево-чиста» благодаря <strong>высокому уровню очистки</strong>, обладает отличными вкусовыми показателями и имеет идеальный для организма человека <strong>кислотно-щелочной баланс (уровень pH)</strong>.</p>
       </div>
 
-      <div style="background:var(--cw-white);border:2px solid var(--cw-blue-light);border-radius:16px;padding:24px;margin:20px 0;">
-        <h3 style="font-size:18px;color:var(--cw-blue-dark);margin-bottom:12px;text-align:center;">Мы обеспечиваем лучшую очистку воды самыми востребованными мировыми технологиями:</h3>
-        <ul style="list-style:none;padding:0;margin:8px 0;text-align:center;">
-          <li style="padding:10px;font-size:16px;color:var(--cw-text);">🔬 <strong>Система обратного осмоса</strong> (обратно осмотическая)</li>
-          <li style="padding:10px;font-size:16px;color:var(--cw-text);">💨 <strong>Озоновая стерилизация</strong> (озонирование)</li>
+      <div class="seo-tech-box">
+        <h3>Мы обеспечиваем лучшую очистку воды самыми востребованными мировыми технологиями:</h3>
+        <ul>
+          <li>🔬 <strong>Система обратного осмоса</strong> (обратно осмотическая)</li>
+          <li>💨 <strong>Озоновая стерилизация</strong> (озонирование)</li>
         </ul>
       </div>
 
-      <div style="background:linear-gradient(135deg,var(--cw-accent),var(--cw-blue));border-radius:16px;padding:28px;margin:20px 0;text-align:center;color:var(--cw-white);">
-        <h3 style="font-size:22px;margin:0 0 12px;">🏪 ЗДЕСЬ ВЫ МОЖЕТЕ КУПИТЬ БУТИЛИРОВАННУЮ ВОДУ С БЕСПЛАТНОЙ ДОСТАВКОЙ В БРОВАРАХ</h3>
-        <p style="font-size:16px;margin:0;opacity:0.95;">У нас Вы можете купить воду любым удобным для вас способом:</p>
-        <ul style="list-style:none;padding:0;margin:16px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;">
-          <li style="background:rgba(255,255,255,0.2);border-radius:20px;padding:10px 18px;font-size:15px;">🚚 Доставка воды Бровары на дом либо в офис</li>
-          <li style="background:rgba(255,255,255,0.2);border-radius:20px;padding:10px 18px;font-size:15px;">🏙️ Доставка воды Киев на дом или в офис</li>
-          <li style="background:rgba(255,255,255,0.2);border-radius:20px;padding:10px 18px;font-size:15px;">📍 Доставка воды в броварской район (по личной договоренности и при оптовом заказе)</li>
+      <div class="seo-cta-banner">
+        <h3>🏪 ЗДЕСЬ ВЫ МОЖЕТЕ КУПИТЬ БУТИЛИРОВАННУЮ ВОДУ С БЕСПЛАТНОЙ ДОСТАВКОЙ В БРОВАРАХ</h3>
+        <p>У нас Вы можете купить воду любым удобным для вас способом:</p>
+        <ul>
+          <li>🚚 Доставка воды Бровары на дом либо в офис</li>
+          <li>🏙️ Доставка воды Киев на дом или в офис</li>
+          <li>📍 Доставка воды в броварской район (по личной договоренности и при оптовом заказе)</li>
         </ul>
       </div>
 
-      <p style="text-align:center;font-size:13px;color:var(--cw-text-muted);margin:20px 0 10px;">наши сертификаты качества доставки воды Бровары</p>
+      <p class="seo-sub">наши сертификаты качества доставки воды Бровары</p>
 
-      <div style="background:var(--cw-blue-dark);border-radius:16px;padding:28px;margin:20px 0;text-align:center;color:var(--cw-white);">
-        <p style="font-size:20px;margin:0 0 12px;font-weight:700;">📞 Оформите заказ воды на дом в Броварах в любое комфортное для Вас время</p>
-        <p style="font-size:26px;margin:0;font-weight:800;letter-spacing:2px;">+380637886880 / +380635304050</p>
+      <div class="seo-phone-banner">
+        <p>📞 Оформите заказ воды на дом в Броварах в любое комфортное для Вас время</p>
+        <p class="seo-phone">+380637886880 / +380635304050</p>
       </div>
 
-      <div style="padding:24px 0;text-align:center;">
-        <p style="font-size:16px;color:var(--cw-text);line-height:1.8;font-style:italic;max-width:800px;margin:0 auto;">
+      <div class="seo-final">
+        <p>
           <em>Вода – это источник жизни, не лишайте свой организм в возможности быть абсолютно здоровым.</em><br><br>
           <strong>Доставка воды в Броварах «Кришталево-чиста» для Вашего долголетия!</strong><br><br>
           Чтобы заказать воду в городе Бровары, просто позвоните нам прямо сейчас!
