@@ -5,6 +5,43 @@ Production: https://crystalwater.kiev.ua/ (legacy live MODX site; preserve as so
 Staging: https://drandromeda.github.io/crystal-water-site-backup/  
 Repository: https://github.com/DrAndromeda/crystal-water-site-backup
 
+
+
+## 0. Obsidian handoff and repository map — added 2026-11-12
+
+The owner supplied two Obsidian notes. Treat them as project context, not as proof that tasks were deployed.
+
+### Repository and workspace roles
+
+- **Production domain / historical ORIGINAL:** https://crystalwater.kiev.ua/
+- **Prototype / static redesign:** https://drandromeda.github.io/crystal-water-site-backup/
+- **Prototype repository:** https://github.com/DrAndromeda/crystal-water-site-backup (default branch: `main`; this is the repository containing this TODO).
+- **Additional historical/live-site repository recorded in Obsidian:** https://github.com/DrAndromeda/crystalwater.kiev.ua (default branch: `master`). GitHub metadata confirms this repository exists and is public. Its root contains MODX/PHP-era material and operational-looking files; its README currently describes the Seo4Evo MODX package, not a clear static-site handoff. Do not assume this repository is the prototype or the authoritative current source tree. Inspect its tree and commit history carefully before using it.
+- **Historical local workspace path recorded in Obsidian:** `~/.openclaw/workspace/crystal-water-site/`. Verify that this path still exists on the owner's machine before assuming it is the current working clone.
+- Obsidian previously recorded the project as active, priority P3. Treat that as a note status, not a verified deployment status.
+- Historical Obsidian completion claims: 66+ HTML pages, all articles, compact header phone alignment, bottle logo adjustment, and 63/63 article sitemap match. A later note claims 85 pages. These are historical assertions; measure the actual current inventories and report exact counts.
+
+### Security blocker — inspect before cloning or deployment
+
+A GitHub root-directory listing of the public `DrAndromeda/crystalwater.kiev.ua` repository exposed filenames including `.htpasswd`, `.my.cnf`, `kickstart.php`, `php-cgi.core`, and a `manager/` directory. Their contents have not been inspected. This is enough to require a security review; it does **not** prove that credentials are valid or currently usable.
+
+- [ ] Owner/security administrator: determine whether `.htpasswd`, `.my.cnf`, database credentials, hosting credentials, backup installer files, crash/core dumps, or other private operational data were ever committed publicly.
+- [ ] If any real credentials or secrets were present in repository history, rotate/revoke them immediately; removing a file from the latest commit alone does not remove historical exposure.
+- [ ] Review repository history and remove sensitive material from all reachable history using a carefully planned, owner-approved cleanup; coordinate with anyone who cloned/forked it.
+- [ ] Check the public repository for private customer data, database exports, backups, tokens and personal information. Never copy any such data into this prototype repository.
+- [ ] Do not fetch, quote, reproduce, or commit the contents of suspected credential/configuration files as part of this TODO.
+- [ ] Do not run `kickstart.php`, import a backup, or expose the `manager/` area as part of static-site work.
+- [ ] Keep the production MODX backup private and access-controlled. Public visibility of this repository is not proof that the owner intended every operational file to be public.
+
+### Private customer/bot data — never publish
+
+The owner supplied a private Obsidian note describing the legacy `@CrystalWaterBro_bot` customer store. It records that the old bot used a local `clients.json` file at `/Users/Andromeda/bots/crystal-water-bot/clients.json`. The note contained Telegram identifiers and order statistics; those values are intentionally omitted from this public TODO.
+
+- Treat `clients.json`, bot logs, Telegram IDs, order history and customer records as confidential personal/business data.
+- Do not commit, upload to public repositories, place in site assets, expose in HTML/JSON-LD, or include raw customer identifiers in Claude prompts or reports.
+- If bot maintenance requires the file, work only on an owner-authorized private local copy with least-privilege access and a separate backup. Do not assume the historical path still exists.
+- The existence and format of the old file are historical facts from the note; current bot storage and current customer counts must be verified privately before any migration.
+
 ## Instructions and safety rules
 
 - Work in a local clone/working branch. First inspect `git status`, current branch, latest commit and all existing changes. Do not overwrite uncommitted user work.
