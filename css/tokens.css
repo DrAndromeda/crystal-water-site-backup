@@ -60,3 +60,22 @@ iframe[src*="google.com/maps"] { width: 100%; }
   .header-main { flex-wrap: wrap; justify-content: center; }
   .site-header__phones { flex-wrap: wrap; justify-content: center; }
 }
+
+/* Touch targets >= 44x44px for navigation, buttons and footer links (inline text links are exempt) */
+.site-nav a, .site-header__phones a, .site-header__logo, .breadcrumbs a, .lang-switch,
+.btn, .btn-cta, .btn-main, .btn-primary, .btn-secondary, .btn-telegram, .mob-call, .mob-tg, .floating-telegram, .scrollup,
+.cw-btn, .article-card, button, input[type="submit"], select, summary {
+  min-height: 44px; box-sizing: border-box;
+}
+.site-nav a, .site-header__phones a, .site-header__logo, .breadcrumbs a, .lang-switch, .btn, .btn-cta, .btn-main, .btn-primary, .btn-secondary,
+.btn-telegram, .mob-call, .mob-tg, .floating-telegram, .cw-btn { display: inline-flex; align-items: center; justify-content: center; }
+.breadcrumbs a { justify-content: flex-start; }
+.footer-col a, footer a { display: flex; align-items: center; min-height: 44px; }
+.footer-bottom a { display: inline-flex; }
+a[href^="tel:"] { min-width: 44px; }
+input:not([type="checkbox"]):not([type="radio"]), textarea { min-height: 44px; box-sizing: border-box; }
+:where(header, footer, nav) a, .logo, .btn, .btn-primary, .btn-secondary, .btn-telegram, button { min-height: 44px !important; min-width: 44px !important; box-sizing: border-box; }
+:where(header, footer, nav) a { display: inline-flex; align-items: center; justify-content: center; }
+footer a, .footer-col a { justify-content: flex-start; }
+.site-nav a { padding-inline: 12px; }
+address a, main a[href^="tel:"], main a[href^="mailto:"], main a[href*="t.me"], main a[href*="google.com/maps"] { display: inline-flex; align-items: center; min-height: 44px; }

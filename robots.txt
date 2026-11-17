@@ -8,6 +8,7 @@ Disallow: /json-ld-
 Disallow: /header-
 Disallow: /footer-
 Disallow: /hreflang-template.html
+Disallow: /blocks.html
 Disallow: /head-meta-template.html
 
 User-agent: GPTBot
