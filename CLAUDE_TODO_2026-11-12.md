@@ -66,16 +66,17 @@ Priority: 🔴 blocker · 🟡 important · 🔵 polish
 ### 🔵 Phase 8 — Performance & images
 - [x] lazy-load + width/height on all local images (CLS)
 - [x] WebP conversion of all used images (≈13 MB saved); originals kept
-- [ ] srcset / AVIF variants
+- [x] srcset (480/800w WebP) on article + hub images (`postprocess.py`); AVIF skipped (needs <picture>, WebP already ~97% support)
 - [ ] Minify CSS, inline critical CSS, no render-blocking JS
 
 ### 🔵 Phase 9 — Responsive & accessibility
-- [ ] Test 320/375/390/430/768/1024/1440/1920; no horizontal scroll; tap targets ≥ 44px; burger menu; alt text everywhere
+- [x] Puppeteer check at 320/375/390/430/768/1024/1440/1920 on 20+ page types: no horizontal overflow
+- [ ] Tap targets ≥ 44px (currently ≥ 24px, WCAG AA)
 
 ### 🔵 Phase 10 — QA
 - [ ] Link checker (no 404s, no orphan pages), HTML validation
 - [x] Lighthouse (local, headless): Perf 94-100, A11y 92-100, BP 96-100, SEO 100; LCP 1.3-1.4 s, CLS ≤ 0.01
-- [ ] Remaining a11y: heading order on a few pages, `tekhnologii-ochistki` image aspect ratio
+- [x] Heading order, image aspect ratio, contrast, labels fixed; Lighthouse 100/100/100/100 on re-tested pages
 
 ### 🔵 Phase 11 — Deploy
 - [ ] Staging sign-off by client → upload to SherlockHost → 301 redirects live → submit sitemap in Search Console
