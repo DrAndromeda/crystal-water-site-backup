@@ -27,7 +27,8 @@ Priority: 🔴 blocker · 🟡 important · 🔵 polish
 - [ ] Inventory all HTML pages vs. sitemap.xml and legacy site; list missing/duplicate pages (spec says 85+, repo has ~71)
 - [x] Real phones/address are in use (only `IMPROVEMENTS.md` has the fake `+38 (067) 123-45-67` example; update it)
 - [x] Removed `.bak`/`.backup` files and `.bak-articles/`
-- [ ] `articles_updated.html` duplicates `articles.html` (canonical already points to articles.html, disallowed in robots) — delete after owner confirms; `MESSAGE_TO_SEND.txt` still in root
+- [x] Duplicates merged: `prices`→`uslugi-i-tseny`, `tech`→`tekhnologii-ochistki`, `articles_updated` removed (also `ua/about|prices|tech`)
+- [ ] `MESSAGE_TO_SEND.txt` still in root
 - [ ] Missing image `assets/images/obezzarazhivanie-vodi.JPG` (kak-delat-obezzarazhivanie-vodyi.html) — need the file
 - [ ] Confirm URL structure decision (`blog-structure-decision.md`) before any renames; set up 301 map from legacy URLs
 
@@ -38,7 +39,8 @@ Priority: 🔴 blocker · 🟡 important · 🔵 polish
 ### 🔴 Phase 3 — SEO foundation
 - [ ] Unique title/description/H1/canonical on every page (script a check, fail on duplicates/length)
 - [x] `sitemap.xml` regenerated (71 URLs, fixed broken `uslugi-i-tseny` URL, added index); `robots.txt` cleaned (invalid `Host:` removed, AI bots allowed); `llms.txt` + `llms-full.txt` added
-- [ ] `sitemap-ua.xml` only 7 URLs — UA translations missing; verify `hreflang` ru/ua pairs
+- [x] Full UA version: 68 pages in `/ua/` (`build_ua.py`), self canonical + hreflang ru/uk/x-default on both sides, `sitemap-ua.xml` has 69 URLs
+- [ ] UA translations are machine-made — native-speaker proofreading before launch
 - [ ] BreadcrumbList on every page
 
 ### 🟡 Phase 4 — Structured data
@@ -47,7 +49,8 @@ Priority: 🔴 blocker · 🟡 important · 🔵 polish
 - [ ] Validate with Rich Results Test / schema validator
 
 ### 🟡 Phase 5 — Design system & blocks
-- [ ] One shared stylesheet (consolidate `MASTER-styles.css`, `header*.css`, `css/`); CSS variables for palette
+- [x] Inline `<style>` blocks extracted into `css/article-basic.css`, `article-full.css`, `page-core.css`, `page-tech.css`, `css/pages/*`; unused stylesheets removed
+- [ ] Next: merge `style-remaster.css` + shared files into one minified bundle; unify the two `:root` palettes
 - [ ] Blocks: HowItWorks, PriceTable, ServiceCard, OrderForm, FAQBlock, WhyUs, ReviewCarousel, FooterMap
 - [ ] Each: hover/focus/active states, works without JS
 
