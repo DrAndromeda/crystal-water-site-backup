@@ -1,0 +1,73 @@
+/* Reusable content blocks (no JS required). All states: default, hover, focus-visible, active.
+   Demo + markup: blocks.html */
+.cw-block { max-width: 1100px; margin: 40px auto; padding: 0 16px; color: var(--cw-text); }
+.cw-block > h2 { color: var(--cw-blue-dark); margin: 0 0 16px; font-size: clamp(22px, 3vw, 30px); }
+.cw-block p { line-height: 1.65; }
+
+/* HowItWorks */
+.cw-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: step; }
+.cw-steps li { position: relative; padding: 20px 18px 18px 18px; background: var(--cw-blue-light); border-radius: 14px; border: 1px solid #cfe7f5; counter-increment: step; transition: transform .2s, box-shadow .2s; }
+.cw-steps li::before { content: counter(step); display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--cw-blue-dark); color: var(--cw-white); font-weight: 800; margin-bottom: 10px; }
+.cw-steps li:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15, 95, 150, .15); }
+.cw-steps strong { display: block; margin-bottom: 4px; color: var(--cw-blue-dark); }
+
+/* PriceTable: table on desktop, cards on mobile */
+.cw-price-table { width: 100%; border-collapse: collapse; background: var(--cw-white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(15, 95, 150, .1); }
+.cw-price-table caption { text-align: left; font-weight: 700; padding: 0 0 10px; color: var(--cw-blue-dark); }
+.cw-price-table th, .cw-price-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #e3eef6; vertical-align: top; }
+.cw-price-table thead th { background: var(--cw-blue-dark); color: var(--cw-white); }
+.cw-price-table tbody tr:hover { background: var(--cw-blue-light); }
+.cw-price-table td.cw-price { font-weight: 800; color: #006a82; white-space: nowrap; }
+@media (max-width: 640px) {
+  .cw-price-table, .cw-price-table tbody, .cw-price-table tr, .cw-price-table td { display: block; width: 100%; }
+  .cw-price-table thead { position: absolute; left: -9999px; }
+  .cw-price-table tr { border-bottom: 8px solid var(--cw-blue-light); padding: 8px 0; }
+  .cw-price-table td { border: 0; padding: 6px 16px; }
+  .cw-price-table td[data-label]::before { content: attr(data-label) ": "; font-weight: 700; color: var(--cw-text-muted); }
+}
+
+/* ServiceCard */
+.cw-cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.cw-card { display: flex; flex-direction: column; gap: 8px; padding: 20px; background: var(--cw-white); border: 1px solid #d6e8f4; border-radius: 14px; text-decoration: none; color: inherit; transition: box-shadow .2s, transform .2s, border-color .2s; }
+.cw-card:hover { box-shadow: 0 12px 28px rgba(15, 95, 150, .18); transform: translateY(-3px); border-color: var(--cw-blue); }
+.cw-card:active { transform: translateY(0); }
+.cw-card h3 { margin: 0; color: var(--cw-blue-dark); }
+.cw-card .cw-price { font-size: 24px; font-weight: 800; color: #006a82; }
+.cw-card .cw-btn { margin-top: auto; }
+
+.cw-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 22px; border-radius: 10px; background: var(--cw-accent); color: #06324f; font-weight: 700; text-decoration: none; border: 0; cursor: pointer; transition: background .2s, transform .1s; }
+.cw-btn:hover { background: var(--cw-accent-dark); color: var(--cw-white); }
+.cw-btn:active { transform: scale(.98); }
+
+/* FAQBlock: native <details>, works without JS */
+.cw-faq details { background: var(--cw-white); border: 1px solid #d6e8f4; border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+.cw-faq summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 18px; font-weight: 700; color: var(--cw-blue-dark); position: relative; min-height: 24px; }
+.cw-faq summary::-webkit-details-marker { display: none; }
+.cw-faq summary::after { content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 24px; line-height: 1; transition: transform .2s; }
+.cw-faq details[open] summary::after { content: "–"; }
+.cw-faq summary:hover { background: var(--cw-blue-light); }
+.cw-faq details > div, .cw-faq details > p { padding: 0 18px 16px; margin: 0; line-height: 1.65; }
+
+/* WhyUs */
+.cw-why { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); list-style: none; padding: 0; margin: 0; }
+.cw-why li { padding: 18px; border-radius: 14px; background: linear-gradient(180deg, var(--cw-white), var(--cw-blue-light)); border: 1px solid #d6e8f4; transition: transform .2s; }
+.cw-why li:hover { transform: translateY(-3px); }
+.cw-why .cw-ico { font-size: 28px; display: block; margin-bottom: 6px; }
+.cw-why strong { color: var(--cw-blue-dark); display: block; margin-bottom: 4px; }
+
+/* ReviewCarousel: CSS scroll-snap, swipe / keyboard scroll, no JS */
+.cw-reviews { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; }
+.cw-reviews:focus-visible { outline-offset: 4px; }
+.cw-reviews figure { flex: 0 0 min(340px, 85%); margin: 0; scroll-snap-align: start; padding: 20px; background: var(--cw-white); border: 1px solid #d6e8f4; border-radius: 14px; transition: box-shadow .2s; }
+.cw-reviews figure:hover { box-shadow: 0 10px 24px rgba(15, 95, 150, .15); }
+.cw-reviews blockquote { margin: 0 0 10px; line-height: 1.6; }
+.cw-reviews figcaption { color: var(--cw-text-muted); font-size: 14px; }
+
+/* FooterMap */
+.cw-map { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .cw-map { grid-template-columns: 1fr 1.4fr; } }
+.cw-map address { font-style: normal; line-height: 1.8; padding: 18px; background: var(--cw-blue-light); border-radius: 14px; }
+.cw-map iframe { width: 100%; min-height: 320px; border: 0; border-radius: 14px; }
+
+/* Example / note */
+.cw-note { padding: 14px 18px; border-left: 4px solid var(--cw-accent); background: var(--cw-blue-light); border-radius: 8px; margin: 16px 0; }
