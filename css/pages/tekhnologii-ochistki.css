@@ -5,7 +5,7 @@
     .tech-detail .text-col ul { padding-left: 20px; color: #2d4a63; line-height: 1.7; font-size: 15px; }
     .tech-detail .text-col ul li { margin-bottom: 8px; }
     .tech-detail .img-col { display: flex; align-items: center; justify-content: center; padding: 20px; background: #f8fcff; border-left: 1px solid #e6f0f8; }
-    .tech-detail .img-col img { max-width: 100%; height: auto; max-height: 400px; }
+    .tech-detail .img-col img { width: auto; max-width: 100%; height: auto; max-height: 400px; object-fit: contain; }
 
     @media (max-width: 768px) {
       .tech-detail { grid-template-columns: 1fr; }
