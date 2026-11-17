@@ -11,11 +11,15 @@ def info(path, ua):
     crumb = re.search(r'<nav class="breadcrumbs".*?<span>(.*?)</span>', s, re.S)
     h1 = re.search(r'<h1[^>]*>(.*?)</h1>', s, re.S)
     d = re.search(r'name="description" content="([^"]*)"', s)
+    s = re.sub(r'<!--.*?-->', '', s, flags=re.S)
     img = re.search(r'<main.*?<img[^>]*\ssrc="([^"]+)"', s, re.S)
     t = html.unescape(re.sub(r'<[^>]+>', '', (crumb.group(1) if crumb and len(crumb.group(1)) > 8 and crumb.group(1).strip() not in ('Статья', 'Стаття') else h1.group(1)) if h1 else '')).strip()
     d = html.unescape(d.group(1)) if d else ''
     d = d if len(d) <= 110 else d[:107].rsplit(' ', 1)[0] + '…'
     src = img.group(1) if img else 'assets/images/voda.webp'
+    chk = src.lstrip('/') if src.startswith('/') else os.path.normpath(os.path.join(os.path.dirname(path), src))
+    if not os.path.exists(chk): src = 'assets/images/voda.webp'
+    if ua and not src.startswith(('../', 'http')): src = '../' + src
     return t, d, src
 
 def card(slug, t, d, src, ua):
