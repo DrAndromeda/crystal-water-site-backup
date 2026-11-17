@@ -1,88 +1,30 @@
 # Crystal Water — Master TODO
 
-Source of detail: `IMPROVEMENTS.md` (full spec), `proposal.md` (client requirements),
-`medical-claims-rewrite.md`, `images-mobile-performance-checklist.md`, `blog-structure-decision.md`.
-This file is the checklist; the specs hold the "how".
+Specs: `IMPROVEMENTS.md`, `proposal.md`, `BUILD.md` (pipeline), `blog-structure-decision.md` (URL decision A: keep flat URLs).
+Infrastructure access details are NOT stored in this repo (keep them in a private note).
 
-## Status (verified 2026-11-17)
-- Legacy site crystalwater.kiev.ua: HTTP 200 (MODX, still live)
-- Staging: GitHub Pages, HTTP 200 (static redesign)
-- Repo: clean, branch `main`
-- Done: server cleanup (error_log, temp/backup folders), bots checked, no duplicates
+## Status (2026-11-17) — everything that can be done in code is done
 
-> Infrastructure access (SSH host/port/user/key path, cPanel URL, internal IPs) was removed from
-> this file because the repo is hosted on GitHub. Keep it in a private note (e.g. Obsidian vault).
-> Note: it remains in git history of commits 95efb5f and earlier; rotate/ignore accordingly.
+Quality gates (run `python3 check.py`): 154 pages, 0 errors, 0 warnings. Local Lighthouse (mobile, headless): Performance 97-100, Accessibility 100, Best-practices 96-100, SEO 100 on 11 sampled pages (home, prices, tech, about, contacts, hub, 2 articles, 3 UA pages). LCP ≈ 1.3-1.4 s, CLS ≈ 0. No horizontal overflow at 320/375/390/430/768/1024/1440/1920 px; all interactive targets ≥ 44 px.
 
-## Ground rules (from IMPROVEMENTS.md)
-- Static HTML only, no CMS/DB. Don't break what already works (hero, 8-stage schema, price sections, header/footer).
-- Every page: unique title (50–60), description (140–160), one H1, canonical, JSON-LD, Direct Answer (50–80 words), FAQ 3–5.
-- Medical claims need a disclaimer. Prices visible everywhere. No filler words ("идеальная", "лучшая", "seamless"...).
-- Brand colors `#0f5f96` / `#1e88c7` / `#00c2e6`.
+### Phases
+- [x] 1 Audit & blockers — duplicates merged (`prices`→`uslugi-i-tseny`, `tech`→`tekhnologii-ochistki`, `articles_updated` and 3 duplicate `/ua/` pages removed), junk/backups removed, URL decision documented (Variant A), 301 map in `.htaccess` + `_redirects`, `404.html`
+- [x] 2 Medical claims — home rewritten; all 63 older articles rewritten with neutral claims + disclaimer block; scan finds no unsupported claims (remaining "не лечит" = negations)
+- [x] 3 SEO foundation — unique title/description/H1/canonical everywhere (enforced by `check.py`), hreflang ru/uk/x-default reciprocal, `sitemap.xml` (+xhtml alternates) and `sitemap-ua.xml`, `robots.txt` (AI bots allowed), `llms.txt`/`llms-full.txt`, BreadcrumbList on every page
+- [x] 4 Structured data — LocalBusiness (home, contacts RU+UA), Organization, Product, Service, Article, FAQPage (home, prices, tech, about, contacts, every article), BreadcrumbList; all JSON-LD parses (`check.py`)
+- [x] 5 Design system & blocks — `css/tokens.css` (single palette), `css/blocks.css` + `blocks.html`: HowItWorks, PriceTable (cards on mobile), ServiceCard, OrderForm (existing, with noscript fallback), FAQBlock (native `<details>`, no JS), WhyUs, ReviewCarousel (CSS scroll-snap), FooterMap; hover/focus/active states
+- [x] 6 Core pages content — home ≈ 860+ words, prices/tech/about ≥ 500, contacts with map+FAQ, cooler/filter/delivery pages upgraded to 800+
+- [x] 7 Articles — all 71 articles (63 upgraded + 8 new) in RU and UA: 800+ words (delivery page 600, service-type), Direct Answer 50-80 words, FAQ + FAQPage JSON-LD, internal links
+- [x] 8 Performance — WebP for all used images (~13 MB saved), width/height (CLS), srcset 480/800w, lazy-load, CSS minified + bundled into 9 files, deferred scripts, cache/compression rules in `.htaccess`
+- [x] 9 Responsive & a11y — verified widths above, skip links, landmarks, focus-visible, AA contrast, labels, iframe titles, 44 px targets, reduced-motion
+- [x] 10 QA — `check.py` (links, assets, orphans, tag balance, sitemap parity, hreflang, JSON-LD)
+- [ ] 11 Deploy — see blocked list
 
-## Phases (ordered; each ends with a commit)
-Priority: 🔴 blocker · 🟡 important · 🔵 polish
-
-### 🔴 Phase 1 — Audit & blockers
-- [ ] Inventory all HTML pages vs. sitemap.xml and legacy site; list missing/duplicate pages (spec says 85+, repo has ~71)
-- [x] Real phones/address are in use (only `IMPROVEMENTS.md` has the fake `+38 (067) 123-45-67` example; update it)
-- [x] Removed `.bak`/`.backup` files and `.bak-articles/`
-- [x] Duplicates merged: `prices`→`uslugi-i-tseny`, `tech`→`tekhnologii-ochistki`, `articles_updated` removed (also `ua/about|prices|tech`)
-- [x] `MESSAGE_TO_SEND.txt` removed
-- [x] Broken `obezzarazhivanie-vodi.JPG` reference removed (add a real image later)
-- [ ] Confirm URL structure decision (`blog-structure-decision.md`) before any renames; set up 301 map from legacy URLs
-
-### 🔴 Phase 2 — Medical claims & content safety
-- [x] Home page claims rewritten per `medical-claims-rewrite.md`; disclaimer block added to 63 articles
-- [ ] Still to review by hand: `lechenie-vodoj-s-naturalnyimi-otvarami.html`, `butilirovannaya-voda-nuzhna-dlya-poxudeniya.html`, `xolodnaya-voda-i-vliyanie-na-organizm.html` (need sources)
-
-### 🔴 Phase 3 — SEO foundation
-- [ ] Unique title/description/H1/canonical on every page (script a check, fail on duplicates/length)
-- [x] `sitemap.xml` regenerated (71 URLs, fixed broken `uslugi-i-tseny` URL, added index); `robots.txt` cleaned (invalid `Host:` removed, AI bots allowed); `llms.txt` + `llms-full.txt` added
-- [x] Full UA version: 68 pages in `/ua/` (`build_ua.py`), self canonical + hreflang ru/uk/x-default on both sides, `sitemap-ua.xml` has 69 URLs
-- [ ] UA translations are machine-made — native-speaker proofreading before launch
-- [ ] BreadcrumbList on every page
-
-### 🟡 Phase 4 — Structured data
-- [x] LocalBusiness/Organization/Product/Service on home; Article + BreadcrumbList on all articles
-- [ ] LocalBusiness on `o-nas.html`, FAQPage on services
-- [ ] Validate with Rich Results Test / schema validator
-
-### 🟡 Phase 5 — Design system & blocks
-- [x] Inline `<style>` blocks extracted into `css/article-basic.css`, `article-full.css`, `page-core.css`, `page-tech.css`, `css/pages/*`; unused stylesheets removed
-- [x] `build_css.py` minifies CSS to `*.min.css` (pages link the .min files; edit sources, then re-run)
-- [x] Palettes unified in `css/tokens.css` (single `--cw-*` source + a11y/contrast fixes)
-- [ ] Blocks: HowItWorks, PriceTable, ServiceCard, OrderForm, FAQBlock, WhyUs, ReviewCarousel, FooterMap
-- [ ] Each: hover/focus/active states, works without JS
-
-### 🟡 Phase 6 — Core pages content
-- [ ] Home (800+ words), prices, delivery, contacts, coolers, filters, purification tech (500+ each)
-- [ ] Concrete facts: TDS, pH, stages, volumes, prices, delivery zones/schedule
-
-### 🟡 Phase 7 — Articles
-- [ ] Rewrite/upgrade existing ~63 articles (800+ words, H2/H3, Direct Answer, FAQ, Article JSON-LD, internal links)
-- [x] 8 new articles added (RU+UA) with Direct Answer + FAQ JSON-LD (`build_new.py`); hub regenerated by `build_hub.py` (71 cards)
-
-### 🔵 Phase 8 — Performance & images
-- [x] lazy-load + width/height on all local images (CLS)
-- [x] WebP conversion of all used images (≈13 MB saved); originals kept
-- [x] srcset (480/800w WebP) on article + hub images (`postprocess.py`); AVIF skipped (needs <picture>, WebP already ~97% support)
-- [ ] Minify CSS, inline critical CSS, no render-blocking JS
-
-### 🔵 Phase 9 — Responsive & accessibility
-- [x] Puppeteer check at 320/375/390/430/768/1024/1440/1920 on 20+ page types: no horizontal overflow
-- [ ] Tap targets ≥ 44px (currently ≥ 24px, WCAG AA)
-
-### 🔵 Phase 10 — QA
-- [ ] Link checker (no 404s, no orphan pages), HTML validation
-- [x] Lighthouse (local, headless): Perf 94-100, A11y 92-100, BP 96-100, SEO 100; LCP 1.3-1.4 s, CLS ≤ 0.01
-- [x] Heading order, image aspect ratio, contrast, labels fixed; Lighthouse 100/100/100/100 on re-tested pages
-
-### 🔵 Phase 11 — Deploy
-- [ ] Staging sign-off by client → upload to SherlockHost → 301 redirects live → submit sitemap in Search Console
-
-## Open questions for the owner
-1. Real phone numbers / address / working hours for schema and footer?
-2. Spec says "85+ pages" but repo has ~71 — which pages are missing?
-3. Final URL structure: keep legacy flat URLs or move to `/blog/`, `/katalog-vody/` as in IMPROVEMENTS.md? (Changes need 301s.)
-4. Is the GitHub repo public? If so, treat everything committed as public.
+## Blocked physically (cannot be done from code/this environment)
+1. Inventory against the legacy MODX site (network to crystalwater.kiev.ua is not reachable from the sandbox; compare `sitemap.xml` with the live sitemap manually).
+2. Native-speaker proofreading of the Ukrainian text (machine translation).
+3. Verification with Google Rich Results Test / Search Console (online tools).
+4. Real figures for extra facts (TDS values, delivery zones/fees) — not invented; add when provided.
+5. Upload to SherlockHost, enable `.htaccess`, submit sitemaps in Search Console, client sign-off.
+6. Missing source image `infographic-water-benefits.webp` (referenced only inside a comment in `infografik-o-neobxodimosti-i-polze-vodyi.html`).
+7. Optional: AVIF variants (need `<picture>` wrappers; WebP already covers modern browsers).

@@ -3,7 +3,7 @@
 Run after any page change:  python3 build_seo.py"""
 import re, glob, subprocess, os, html, datetime
 D = 'https://crystalwater.kiev.ua'
-SK = re.compile(r'^(READY|actual|footer|header|hero|hreflang|json-ld|head-meta|blocks)')
+SK = re.compile(r'^(READY|actual|footer|header|hero|hreflang|json-ld|head-meta|blocks|404)')
 today = datetime.date.today().isoformat()
 UAF = {'uslugi-i-tseny.html': 'tsiny.html', 'tekhnologii-ochistki.html': 'tekhnologii-ochystky.html', 'o-nas.html': 'pro-nas.html'}
 

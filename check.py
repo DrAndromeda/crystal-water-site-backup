@@ -6,7 +6,7 @@ import re, glob, os, json, sys, collections
 from html.parser import HTMLParser
 
 SK = re.compile(r'^(READY|actual|footer|header|hero|hreflang|json-ld|head-meta)')
-SKIP_PAGES = {'blocks.html'}
+SKIP_PAGES = {'blocks.html', '404.html'}
 pages = [f for f in sorted(glob.glob('*.html') + glob.glob('ua/*.html')) if not SK.match(os.path.basename(f)) and f not in SKIP_PAGES]
 errors, warns = [], []
 E = lambda f, m: errors.append('%s: %s' % (f, m)); W = lambda f, m: warns.append('%s: %s' % (f, m))
@@ -78,6 +78,11 @@ for t, fs in descs.items():
     if len(fs) > 1: E(','.join(fs), 'duplicate description')
 for f in pages:
     if f != 'index.html' and f != 'ua/index.html' and links_to[f] == 0: W(f, 'orphan page (no inbound links)')
+# sitemap parity (inventory): every indexable page listed, nothing listed that does not exist
+smap = set(re.findall(r'<loc>([^<]+)</loc>', open('sitemap.xml', encoding='utf-8').read())) | set(re.findall(r'<loc>([^<]+)</loc>', open('sitemap-ua.xml', encoding='utf-8').read()))
+want = {'https://crystalwater.kiev.ua/' + ('' if f == 'index.html' else f) for f in pages}
+for u in sorted(want - smap): E('sitemap', 'page missing from sitemap: %s' % u)
+for u in sorted(smap - want): E('sitemap', 'sitemap lists non-existent page: %s' % u)
 for m in warns[:60]: print('WARN ', m)
 for m in errors: print('ERROR', m)
 print('%d pages, %d errors, %d warnings' % (len(pages), len(errors), len(warns)))

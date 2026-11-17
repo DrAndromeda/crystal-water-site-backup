@@ -76,6 +76,10 @@ def a11y(s, ua):
         if re.search(r'\srel="', t): return re.sub(r'\srel="([^"]*)"', lambda r: ' rel="%s noopener"' % r.group(1).strip(), t, 1)
         return t[:-1] + ' rel="noopener">'
     s = re.sub(r'<a\b[^>]*target="_blank"[^>]*>', noop, s)
+    s = re.sub(r'(src=")https?://(?:www\.)?youtube\.com/embed/', r'\1https://www.youtube-nocookie.com/embed/', s)
+    if ua:
+        s = re.sub(r'srcset="([^"]*)"', lambda m: 'srcset="%s"' % re.sub(r'(^|, )(?=(?:assets|images)/)', r'\1../', m.group(1)), s)
+    s = re.sub(r'(<img\b[^>]*bottle_real[^>]*style=")(?![^"]*object-fit)', r'\1object-fit:contain;', s)
     s = re.sub(r'<main\b(?![^>]*\sid=)', '<main id="main"', s, 1)
     if ua:
         s = s.replace('Перейти к содержимому', 'Перейти до вмісту').replace('aria-label="Главное меню"', 'aria-label="Головне меню"')
