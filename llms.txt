@@ -1,0 +1,89 @@
+# Crystal Water
+
+> Доставка очищенной питьевой воды (бутыли 19,9 л) в Броварах и Киеве. Многоступенчатая очистка: обратный осмос и озоновая стерилизация.
+
+## Факты
+- Услуга: доставка очищенной питьевой воды в бутылях 19,9 л на дом и в офис в Броварах и Киеве.
+- Марка воды: «Кришталево-чиста питна вода». Очистка: 8 ступеней, обратный осмос, озоновая стерилизация, pH около 7,5.
+- Цены: бутыль 19,9 л — 100 грн; залог за бутыль — 225 грн; помпа — 160 грн; кулер — цена по запросу.
+- Адрес: ул. Кооперативная, 3 А, г. Бровары.
+- Телефоны: +38 (063) 788-68-80, +38 (063) 530-40-50.
+- Telegram: https://t.me/CrystalWaterBro_bot
+- График: Пн—Пт 08:00–20:00, Сб—Вс 09:00–17:00.
+- Языки сайта: русский (основной), украинский (/ua/).
+
+## Основные страницы
+- [Главная](https://crystalwater.kiev.ua/): Доставка воды, цены, схема очистки
+- [Цены](https://crystalwater.kiev.ua/prices.html): Прайс на воду, помпы и кулеры
+- [О нас и контакты](https://crystalwater.kiev.ua/about.html): Адрес, телефоны, график
+- [Технологии очистки](https://crystalwater.kiev.ua/tech.html): 8 ступеней очистки воды
+- [Статьи](https://crystalwater.kiev.ua/articles.html): Каталог статей о воде
+
+## Статьи
+- [Значение воды в жизни человека: почему нельзя игнорировать жажду](https://crystalwater.kiev.ua/3-znachenie-vody-v-zhizni-cheloveka.html)
+- [Связь воды и кальция: как питьевая вода влияет на крепость костей](https://crystalwater.kiev.ua/33-voda-i-kalcij.html)
+- [Озоновая стерилизация воды: максимальная чистота и безопасность](https://crystalwater.kiev.ua/35-ochishchenaya-voda-po-sisteme-ozonovaya-sterilizatsiya.html)
+- [Вода без хлора: как избавиться от химического привкуса и вреда](https://crystalwater.kiev.ua/43-chistaya-voda-izbavlennaya-ot-khlora.html)
+- [Умягчение воды: как избавиться от солей жесткости и накипи](https://crystalwater.kiev.ua/49-ochistka-vody-protsess-umyagcheniya-vody.html)
+- [Купить воду оптом в Броварах и Киеве: выгодные условия от производителя](https://crystalwater.kiev.ua/63-voda-optom.html)
+- [А вы знаете какая правильная вода](https://crystalwater.kiev.ua/a-vyi-znaete-kakaya-pravilnaya-voda.html)
+- [Бесплатные воды Киева и Броваров](https://crystalwater.kiev.ua/besplatnyie-vodyi-kieva-i-brovarov.html)
+- [Как очищенная вода помогает похудеть: мнение ученых и советы](https://crystalwater.kiev.ua/butilirovannaya-voda-nuzhna-dlya-poxudeniya.html)
+- [Чище вода только после очистки: почему это факт](https://crystalwater.kiev.ua/chishhe-voda-tolko-posle-ochistki.html)
+- [Чистая дистиллированная вода это](https://crystalwater.kiev.ua/chistaya-distillirovannaya-voda-eto.html)
+- [Что нужно знать, покупая воду в бутылке](https://crystalwater.kiev.ua/chto-nuzhno-znat-pokupaya-vodu-v-butyilke.html)
+- [Что пить беременным для отличного самочувствия](https://crystalwater.kiev.ua/chto-pit-beremennyim-dlya-otlichnogo-samochuvstviya.html)
+- [Доставка питьевой воды от производителя: как выбрать надежного поставщика](https://crystalwater.kiev.ua/dostavka-pitevoj-vodyi-ot-proizvoditelya.html)
+- [Доставка питьевой воды в Киеве и Киевской области](https://crystalwater.kiev.ua/dostavka-vodyi-kiev-i-kievskuyu-oblast.html)
+- [Вода в эко-таре: как выбрать безопасный пластик для здоровья и природы](https://crystalwater.kiev.ua/esli-nuzhno-kupit-vodu-v-eko-tare.html)
+- [Если питьевая вода содержит химические добавки: риски и решение](https://crystalwater.kiev.ua/esli-pitevaya-voda-soderzhit-ximicheskie-dobavki.html)
+- [Ежедневно выпивайте литр воды: польза для организма](https://crystalwater.kiev.ua/ezhednevno-vyipivajte-litr-vodyi.html)
+- [Как работает очистка в Crystal Water: обзор наших систем фильтрации](https://crystalwater.kiev.ua/filtryi-dlya-vodyi-krishtalevo-chista-pitna-voda.html)
+- [Инфографика: роль воды для организма](https://crystalwater.kiev.ua/infografik-o-neobxodimosti-i-polze-vodyi.html)
+- [Качество воды влияет на человека](https://crystalwater.kiev.ua/kachestvo-vodyi-vliyaet-na-cheloveka.html)
+- [Как делать обеззараживание воды](https://crystalwater.kiev.ua/kak-delat-obezzarazhivanie-vodyi.html)
+- [Как проверить качество бутилированной воды самостоятельно](https://crystalwater.kiev.ua/kak-proverit-kachestvo-butilirovannoj-vodyi.html)
+- [Как выглядит и работает система обратного осмоса](https://crystalwater.kiev.ua/kak-vyiglyadit-i-rabotaet-sistema-osmos.html)
+- [Схема обратного осмоса: устройство системы по этапам](https://crystalwater.kiev.ua/kak-vyiglyadit-sxema-osmosa-obratnogo.html)
+- [Вкус и характеристики воды после обратного осмоса](https://crystalwater.kiev.ua/kakaya-voda-posle-osmosa-na-vkus-i-xarakteristiki.html)
+- [Виды воды на Земле: от минеральной до дистиллированной](https://crystalwater.kiev.ua/kakie-vidyi-vodyi-sushhestvuyut-na-zemle.html)
+- [Кулер для воды экономит время](https://crystalwater.kiev.ua/kuler-dlya-vodyi.html)
+- [Лечение водой с натуральными отварами: польза и предостережения](https://crystalwater.kiev.ua/lechenie-vodoj-s-naturalnyimi-otvarami.html)
+- [Лучшая вода и её технология очистки: стандарт Crystal Water](https://crystalwater.kiev.ua/luchshaya-voda-i-ee-texnologiya-ochistki.html)
+- [Минеральная вода: состав и особенности употребления](https://crystalwater.kiev.ua/mineralnaya-voda-dlya-organizma-i-dlya-tela.html)
+- [Может ли домашняя вода быть вкусная](https://crystalwater.kiev.ua/mozhet-li-domashnyaya-voda-byit-vkusnaya.html)
+- [Наука о воде: что важно знать](https://crystalwater.kiev.ua/nauchnyij-film-o-vode-i-chistote-zhizni.html)
+- [Нормы потребления воды: сколько пить в зависимости от условий](https://crystalwater.kiev.ua/normyi-vodyi.html)
+- [Обратный осмос: самая эффективная технология очистки воды сегодня](https://crystalwater.kiev.ua/obratnyij-osmos-i-ego-ispolzovanie.html)
+- [Вода после обратного осмоса с доставкой в Киев](https://crystalwater.kiev.ua/obratnyij-osmos-v-kiev-dlya-ochistki.html)
+- [Что такое очищенная вода и чем она отличается от водопроводной?](https://crystalwater.kiev.ua/ochishhennaya-voda-polza-ot-upotrebleniya.html)
+- [Обратный осмос или дистилляция: какой метод очистки лучше?](https://crystalwater.kiev.ua/ochistka-vodyi-obratnyij-osmos-otlichie-distilyaczii.html)
+- [Организмы и значение воды для них: биология жизни](https://crystalwater.kiev.ua/organizmyi-i-znachenie-vodyi-dlya-nix.html)
+- [ПЭТ бутылки или пластиковая вода везде](https://crystalwater.kiev.ua/pet-butyilki-ili-plastikovaya-voda-vezde.html)
+- [Бутилированная и минеральная вода: в чём разница](https://crystalwater.kiev.ua/pochemu-luchshaya-butilirovannaya-voda-poleznej-mineralnoj.html)
+- [Вода для спортсменов: почему качество H2O определяет результат в спорте](https://crystalwater.kiev.ua/pochemu-pitevaya-voda-nuzhna-sportsmenam.html)
+- [Почему полезная вода должна быть правильно очищенной](https://crystalwater.kiev.ua/pochemu-poleznaya-voda-kreshhenskaya.html)
+- [Самая прозрачная вода озера Байкал](https://crystalwater.kiev.ua/porazhayushhe-prozrachnaya-voda-stala-ldom.html)
+- [Актуальные акции на доставку воды](https://crystalwater.kiev.ua/postoyannyie-akczii-butilirovannaya-voda-krishtalevo-chista.html)
+- [Простая вода может изменить вашу жизнь: сила правильной гидратации](https://crystalwater.kiev.ua/prostaya-voda-mozhet-izmenit-vashu-zhizn.html)
+- [Простая вода натощак: почему это рекомендует Аюрведа и современная медицина](https://crystalwater.kiev.ua/prostaya-voda-natoshhak-eto-rekomenduet-ayurveda.html)
+- [Простой анализ воды](https://crystalwater.kiev.ua/prostoj-analiz-vodyi.html)
+- [Разрешаем или запрещаем пить кофе беременным?](https://crystalwater.kiev.ua/razreshaem-ili-zapreshhaem-pit-kofe-beremennyim.html)
+- [Сколько воды нужно человеку в сутки: расчет индивидуальной нормы](https://crystalwater.kiev.ua/skolko-nuzhno-vodyi-cheloveku-v-sutki.html)
+- [Какая вода на самом деле нужна вашему организму: гид по выбору качественной воды](https://crystalwater.kiev.ua/uznaj-kakaya-voda-nuzhna-tvoemu-organizmu.html)
+- [7 важных причин регулярно пить очищенную воду каждый день](https://crystalwater.kiev.ua/vazhnyie-prichinyi-dlya-togo-chtobyi-regulyarno-pit-vodu.html)
+- [Видео 1983г где вода Киев окутывает](https://crystalwater.kiev.ua/video-1983g-gde-voda-kiev-okutyivaet.html)
+- [Видео вода мира и ее обитатели](https://crystalwater.kiev.ua/video-voda-mira-i-ee-obitateli.html)
+- [Полив растений очищенной водой: секреты здорового роста](https://crystalwater.kiev.ua/voda-dlya-rastenij.html)
+- [Вода фото которой поразит весь мир](https://crystalwater.kiev.ua/voda-foto-kotoroj-porazit-ves-mir.html)
+- [Вода для малышей: как выбрать идеальную воду для ребенка](https://crystalwater.kiev.ua/voda-malyisham.html)
+- [Вода в офис на каждый день: продуктивность и здоровье команды](https://crystalwater.kiev.ua/voda-v-ofis-na-kazhdyij-den.html)
+- [Холодная вода и её влияние на организм: польза и риски](https://crystalwater.kiev.ua/xolodnaya-voda-i-vliyanie-na-organizm.html)
+- [Храмы воды Украины и мира](https://crystalwater.kiev.ua/xramyi-vodyi-ukrainyi-i-mira.html)
+- [Зачем нужна бутилированная вода в рационе](https://crystalwater.kiev.ua/zachem-voda-butilirovannaya-nuzhna-v-raczione.html)
+- [Заказать воду просто, если знаешь о ней всё](https://crystalwater.kiev.ua/zakazat-vodu-prosto-esli-znaesh-o-nej-vse.html)
+- [Живая вода и сила воды: энергия здоровья в каждой капле](https://crystalwater.kiev.ua/zhivaya-voda-i-sila-vodyi.html)
+
+## Дополнительно
+- Полное описание: https://crystalwater.kiev.ua/llms-full.txt
+- Sitemap: https://crystalwater.kiev.ua/sitemap.xml

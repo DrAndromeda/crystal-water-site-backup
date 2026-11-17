@@ -1,21 +1,36 @@
-# Если сайт остаётся на MODX — раскомментируйте блок ниже
-# и верните оригинальные Disallow-правила движка:
-#
-# Disallow: /assets/backup/
-# Disallow: /assets/cache/
-# Disallow: /assets/docs/
-# Disallow: /assets/export/
-# Disallow: /assets/import/
-# Disallow: /assets/modules/
-# Disallow: /assets/plugins/
-# Disallow: /assets/snippets/
-# Disallow: /install/
+# Crystal Water — crystalwater.kiev.ua
+# Поисковые и AI-боты разрешены. Служебные шаблоны не индексируем.
 
 User-agent: *
-Allow: /ua/
+Allow: /
+Disallow: /articles_updated.html
+Disallow: /READY-TO-PASTE-
+Disallow: /json-ld-
+Disallow: /header-
+Disallow: /footer-
+Disallow: /hreflang-template.html
+Disallow: /head-meta-template.html
+
+User-agent: GPTBot
 Allow: /
 
-Host: https://crystalwater.kiev.ua/ua/
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 Sitemap: https://crystalwater.kiev.ua/sitemap.xml
 Sitemap: https://crystalwater.kiev.ua/sitemap-ua.xml

@@ -25,21 +25,25 @@ Priority: 🔴 blocker · 🟡 important · 🔵 polish
 
 ### 🔴 Phase 1 — Audit & blockers
 - [ ] Inventory all HTML pages vs. sitemap.xml and legacy site; list missing/duplicate pages (spec says 85+, repo has ~71)
-- [ ] Replace placeholder phone `+38 (067) 123-45-67` in JSON-LD with the real number (grep all `json-ld-*.html` and pages)
-- [ ] Remove junk from repo root: `index.html.bak*`, `MESSAGE_TO_SEND.txt`, `articles_updated.html` vs `articles.html` duplicate; decide which is canonical
+- [x] Real phones/address are in use (only `IMPROVEMENTS.md` has the fake `+38 (067) 123-45-67` example; update it)
+- [x] Removed `.bak`/`.backup` files and `.bak-articles/`
+- [ ] `articles_updated.html` duplicates `articles.html` (canonical already points to articles.html, disallowed in robots) — delete after owner confirms; `MESSAGE_TO_SEND.txt` still in root
+- [ ] Missing image `assets/images/obezzarazhivanie-vodi.JPG` (kak-delat-obezzarazhivanie-vodyi.html) — need the file
 - [ ] Confirm URL structure decision (`blog-structure-decision.md`) before any renames; set up 301 map from legacy URLs
 
 ### 🔴 Phase 2 — Medical claims & content safety
-- [ ] Apply `medical-claims-rewrite.md` to all articles; add disclaimer block
+- [x] Home page claims rewritten per `medical-claims-rewrite.md`; disclaimer block added to 63 articles
+- [ ] Still to review by hand: `lechenie-vodoj-s-naturalnyimi-otvarami.html`, `butilirovannaya-voda-nuzhna-dlya-poxudeniya.html`, `xolodnaya-voda-i-vliyanie-na-organizm.html` (need sources)
 
 ### 🔴 Phase 3 — SEO foundation
 - [ ] Unique title/description/H1/canonical on every page (script a check, fail on duplicates/length)
-- [ ] Regenerate `sitemap.xml` and `sitemap-ua.xml`; verify `hreflang` ru/ua pairs
-- [ ] `robots.txt` (allow AI bots), add `llms.txt` + `llms-full.txt`
+- [x] `sitemap.xml` regenerated (71 URLs, fixed broken `uslugi-i-tseny` URL, added index); `robots.txt` cleaned (invalid `Host:` removed, AI bots allowed); `llms.txt` + `llms-full.txt` added
+- [ ] `sitemap-ua.xml` only 7 URLs — UA translations missing; verify `hreflang` ru/ua pairs
 - [ ] BreadcrumbList on every page
 
 ### 🟡 Phase 4 — Structured data
-- [ ] LocalBusiness (home/contacts), Product (water/coolers), Article (blog), FAQPage (services)
+- [x] LocalBusiness/Organization/Product/Service on home; Article + BreadcrumbList on all articles
+- [ ] LocalBusiness on `o-nas.html`, FAQPage on services
 - [ ] Validate with Rich Results Test / schema validator
 
 ### 🟡 Phase 5 — Design system & blocks
