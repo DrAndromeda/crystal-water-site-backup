@@ -28,8 +28,8 @@ Priority: 🔴 blocker · 🟡 important · 🔵 polish
 - [x] Real phones/address are in use (only `IMPROVEMENTS.md` has the fake `+38 (067) 123-45-67` example; update it)
 - [x] Removed `.bak`/`.backup` files and `.bak-articles/`
 - [x] Duplicates merged: `prices`→`uslugi-i-tseny`, `tech`→`tekhnologii-ochistki`, `articles_updated` removed (also `ua/about|prices|tech`)
-- [ ] `MESSAGE_TO_SEND.txt` still in root
-- [ ] Missing image `assets/images/obezzarazhivanie-vodi.JPG` (kak-delat-obezzarazhivanie-vodyi.html) — need the file
+- [x] `MESSAGE_TO_SEND.txt` removed
+- [x] Broken `obezzarazhivanie-vodi.JPG` reference removed (add a real image later)
 - [ ] Confirm URL structure decision (`blog-structure-decision.md`) before any renames; set up 301 map from legacy URLs
 
 ### 🔴 Phase 2 — Medical claims & content safety
@@ -50,7 +50,8 @@ Priority: 🔴 blocker · 🟡 important · 🔵 polish
 
 ### 🟡 Phase 5 — Design system & blocks
 - [x] Inline `<style>` blocks extracted into `css/article-basic.css`, `article-full.css`, `page-core.css`, `page-tech.css`, `css/pages/*`; unused stylesheets removed
-- [ ] Next: merge `style-remaster.css` + shared files into one minified bundle; unify the two `:root` palettes
+- [x] `build_css.py` minifies CSS to `*.min.css` (pages link the .min files; edit sources, then re-run)
+- [ ] Unify the two `:root` palettes
 - [ ] Blocks: HowItWorks, PriceTable, ServiceCard, OrderForm, FAQBlock, WhyUs, ReviewCarousel, FooterMap
 - [ ] Each: hover/focus/active states, works without JS
 
@@ -63,7 +64,8 @@ Priority: 🔴 blocker · 🟡 important · 🔵 polish
 - [ ] Add the 8 new topics listed in `IMPROVEMENTS.md` §5
 
 ### 🔵 Phase 8 — Performance & images
-- [ ] Follow `images-mobile-performance-checklist.md`: AVIF/WebP, lazy-load, srcset, width/height (CLS)
+- [x] lazy-load + width/height on all local images (CLS)
+- [ ] AVIF/WebP conversion + srcset (`images-mobile-performance-checklist.md`)
 - [ ] Minify CSS, inline critical CSS, no render-blocking JS
 
 ### 🔵 Phase 9 — Responsive & accessibility

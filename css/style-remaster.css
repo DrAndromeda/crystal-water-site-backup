@@ -183,6 +183,7 @@
     a { color: #1f5f9a; text-decoration: none; }
     a:hover { text-decoration: underline; }
     img { max-width: 100%; display: block; }
+    img[width][height] { height: auto; }
     .container { width: min(calc(100% - 28px), var(--max)); margin: 0 auto; }
 
     .utility {
