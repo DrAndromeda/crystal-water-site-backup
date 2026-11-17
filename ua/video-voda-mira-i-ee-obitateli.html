@@ -40,10 +40,10 @@
   <link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/video-voda-mira-i-ee-obitateli.html" />
 </head>
 <body>
-<a class="skip-link" href="#main">Перейти к содержимому</a>
+<a class="skip-link" href="#main">Перейти до вмісту</a>
     <header class="site-header"><div class="header-main">
       <a href="index.html" class="site-header__logo">💧 Crystal Water</a>
-      <nav class="site-nav" aria-label="Главное меню">
+      <nav class="site-nav" aria-label="Головне меню">
         <ul>
           <li><a href="index.html">Головна</a></li>
           <li><a href="tsiny.html">Ціни</a></li>
@@ -61,7 +61,7 @@
     </div>
   </header>
 <nav class="breadcrumbs" aria-label="breadcrumb"><a href="index.html">Доставка води Бровари</a> &raquo; <span>Стаття</span></nav>
-  <main>
+  <main id="main">
     <section class="hero"><div class="container" style="padding:20px 0;">
       <div class="panel" style="padding:24px;">
         <h1 style="font-size:clamp(28px,4vw,38px);margin:0 0 16px;color:#23435d;">Відео вода світу та її мешканці</h1>
@@ -70,7 +70,7 @@
 
 
 
-<p><p><iframe width="560" height="315" src="http://www.youtube.com/embed/Fk0FcwY1vE0?wmode=transparent" frameborder="0" allowfullscreen=""></iframe></p>
+<p><p><iframe title="Карта проїзду" width="560" height="315" src="http://www.youtube.com/embed/Fk0FcwY1vE0?wmode=transparent" frameborder="0" allowfullscreen=""></iframe></p>
 <p>Як людина на 70% складається з води, так і наша планета здебільшого зайнята океанами, морями, річками, озерами та болотами. Представляємо Вам <strong>відео вода</strong>, у якому вона є джерелом життя на Землі та домом для мільйонів різноманітних мешканців планети.&nbsp;</p>
 <p>У цій відеороботі представлено гарні моменти зйомок рифів і глибоководних мешканців океанів. Їхнє життя, способи існування та добування їжі. Професійна відеозйомка води зачаровує своєю красою й не залишить байдужим.</p>
 <p></p></p>
@@ -134,7 +134,7 @@
   </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click', function() {
+    var hb = document.getElementById('hamburger'); hb && hb.addEventListener('click', function() {
       document.getElementById('nav').classList.toggle('open');
     });
   </script>

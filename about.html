@@ -83,8 +83,8 @@
           <h2>📍 Адрес самовывоза</h2>
           <p style="font-size:20px;font-weight:bold;color:#1a3c59;">г. Бровары, ул. Кооперативная, 3А</p>
           <p style="font-size:18px;margin-top:10px;">
-            <a href="tel:+380635304050" style="color:#2d89d7;">(063) 530-40-50</a><br/>
-            <a href="tel:+380637886880" style="color:#2d89d7;">(063) 788-68-80</a>
+            <a href="tel:+380635304050" style="color:#1f6fb5;">(063) 530-40-50</a><br/>
+            <a href="tel:+380637886880" style="color:#1f6fb5;">(063) 788-68-80</a>
           </p>
         </div>
         <div class="info-box">
@@ -99,7 +99,7 @@
       </div>
 
       <div style="border-radius:16px;overflow:hidden;margin:20px 0;border:1px solid #d6e8f7;box-shadow:0 6px 18px rgba(6,48,84,0.08);">
-        <iframe width="100%" height="400" style="border:0;display:block;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5074.384083309737!2d30.805222263962246!3d50.511993485000296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xba0c863c651ffc55!2z0JTQvtGB0YLQsNCy0LrQsCDQstC-0LTRiyAi0JrRgNC40YjRgtCw0LvQtdCy0L4t0YfQuNGB0YLQsCDQv9C40YLQvdCwINCy0L7QtNCwIg!5e0!3m2!1sru!2sua!4v1409347950906" allowfullscreen loading="lazy"></iframe>
+        <iframe title="Карта проезда" width="100%" height="400" style="border:0;display:block;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5074.384083309737!2d30.805222263962246!3d50.511993485000296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xba0c863c651ffc55!2z0JTQvtGB0YLQsNCy0LrQsCDQstC-0LTRiyAi0JrRgNC40YjRgtCw0LvQtdCy0L4t0YfQuNGB0YLQsCDQv9C40YLQvdCwINCy0L7QtNCwIg!5e0!3m2!1sru!2sua!4v1409347950906" allowfullscreen loading="lazy"></iframe>
       </div>
 
       <div class="panel" style="padding:24px;font-size:16px;margin:20px 0;">
@@ -145,7 +145,7 @@
             </div>
             <div><label>Адрес</label><input name="address" type="text" placeholder="Бровары, улица, дом" /></div>
             <div class="form-row">
-              <div><label>Количество</label><select name="bottles"><option>1 бутыль</option><option>2 бутыли</option><option>3 бутыли</option><option>4 бутыли</option><option>5+ бутылей</option></select></div>
+              <div><label>Количество</label><select name="bottles" aria-label="Количество бутылей"><option>1 бутыль</option><option>2 бутыли</option><option>3 бутыли</option><option>4 бутыли</option><option>5+ бутылей</option></select></div>
               <div><label>Время</label><input name="time" type="text" placeholder="После 20:00" /></div>
             </div>
             <div><label>Комментарий</label><textarea name="comment" placeholder="Этаж, код, пожелания"></textarea></div>
@@ -211,7 +211,7 @@
       <form id="modalOrderForm">
         <div class="form-row"><input name="name" type="text" placeholder="Имя" /><input name="phone" type="tel" placeholder="Телефон" /></div>
         <input name="address" type="text" placeholder="Адрес" />
-        <div class="form-row"><select name="bottles"><option>1 бутыль</option><option>2 бутыли</option><option>3 бутыли</option><option>4 бутыли</option><option>5+ бутылей</option></select><input name="time" type="text" placeholder="Время" /></div>
+        <div class="form-row"><select name="bottles" aria-label="Количество бутылей"><option>1 бутыль</option><option>2 бутыли</option><option>3 бутыли</option><option>4 бутыли</option><option>5+ бутылей</option></select><input name="time" type="text" placeholder="Время" /></div>
         <textarea name="comment" placeholder="Комментарий"></textarea>
         <div class="cta-actions"><button class="btn btn-primary" type="submit">Открыть Telegram</button><button class="btn btn-secondary" type="button" data-close-order>Закрыть</button></div>
       </form>

@@ -40,10 +40,10 @@
   <link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/mineralnaya-voda-dlya-organizma-i-dlya-tela.html" />
 </head>
 <body>
-<a class="skip-link" href="#main">Перейти к содержимому</a>
+<a class="skip-link" href="#main">Перейти до вмісту</a>
     <header class="site-header"><div class="header-main">
       <a href="index.html" class="site-header__logo">💧 Crystal Water</a>
-      <nav class="site-nav" aria-label="Главное меню">
+      <nav class="site-nav" aria-label="Головне меню">
         <ul>
           <li><a href="index.html">Головна</a></li>
           <li><a href="tsiny.html">Ціни</a></li>
@@ -63,7 +63,7 @@
     
 
 <nav class="breadcrumbs" aria-label="breadcrumb"><a href="index.html">Доставка води Бровари</a> &raquo; <span>Стаття</span></nav>
-  <main>
+  <main id="main">
     <img width="689" height="439" class="article-hero" src="../assets/images/mineralnaya-voda.webp" alt="" style="display:block;margin-bottom:15px;max-width:100%;height:auto;border-radius:8px;" loading="lazy" decoding="async">
 
     <section class="article-content" style="max-width:800px;margin:40px auto;padding:0 16px;line-height:1.6;">
@@ -128,7 +128,7 @@
   </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click', function() {
+    var hb = document.getElementById('hamburger'); hb && hb.addEventListener('click', function() {
       document.getElementById('nav').classList.toggle('open');
     });
   </script>

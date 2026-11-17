@@ -126,7 +126,7 @@
 
     /* --- HEADER --- */
     .hero {
-      background: linear-gradient(135deg, rgba(15, 95, 150, 0.75), rgba(15, 95, 150, 0.65)), url('images/water_bg.min.png');
+      background: linear-gradient(135deg, rgba(15, 95, 150, 0.75), rgba(15, 95, 150, 0.65)), url('../../images/water_bg.min.png');
       background-size: cover;
       background-position: center;
       min-height: 650px;

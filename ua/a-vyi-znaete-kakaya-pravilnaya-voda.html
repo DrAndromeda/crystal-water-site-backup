@@ -40,10 +40,10 @@
   <link rel="alternate" hreflang="x-default" href="https://crystalwater.kiev.ua/a-vyi-znaete-kakaya-pravilnaya-voda.html" />
 </head>
 <body>
-<a class="skip-link" href="#main">Перейти к содержимому</a>
+<a class="skip-link" href="#main">Перейти до вмісту</a>
     <header class="site-header"><div class="header-main">
       <a href="index.html" class="site-header__logo">💧 Crystal Water</a>
-      <nav class="site-nav" aria-label="Главное меню">
+      <nav class="site-nav" aria-label="Головне меню">
         <ul>
           <li><a href="index.html">Головна</a></li>
           <li><a href="tsiny.html">Ціни</a></li>
@@ -61,7 +61,7 @@
     </div>
   </header>
 <nav class="breadcrumbs" aria-label="breadcrumb"><a href="index.html">Доставка води Бровари</a> &raquo; <span>Стаття</span></nav>
-  <main>
+  <main id="main">
     <section class="hero"><div class="container" style="padding:20px 0;">
       <div class="panel" style="padding:24px;">
         <h1 style="font-size:clamp(28px,4vw,38px);margin:0 0 16px;color:#23435d;">А ви знаєте, яка вода правильна</h1>
@@ -74,7 +74,7 @@
 <div class="section-divider">~~~</div><h2>Правильна вода — це та, що корисна</h2>
 <p>Хімічний склад мінеральної води значно відрізняється від складу очищеної, не кажучи вже про водопровідну. Існує велика кількість різноманітних мінеральних вод, і до кожної з них є свій рецепт регулярного вживання:</p>
 <p></p>
-<p><iframe width="640" height="360" src="http://www.youtube.com/embed/DheLSLS4hxY?wmode=transparent" frameborder="0" allowfullscreen=""></iframe></p></p>
+<p><iframe title="Карта проїзду" width="640" height="360" src="http://www.youtube.com/embed/DheLSLS4hxY?wmode=transparent" frameborder="0" allowfullscreen=""></iframe></p></p>
 						
 	
 						
@@ -135,7 +135,7 @@
   </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click', function() {
+    var hb = document.getElementById('hamburger'); hb && hb.addEventListener('click', function() {
       document.getElementById('nav').classList.toggle('open');
     });
   </script>

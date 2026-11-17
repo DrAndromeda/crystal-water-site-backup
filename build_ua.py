@@ -59,7 +59,9 @@ def rewrite_links(s):
     s = re.sub(r"url\((['\"]?)(?:\./)?(images|assets)/", lambda m: "url(%s../%s/" % (m.group(1), m.group(2)), s)
     return s
 
-EXTRA = [('Зачем нужна бутилированная вода в рационе', 'Навіщо бутильована вода в раціоні'),
+EXTRA = [('Перейти к содержимому', 'Перейти до вмісту'), ('Главное меню', 'Головне меню'),
+         ('aria-label="Количество бутылей"', 'aria-label="Кількість бутелів"'),
+         ('Зачем нужна бутилированная вода в рационе', 'Навіщо бутильована вода в раціоні'),
          ('Преимущества профессиональной очистки перед бытовыми фильтрами', 'Переваги професійного очищення порівняно з побутовими фільтрами'),
          ('<option>1 бутыль</option>', '<option>1 бутель</option>'), ('<option>2 бутыли</option>', '<option>2 бутелі</option>'),
          ('<option>3 бутыли</option>', '<option>3 бутелі</option>'), ('<option>4 бутыли</option>', '<option>4 бутелі</option>'),
@@ -133,6 +135,7 @@ def build(slug, tdir):
         s = re.sub(r'(</header>\s*).*?(\s*<footer)', lambda x: x.group(1) + main + x.group(2), s, 1, flags=re.S)
     # breadcrumb last crumb + static strings
     s = re.sub(r'(<nav class="breadcrumbs"[^>]*>.*?<span>)(.*?)(</span>)', lambda x: x.group(1) + html.escape(crumb, quote=False) + x.group(3), s, 1, flags=re.S)
+    if re.search(r'<main\b(?![^>]*\sid=)', s): s = re.sub(r'<main\b(?![^>]*\sid=)', '<main id="main"', s, 1)
     s = jsonld_fix(s, title, desc, crumb, ru_page, ua_page)
     # language switch before link rewriting
     s = re.sub(r'<li class="nav-lang"><a href="[^"]*" class="lang-switch">UA</a></li>',

@@ -136,7 +136,7 @@
   </footer>
 
   <script>
-    document.getElementById('hamburger').addEventListener('click', function() {
+    var hb = document.getElementById('hamburger'); hb && hb.addEventListener('click', function() {
       document.getElementById('nav').classList.toggle('open');
     });
   </script>

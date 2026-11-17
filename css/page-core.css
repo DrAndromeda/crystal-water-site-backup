@@ -26,7 +26,7 @@ body {
    чтобы волна была ближе к верху блока, а текст — на синем фоне. */
 .hero {
   background-color: var(--cw-blue);
-  background-image: url('./images/water_bg.min.png');
+  background-image: url('../images/water_bg.min.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;

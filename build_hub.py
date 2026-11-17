@@ -25,7 +25,7 @@ def info(path, ua):
 def card(slug, t, d, src, ua):
     src = src if not ua or src.startswith(('../', 'http')) else src
     return ('          <a href="%s.html" class="article-card" style="display:block;padding:16px;background:#ebf4ff;border-radius:10px;text-decoration:none;color:#23435d;">\n'
-            '            <img src="%s" alt="%s" style="width:100%%;height:130px;object-fit:cover;border-radius:8px;margin-bottom:10px;" loading="lazy" decoding="async" /><h3 style="margin:0 0 6px;font-size:15px;">%s</h3>\n'
+            '            <img src="%s" alt="%s" style="width:100%%;height:130px;object-fit:cover;border-radius:8px;margin-bottom:10px;" loading="lazy" decoding="async" /><h2 style="margin:0 0 6px;font-size:15px;">%s</h2>\n'
             '            <p style="margin:0;font-size:13px;color:#526d84;">%s</p>\n          </a>') % (slug, src, html.escape(t, True), html.escape(t, False), html.escape(d, False))
 
 for ua in (False, True):

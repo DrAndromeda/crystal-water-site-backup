@@ -30,3 +30,13 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* WCAG AA contrast fixes: dark text on the cyan accent, darker accent for text on white */
+.btn-main, .btn-cta, .mob-tg, .btn-accent, .order-btn { color: #06324f !important; }
+.product-price, .price-big { color: #007a94; }
+.avatar { background: var(--cw-blue-dark) !important; }
+.footer-bottom { opacity: 1 !important; color: #d6e6f2 !important; }
+.product-price { color: #007a94 !important; }
+a.btn { color: #06324f; }
+footer a, .site-header__phones a { display: inline-block; min-height: 24px; line-height: 24px; }
+a[href^="tel:"] { min-height: 24px; }

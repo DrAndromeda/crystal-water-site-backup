@@ -5,9 +5,9 @@
     .price-row .info-col { padding: 20px 20px 20px 0; }
     .price-row .info-col h3 { margin: 0 0 8px; font-size: 22px; color: #1a3c59; }
     .price-row .info-col .price-big { font-size: 28px; font-weight: bold; color: #0d4d86; margin: 8px 0; }
-    .price-row .info-col .price-big small { font-size: 16px; font-weight: normal; color: #5f7f99; }
+    .price-row .info-col .price-big small { font-size: 16px; font-weight: normal; color: #4b6a83; }
     .price-row .info-col p { color: #2d4a63; line-height: 1.7; margin: 10px 0 0; font-size: 15px; }
-    .price-row .info-col .note { font-size: 13px; color: #5f7f99; margin-top: 8px; }
+    .price-row .info-col .note { font-size: 13px; color: #4b6a83; margin-top: 8px; }
 
     .price-row.free .price-big { color: #1a8b63; font-size: 20px; }
     .price-row.free .price-big strong { font-size: 28px; }
