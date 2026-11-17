@@ -1,0 +1,38 @@
+{
+ "8cfa25b8b6": [
+  "css/tokens.css",
+  "css/style-remaster.css",
+  "css/article-basic.css"
+ ],
+ "22c851a929": [
+  "css/tokens.css",
+  "css/style-remaster.css"
+ ],
+ "e7de270635": [
+  "css/tokens.css",
+  "css/pages/index.css"
+ ],
+ "a532291ee8": [
+  "css/page-core.css",
+  "css/style.css"
+ ],
+ "b533fa0d1a": [
+  "css/pages/uslugi-i-tseny.css"
+ ],
+ "b511b5099f": [
+  "css/page-tech.css",
+  "css/style.css"
+ ],
+ "f679e0db01": [
+  "css/pages/tekhnologii-ochistki.css"
+ ],
+ "b16bcfe849": [
+  "css/tokens.css",
+  "css/style-remaster.css",
+  "css/pages/o-nas.css"
+ ],
+ "9a92e38b99": [
+  "css/tokens.css",
+  "css/pages/ua-index.css"
+ ]
+}

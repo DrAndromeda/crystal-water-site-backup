@@ -70,9 +70,19 @@ def headings(s):
 def a11y(s, ua):
     s = re.sub(r'<iframe\b(?![^>]*\stitle=)', lambda m: m.group(0) + ' title="%s"' % ('Карта проїзду' if ua else 'Карта проезда'), s)
     s = re.sub(r'<select name="bottles"(?![^>]*aria-label)', lambda m: m.group(0) + ' aria-label="%s"' % ('Кількість бутелів' if ua else 'Количество бутылей'), s)
+    def noop(m):
+        t = m.group(0)
+        if 'noopener' in t: return t
+        if re.search(r'\srel="', t): return re.sub(r'\srel="([^"]*)"', lambda r: ' rel="%s noopener"' % r.group(1).strip(), t, 1)
+        return t[:-1] + ' rel="noopener">'
+    s = re.sub(r'<a\b[^>]*target="_blank"[^>]*>', noop, s)
     s = re.sub(r'<main\b(?![^>]*\sid=)', '<main id="main"', s, 1)
     if ua:
         s = s.replace('Перейти к содержимому', 'Перейти до вмісту').replace('aria-label="Главное меню"', 'aria-label="Головне меню"')
+    if 'id="orderForm"' in s and 'cw-noscript' not in s:
+        msg = ('Для відправки форми потрібен JavaScript. Зателефонуйте: <a href="tel:+380637886880">+38 (063) 788-68-80</a> або напишіть у <a href="https://t.me/CrystalWaterBro_bot" rel="noopener">Telegram</a>.' if ua else
+               'Для отправки формы нужен JavaScript. Позвоните: <a href="tel:+380637886880">+38 (063) 788-68-80</a> или напишите в <a href="https://t.me/CrystalWaterBro_bot" rel="noopener">Telegram</a>.')
+        s = s.replace('</form>', '</form>\n<noscript><p class="cw-noscript cw-note">%s</p></noscript>' % msg, 1)
     s = s.replace("document.getElementById('hamburger').addEventListener(", "var hb = document.getElementById('hamburger'); hb && hb.addEventListener(")
     return s
 

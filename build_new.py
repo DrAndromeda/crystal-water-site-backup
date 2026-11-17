@@ -4,7 +4,7 @@ copying the head/header/footer of an existing article as template.
 Usage: python3 build_new.py <dir>   (then copy <slug>.ua.txt to the UA translations dir and run build_ua.py, build_hub.py)"""
 import re, sys, os, glob, json, html
 D = "https://crystalwater.kiev.ua"
-TEMPLATE = '3-znachenie-vody-v-zhizni-cheloveka.html'
+TEMPLATE = 'kak-vybrat-pitevuyu-vodu-dlya-doma.html'
 
 def faq_pairs(main):
     sec = re.search(r'<h2[^>]*>(?:Частые вопросы|Часті питання)</h2>(.*?)(?=<div class="cta-block"|<aside|</main>)', main, re.S)
