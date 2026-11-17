@@ -13,11 +13,6 @@
       --shadow: 0 10px 28px rgba(6, 48, 84, 0.16);
       --max: 1160px;
       --radius: 16px;
-      --cw-blue-dark: #0f5f96;
-      --cw-blue: #1e88c7;
-      --cw-accent: #00c2e6;
-      --cw-white: #ffffff;
-      --cw-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* --- COMPACT HEADER --- */

@@ -1,11 +1,4 @@
-:root {
-      --cw-blue-dark: #0f5f96;
-      --cw-blue: #1e88c7;
-      --cw-accent: #00c2e6;
-      --cw-text: #1a1a1a;
-      --cw-text-muted: #526d84;
-      --cw-white: #ffffff;
-    }
+
     body { margin: 0; font-family: 'Segoe UI', Roboto, system-ui, sans-serif; background: #f5f7fa; color: var(--cw-text); line-height: 1.6; }
     
     /* --- HERO --- */

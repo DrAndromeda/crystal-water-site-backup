@@ -1,13 +1,4 @@
 :root {
-      --cw-blue-dark: #0f5f96;
-      --cw-blue: #1e88c7;
-      --cw-blue-light: #eaf6fc;
-      --cw-accent: #00c2e6;
-      --cw-accent-dark: #0ad0f0;
-      --cw-text: #1a1a1a;
-      --cw-text-muted: #526d84;
-      --cw-white: #ffffff;
-      --cw-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
       --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
       --shadow-lg: 0 20px 50px rgba(0,0,0,0.12);
