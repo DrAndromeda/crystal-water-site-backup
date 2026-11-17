@@ -3,145 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Цены на доставку воды в Броварах и Киеве | Crystal Water</title>
-  <meta name="description" content="Актуальные цены на доставку очищенной питьевой воды. Выгодные тарифы для частных лиц и оптовые предложения для бизнеса. Закажите первую бутыль бесплатно!" />
+  <title>Цены на воду в Броварах и Киеве ❘ Crystal Water</title>
+  <meta name="description" content="Цены на доставку питьевой очищенной воды в Броварах и Киеве. Бутыль 19,9л - 100 грн. Помпа - 160 грн. Кулер - цена по запросу. Первая бутыль бесплатно!" />
+  <meta name="keywords" content="купить бутилированную воду, купить воду с доставкой, заказать воду киев, заказ воды киев, вода цена, вода доставка цена, вода стоимость, сколько стоит вода, купить воду киев" />
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="css/style-remaster.css">
+  <link rel="stylesheet" href="css/style-remaster.css" />
   <link rel="canonical" href="https://crystalwater.kiev.ua/uslugi-i-tseny.html" />
-  <style>
-    :root {
-      --cw-blue-dark: #0f5f96;
-      --cw-blue: #1e88c7;
-      --cw-blue-light: #eaf6fc;
-      --cw-accent: #00c2e6;
-      --cw-accent-dark: #0ad0f0;
-      --cw-text: #1a1a1a;
-      --cw-text-muted: #526d84;
-      --cw-white: #ffffff;
-      --cw-transition: all 0.3s ease;
+  <meta property="og:title" content="Цены на воду в Броварах и Киеве ❘ Crystal Water" />
+  <meta property="og:description" content="Цены на доставку питьевой очищенной воды. Бутыль 19,9л - 100 грн. Помпа - 160 грн. Кулер - цена по запросу." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://crystalwater.kiev.ua/uslugi-i-tseny.html" />
+  <meta property="og:image" content="https://crystalwater.kiev.ua/images/bottle_articles.png" />
+<link rel="stylesheet" href="css/pages/uslugi-i-tseny.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Crystal Water",
+    "url": "https://crystalwater.kiev.ua/uslugi-i-tseny.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Crystal Water"
     }
-    body { margin: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: var(--cw-text); background-color: var(--cw-white); line-height: 1.6; }
+  }
+  </script>
 
-    /* --- HEADER --- */
-    .site-header { background: var(--cw-blue-dark); padding: 0;   0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .header-main { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 20px; gap: 20px; }
-    .site-header__logo { color: var(--cw-white); text-decoration: none; font-weight: 800; font-size: 22px; display: flex; align-items: center; gap: 8px; }
-    .site-header__phones { display: flex; gap: 15px; align-items: center; }
-    .site-header__phones a { color: var(--cw-white); text-decoration: none; font-weight: 700; font-size: 16px; transition: var(--cw-transition); }
-    .site-header__phones a:hover { color: var(--cw-accent); }
-    .site-nav { display: flex; gap: 10px; }
-    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 5px; }
-    .site-nav a { color: var(--cw-white); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; transition: var(--cw-transition); }
-    .site-nav a:hover, .site-nav a.is-active { background: var(--cw-white); color: var(--cw-blue-dark); }
+<link rel="stylesheet" href="css/page-tech.css"><link rel="stylesheet" href="css/style.css"></head>
+<body>
 
-    .breadcrumbs { font-size: 13px; color: #3a4a57; padding: 10px 16px; max-width: 1200px; margin: 0 auto; }
-    .breadcrumbs a { color: var(--cw-blue-dark); text-decoration: none; }
-
-    /* --- PAGE HEADER --- */
-    .page-header {
-      background: linear-gradient(rgba(15, 95, 150, 0.9), rgba(15, 95, 150, 0.9)), url('https://crystalwater.kiev.ua/images/water_bg.min.png');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .page-header h1 { font-size: clamp(28px, 5vw, 42px); margin-bottom: 15px; }
-    .page-header p { font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9; }
-
-    /* --- PRICE CONTAINER --- */
-    .price-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-    .price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-    .price-card {
-      background: var(--cw-white);
-      border: 2px solid var(--cw-blue-light);
-      border-radius: 24px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      transition: var(--cw-transition);
-      display: flex;
-      flex-direction: column;
-    }
-    .price-card:hover { border-color: var(--cw-accent); transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-    .price-card h3 { color: var(--cw-blue-dark); font-size: 26px; margin-bottom: 15px; }
-    .price-value { font-size: 42px; font-weight: 800; color: var(--cw-accent); margin-bottom: 20px; }
-    .price-value span { font-size: 18px; font-weight: 400; color: var(--cw-text); }
-    .price-features { list-style: none; padding: 0; margin: 0 0 30px; text-align: left; flex-grow: 1; }
-    .price-features li { padding: 12px 0; border-bottom: 1px solid #eee; font-size: 16px; display: flex; align-items: center; }
-    .price-features li::before { content: '✓'; color: var(--cw-accent); margin-right: 12px; font-weight: 800; }
-    .btn-order {
-      display: block;
-      padding: 16px;
-      background: var(--cw-blue);
-      color: var(--cw-white);
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 18px;
-      transition: var(--cw-transition);
-    }
-    .btn-order:hover { background: var(--cw-blue-dark); }
-
-    /* --- HOW IT WORKS --- */
-    .how-it-works { padding: 80px 20px; background: #f8fafc; border-top: 1px solid #eee; }
-    .section-title { text-align: center; color: var(--cw-blue-dark); font-size: 32px; margin-bottom: 40px; }
-    .steps-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-    .step-item { text-align: center; padding: 20px; }
-    .step-num {
-      width: 50px; height: 50px; background: var(--cw-accent); color: white;
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 24px; font-weight: 800; margin: 0 auto 20px;
-    }
-    .step-item h4 { font-size: 20px; color: var(--cw-blue-dark); margin-bottom: 10px; }
-    .step-item p { font-size: 15px; color: var(--cw-text-muted); }
-
-    /* --- INFO SECTION --- */
-    .info-section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-    .info-block h3 { color: var(--cw-blue-dark); font-size: 24px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-    .info-block p { font-size: 16px; color: var(--cw-text-muted); margin-bottom: 10px; }
-
-    /* --- FAQ --- */
-    .faq { padding: 80px 20px; background: var(--cw-blue-light); }
-    .faq-container { max-width: 800px; margin: 0 auto; }
-    .faq-item { background: var(--cw-white); border-radius: 12px; padding: 20px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-    .faq-item h4 { margin: 0 0 10px; color: var(--cw-blue-dark); font-size: 18px; }
-    .faq-item p { margin: 0; font-size: 15px; color: var(--cw-text-muted); }
-
-    /* --- FOOTER --- */
-    .site-footer { background: var(--cw-blue-dark); color: var(--cw-white); padding: 60px 20px 20px; }
-    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-    .footer-col h3 { color: var(--cw-white); font-size: 20px; margin-bottom: 20px; border-bottom: 2px solid var(--cw-accent); display: inline-block; padding-bottom: 5px; }
-    .footer-col p, .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; display: block; margin-bottom: 10px; transition: var(--cw-transition); }
-    .footer-col a:hover { color: var(--cw-accent); padding-left: 5px; }
-    .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; opacity: 0.6; }
-
-    @media (max-width: 768px) {
-      .header-main { flex-direction: column; gap: 15px; padding: 15px 20px; }
-      .site-nav ul { flex-direction: column; align-items: center; gap: 8px; }
-      .site-nav a { width: 100%; text-align: center; padding: 10px; }
-      .price-grid { grid-template-columns: 1fr; }
-      .info-section { grid-template-columns: 1fr; gap: 40px; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .page-header h1 { font-size: 28px; }
-      .footer-grid { grid-template-columns: 1fr; text-align: center; }
-      .footer-col { display: flex; flex-direction: column; align-items: center; }
-    }
-  </style>
-</head>
-<body class="has-mobile-order-bar">
-
-      <header class="site-header"><div class="header-main">
+  <!-- ============================================
+     ХЕДЕР — вставить в начало <body>
+     ============================================ -->
+    <header class="site-header"><div class="header-main">
       <a href="./" class="site-header__logo">💧 Crystal Water</a>
       <nav class="site-nav">
         <ul>
-          <li class="is-active"><a href="./">Доставка воды</a></li>
+          <li><a href="./">Доставка воды</a></li>
           <li class="is-active"><a href="uslugi-i-tseny.html">Цены</a></li>
           <li><a href="tekhnologii-ochistki.html">Технологии</a></li>
           <li><a href="articles.html">Статьи</a></li>
@@ -155,107 +53,131 @@
         <a href="tel:+380635304050">(063) 530-40-50</a>
       </div>
     </div>
-  
   </header>
 
-  
     
-<nav class="breadcrumbs">
-    <a href="./">Доставка воды Бровары</a> &raquo; <span>Цены и услуги</span>
-  </nav>
+<nav class="breadcrumbs" aria-label="breadcrumb"><a href="./">Доставка воды Бровары</a> &raquo; <span>Цены</span></nav>
 
-  <section class="page-header">
-    <h1>Прозрачные цены на чистую воду</h1>
-    <p>Мы предлагаем доступную стоимость премиальной воды с доставкой на дом и в офис. Никаких скрытых платежей — только честная цена за качество.</p>
-  </section>
-
-  <main class="price-container">
+  <main>
     <img class="article-hero" src="assets/images/voda.png" alt="" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:20px;display:block" loading="lazy" decoding="async">
 
-    <div class="price-grid">
-      <div class="price-card">
-        <h3>Розничный тариф</h3>
-        <div class="price-value">От 120 <span>грн / бутыль</span></div>
-        <ul class="price-features">
-          <li>Доставка по Броварам и Киеву</li>
-          <li>Очистка обратным осмосом</li>
-          <li>Озонирование и стерилизация</li>
-          <li>Идеально для семейного потребления</li>
-          <li>Бесплатный первый запуск кулера</li>
-        </ul>
-        <a href="tel:+380637886880" class="btn-order">Заказать доставку</a>
+    <section class="hero">
+      <div class="container" style="max-width:700px;text-align:center;">
+        <h1 style="font-size:clamp(28px,4vw,38px);color:#1a3c59;margin:0 0 10px;">Кришталево-чиста вода - цена и условия доставки</h1>
+        <p style="color:#5f7f99;font-size:16px;">"Кришталево-чиста питна вода" - это вода, цена которой доступна каждому</p>
+      </div>
+    </section>
+
+<section><div class="container">
+      <div class="price-table">
+        <!-- БУТЫЛЬ -->
+        <div class="price-row free" id="part1">
+          <div class="img-col"><img src="assets/images/cena2.png" alt="Бутыль 19,9л" loading="lazy" decoding="async" /></div>
+          <div class="info-col">
+            <h3>Бутыль очищенной воды 19,9 л</h3>
+            <div class="price-big">100 <small>грн</small></div>
+            <p><strong>Залоговая цена за бутыль - 225 грн</strong><br/>
+            Минимальный заказ - 2 бутыля воды.<br/>
+            При заказе более 8 бутылей цена значительно снижается.</p>
+            <p><em>При первой доставке очищенной воды оплачивается залоговая стоимость за бутыль. В случае прекращения сотрудничества залог за бутыль возвращается в полном объеме.</em></p>
+          </div>
+        </div>
+
+        <!-- ПОМПА -->
+        <div class="price-row" id="part2">
+          <div class="img-col"><img src="assets/images/placeholder.png" alt="Помпа Blue Rain" loading="lazy" decoding="async" /></div>
+          <div class="info-col">
+            <h3>Помпа для накачивания воды Blue Rain</h3>
+            <div class="price-big">160 <small>грн</small></div>
+            <p>Помпа Blue Rain - это удобное устройство для разлива воды. Выполнена из прочного, экологически чистого материала.</p>
+            <p>Помпу для розлива воды удобно и просто использовать. Изготовлена из экологически чистых и санитарно проверенных материалов. Пластик соответствует всем необходимым эпидемиологическим и гигиеническим требованиям. Пригоден для употребления в пищевых промышленных целях.</p>
+          </div>
+        </div>
+
+        <!-- АНАЛИЗ ВОДЫ -->
+        <div class="price-row free">
+          <div class="img-col"><img src="assets/images/Ekspress-analiz.png" alt="Экспресс-анализ воды" loading="lazy" decoding="async" /></div>
+          <div class="info-col">
+            <h3>Экспресс-анализ воды</h3>
+            <div class="price-big" style="color:#1a8b63;">БЕСПЛАТНО!</div>
+            <p>Проверка любых образцов воды на содержание примесей, солей и жесткость.</p>
+            <p>Измеритель TDS определит суммарную концентрацию ионов, содержащихся в воде. Чем меньше солесодержание воды, тем сопротивление выше, а проводимость меньше. Именно по этим причинам измерение общего солесодержания в воде - это основной показатель качества очищенной воды. Чем ниже TDS, тем меньше соли содержится в воде, тем выше её качество.</p>
+          </div>
+        </div>
+
+        <!-- КУЛЕР -->
+        <div class="price-row" id="part3">
+          <div class="img-col"><img src="assets/images/kuler-dlya-vodi.png" alt="Кулер для воды" loading="lazy" decoding="async" /></div>
+          <div class="info-col">
+            <h3>Кулер для нагрева и охлаждения питьевой воды</h3>
+            <div class="price-big"><small>(цену уточняйте)</small></div>
+            <p>Установка кулера - это экологически чистый выбор в сторону здоровья близких и сотрудников!</p>
+            <p>На сегодняшний день каждая солидная компания, офис, магазин и аптека имеют в своем зале кулер с водой. Это удобно и говорит о Вашей заботе о комфорте посетителей, тем самым увеличивая доверие к Вашей компании. Также кулеры удобны для размещения в больницах, школах и детских садах.</p>
+            <p>Когда вам будет совершаться доставка очищенной воды, вы можете уточнить все детали у нашего менеджера по поводу наличия кулеров на складе.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="price-card">
-        <h3>Оптовый тариф (B2B)</h3>
-        <div class="price-value">Спеццена <span>за объем</span></div>
-        <ul class="price-features">
-          <li>Специальные условия для офисов и предприятий</li>
-          <li>Индивидуальный график поставок</li>
-          <li>Прогрессивная скидка от объема заказа</li>
-          <li>Полный пакет документов (безнал)</li>
-          <li>Приоритетная доставка по графику</li>
-        </ul>
-        <a href="tel:+380637886880" class="btn-order">Обсудить опт</a>
+      <!-- ОТЗЫВЫ И ПРИВЕДИ ДРУГА -->
+      <div style="display:grid;gap:16px;margin:24px 0;">
+        <img src="assets/images/otzivi.jpg" alt="Отзывы о доставке воды" style="width:100%;border-radius:14px;" loading="lazy" decoding="async" />
+        <img src="assets/images/privedi-druga.png" alt="Приведи друга" style="width:100%;border-radius:14px;" loading="lazy" decoding="async" />
       </div>
-    </div>
+
+      <div style="text-align:center;margin:30px 0;">
+        <h2>"Кришталево-чиста питна вода" - это вода, цена которой доступна каждому</h2>
+        <div style="margin-top:16px;">
+          <button class="btn btn-primary" type="button" data-open-order>Заказать воду</button>
+          <a class="btn btn-secondary" href="tel:+380637886880">Позвонить</a>
+          <a class="btn btn-telegram" href="https://t.me/CrystalWaterBro_bot" target="_blank">Telegram</a>
+        </div>
+      </div>
+    </div></section>
+
+    <!-- ФОРМА -->
+    <section class="order-band" id="order">
+      <div class="container order-grid">
+        <div class="order-box">
+          <h2>📦 Заказать воду</h2>
+          <p>Оставьте короткую заявку - мы быстро свяжемся.</p>
+          <div class="inline-list">
+            <span class="chip">📞 (063) 788-68-80</span>
+            <span class="chip">📞 (063) 530-40-50</span>
+            <span class="chip">🤖 @CrystalWaterBro_bot</span>
+            <span class="chip">🚚 Дом / офис / сад</span>
+          </div>
+        </div>
+        <div class="order-box form-side">
+          <h2>📝 Короткая заявка</h2>
+          <form id="orderForm">
+            <div class="form-row">
+              <div><label>Имя</label><input name="name" type="text" placeholder="Ваше имя" /></div>
+              <div><label>Телефон</label><input name="phone" type="tel" placeholder="Телефон" /></div>
+            </div>
+            <div><label>Адрес</label><input name="address" type="text" placeholder="Бровары, улица, дом" /></div>
+            <div class="form-row">
+              <div><label>Количество</label><select name="bottles"><option>1 бутыль</option><option>2 бутыли</option><option>3 бутыли</option><option>4 бутыли</option><option>5+ бутылей</option></select></div>
+              <div><label>Время</label><input name="time" type="text" placeholder="После 20:00" /></div>
+            </div>
+            <div><label>Комментарий</label><textarea name="comment" placeholder="Этаж, код, пожелания"></textarea></div>
+            <div class="cta-actions">
+              <button class="btn btn-primary" type="submit">Отправить</button>
+              <a class="btn btn-secondary" href="tel:+380637886880">Позвонить</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <section class="how-it-works">
-    <h2 class="section-title">Как заказать воду за 3 простых шага</h2>
-    <div class="steps-grid">
-      <div class="step-item">
-        <div class="step-num">1</div>
-        <h4>Оставьте заявку</h4>
-        <p>Позвоните нам или напишите в Telegram. Мы уточним ваш адрес и количество бутылей.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-num">2</div>
-        <h4>Согласуйте время</h4>
-        <p>Мы предложим удобный интервал доставки. В Броварах работаем в вечернее время после 20:00.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-num">3</div>
-        <h4>Получите воду</h4>
-        <p>Наш курьер привезет воду, поможет установить бутыль в кулер и примет оплату.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="info-section">
-    <div class="info-block">
-      <h3>🚚 Особенности доставки</h3>
-      <p>Мы осуществляем ежедневную доставку по Броварам и Киеву. Наша логистика настроена так, чтобы вы никогда не оставались без воды.</p>
-      <p><strong>Бровары:</strong> Доставка осуществляется преимущественно в вечернее время (после 20:00), что удобно для большинства жителей города.</p>
-      <p><strong>Киев:</strong> Гибкий график поставок в зависимости от вашего района и объема заказа.</p>
-    </div>
-    <div class="info-block">
-      <h3>💳 Оплата и условия</h3>
-      <p>Мы принимаем оплату любым удобным для вас способом: наличными курьеру или безналичный расчет для юридических лиц.</p>
-      <p><strong>Первый заказ:</strong> Для новых клиентов действует акция — первая бутыль воды бесплатно!</p>
-      <p><strong>Тара:</strong> Мы используем многоразовые бутыли из высококачественного пищевого пластика, которые проходят тщательную санитарную обработку.</p>
-    </div>
-  </section>
-
-  <section class="faq">
-    <div class="faq-container">
-      <h2 class="section-title">Часто задаваемые вопросы</h2>
-      <div class="faq-item">
-        <h4>Сколько стоит доставка?</h4>
-        <p>Доставка входит в стоимость бутыли при соблюдении минимального заказа. Подробности уточняйте у оператора.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Что делать, если у меня нет кулера?</h4>
-        <p>Мы можем проконсультировать вас по выбору подходящего кулера или предложить варианты заказа воды в другой таре.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Как часто нужно менять воду?</h4>
-        <p>Это зависит от вашего потребления. В среднем, семья из 3-4 человек заказывает новую бутыль раз в 5-7 дней.</p>
-      </div>
-    </div>
-  </section>
-
-      <footer class="site-footer">
+  <!-- ============================================
+     ФУТЕР - вставить перед     <div class="mobile-order-bar">
+    <a href="tel:+380637886880" class="mob-call">📞 Позвонить</a>
+    <a href="https://t.me/CrystalWaterBro_bot" class="mob-tg" target="_blank">✈️ Telegram</a>
+  </div>
+</body>
+     ============================================ -->
+  <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-col">
         <h3>Crystal Water</h3>
@@ -290,10 +212,37 @@
     </div>
   </footer>
 
-      <div class="mobile-order-bar">
+  <a class="floating-telegram" href="https://t.me/CrystalWaterBro_bot" target="_blank">🤖 Telegram</a>
+  <button class="scrollup" id="scrollUp" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;right:16px;bottom:74px;z-index:40;width:42px;height:42px;border-radius:50%;background:linear-gradient(180deg,#3d97e6,#2a78c4);color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(44,127,203,0.30);" aria-label="Наверх">↑</button>
+
+  <div class="modal" id="orderModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-close-order>×</button>
+      <h2>Оформление заказа</h2>
+      <form id="modalOrderForm">
+        <div class="form-row"><input name="name" type="text" placeholder="Имя" /><input name="phone" type="tel" placeholder="Телефон" /></div>
+        <input name="address" type="text" placeholder="Адрес" />
+        <div class="form-row"><select name="bottles"><option>1 бутыль</option><option>2 бутыли</option><option>3 бутыли</option><option>4 бутыли</option><option>5+ бутылей</option></select><input name="time" type="text" placeholder="Время" /></div>
+        <textarea name="comment" placeholder="Комментарий"></textarea>
+        <div class="cta-actions"><button class="btn btn-primary" type="submit">Открыть Telegram</button><button class="btn btn-secondary" type="button" data-close-order>Закрыть</button></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var m=document.getElementById('orderModal'),o=document.querySelectorAll('[data-open-order]'),c=document.querySelectorAll('[data-close-order]');
+      o.forEach(function(b){b.addEventListener('click',function(){m.classList.add('is-open');m.setAttribute('aria-hidden','false');})});
+      c.forEach(function(b){b.addEventListener('click',function(){m.classList.remove('is-open');m.setAttribute('aria-hidden','true');})});
+      m.addEventListener('click',function(e){if(e.target===m){m.classList.remove('is-open');m.setAttribute('aria-hidden','true');}});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'){m.classList.remove('is-open');m.setAttribute('aria-hidden','true');}});
+      function sb(f){f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);var t=['Здравствуйте! Хочу заказать воду.','Имя: '+(d.get('name')||'-'),'Телефон: '+(d.get('phone')||'-'),'Адрес: '+(d.get('address')||'-'),'Количество: '+(d.get('bottles')||'-'),'Время: '+(d.get('time')||'-'),'Комментарий: '+(d.get('comment')||'-')].join('\n');window.open('https://t.me/share/url?url='+encodeURIComponent('https://crystalwater.kiev.ua/')+'&text='+encodeURIComponent(t),'_blank','noopener');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');});}
+      sb(document.getElementById('orderForm'));sb(document.getElementById('modalOrderForm'));
+    })();
+  </script>
+  <div class="mobile-order-bar">
     <a href="tel:+380637886880" class="mob-call">📞 Позвонить</a>
     <a href="https://t.me/CrystalWaterBro_bot" class="mob-tg" target="_blank">✈️ Telegram</a>
   </div>
-
 </body>
 </html>

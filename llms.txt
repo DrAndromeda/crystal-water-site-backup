@@ -14,9 +14,9 @@
 
 ## Основные страницы
 - [Главная](https://crystalwater.kiev.ua/): Доставка воды, цены, схема очистки
-- [Цены](https://crystalwater.kiev.ua/prices.html): Прайс на воду, помпы и кулеры
+- [Цены](https://crystalwater.kiev.ua/uslugi-i-tseny.html): Прайс на воду, помпы и кулеры
 - [О нас и контакты](https://crystalwater.kiev.ua/about.html): Адрес, телефоны, график
-- [Технологии очистки](https://crystalwater.kiev.ua/tech.html): 8 ступеней очистки воды
+- [Технологии очистки](https://crystalwater.kiev.ua/tekhnologii-ochistki.html): 8 ступеней очистки воды
 - [Статьи](https://crystalwater.kiev.ua/articles.html): Каталог статей о воде
 
 ## Статьи

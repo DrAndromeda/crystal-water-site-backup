@@ -3,7 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /articles_updated.html
 Disallow: /READY-TO-PASTE-
 Disallow: /json-ld-
 Disallow: /header-
