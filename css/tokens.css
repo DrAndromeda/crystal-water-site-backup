@@ -79,3 +79,12 @@ input:not([type="checkbox"]):not([type="radio"]), textarea { min-height: 44px; b
 footer a, .footer-col a { justify-content: flex-start; }
 .site-nav a { padding-inline: 12px; }
 address a, main a[href^="tel:"], main a[href^="mailto:"], main a[href*="t.me"], main a[href*="google.com/maps"] { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* YouTube click-to-load facade */
+.cw-yt { display: block; max-width: 640px; margin: 16px 0; }
+.cw-yt > a { position: relative; display: block !important; border-radius: 12px; overflow: hidden; background: #000; min-height: 0 !important; }
+.cw-yt img { width: 100%; height: auto; display: block; opacity: .85; transition: opacity .2s; }
+.cw-yt > a:hover img, .cw-yt > a:focus-visible img { opacity: 1; }
+.cw-yt b { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; line-height: 48px; text-align: center; border-radius: 12px; background: #c00; color: #fff; font-size: 22px; }
+.cw-yt-label { position: absolute; left: 0; right: 0; bottom: 0; padding: 8px 12px; background: rgba(0,0,0,.6); color: #fff; font-size: 14px; }
+iframe[src*="youtube-nocookie"] { width: 100%; max-width: 640px; aspect-ratio: 16/9; height: auto; border: 0; border-radius: 12px; }

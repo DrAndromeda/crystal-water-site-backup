@@ -76,6 +76,17 @@ def a11y(s, ua):
         if re.search(r'\srel="', t): return re.sub(r'\srel="([^"]*)"', lambda r: ' rel="%s noopener"' % r.group(1).strip(), t, 1)
         return t[:-1] + ' rel="noopener">'
     s = re.sub(r'<a\b[^>]*target="_blank"[^>]*>', noop, s)
+    def yt(m):
+        t = m.group(0); v = re.search(r'/embed/([\w-]{6,})', t)
+        if not v: return t
+        title = re.search(r'title="([^"]*)"', t); title = title.group(1) if title else ('Відео' if ua else 'Видео')
+        vid = v.group(1)
+        return ('<span class="cw-yt"><a href="https://www.youtube.com/watch?v=%s" target="_blank" rel="noopener" data-yt="%s" data-title="%s">'
+                '<img src="https://i.ytimg.com/vi/%s/hqdefault.jpg" alt="%s" width="480" height="360" loading="lazy" decoding="async">'
+                '<b aria-hidden="true">&#9654;</b><span class="cw-yt-label">%s</span></a></span>') % (vid, vid, title, vid, title, 'Дивитися на YouTube' if ua else 'Смотреть на YouTube')
+    s = re.sub(r'<iframe\b[^>]*(?:youtube|youtu\.be)[^>]*>\s*</iframe>', yt, s)
+    if 'data-yt=' in s and 'yt-facade.js' not in s:
+        s = s.replace('</body>', '<script src="%sassets/js/yt-facade.js" defer></script>\n</body>' % ('../' if ua else ''), 1)
     s = re.sub(r'(src=")https?://(?:www\.)?youtube\.com/embed/', r'\1https://www.youtube-nocookie.com/embed/', s)
     if ua:
         s = re.sub(r'srcset="([^"]*)"', lambda m: 'srcset="%s"' % re.sub(r'(^|, )(?=(?:assets|images)/)', r'\1../', m.group(1)), s)
