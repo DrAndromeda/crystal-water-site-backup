@@ -1,0 +1,7 @@
+# Netlify / Cloudflare Pages equivalent of the 301 rules in .htaccess
+/prices.html          /uslugi-i-tseny.html          301
+/tech.html            /tekhnologii-ochistki.html    301
+/articles_updated.html /articles.html               301
+/voda-h2o-stati/      /articles.html                301
+/ua/prices.html       /ua/tsiny.html                301
+/ua/tech.html         /ua/tekhnologii-ochystky.html 301

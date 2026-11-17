@@ -9,6 +9,7 @@ Disallow: /header-
 Disallow: /footer-
 Disallow: /hreflang-template.html
 Disallow: /blocks.html
+Disallow: /404.html
 Disallow: /head-meta-template.html
 
 User-agent: GPTBot
