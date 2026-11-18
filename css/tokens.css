@@ -48,7 +48,6 @@ iframe[src*="youtube"], iframe[src*="vimeo"] { width: 100%; height: auto; aspect
 iframe[src*="google.com/maps"] { width: 100%; }
 .comparison-table, table { max-width: 100%; }
 @media (max-width: 640px) {
-  .comparison-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   [style*="min-width"] { min-width: 0 !important; }
   .footer-grid { grid-template-columns: 1fr !important; }
   .footer-col { min-width: 0; overflow-wrap: anywhere; }
@@ -89,3 +88,16 @@ address a, main a[href^="tel:"], main a[href^="mailto:"], main a[href*="t.me"], 
 .cw-yt-label { position: absolute; left: 0; right: 0; bottom: 0; padding: 8px 12px; background: rgba(0,0,0,.6); color: #fff; font-size: 14px; }
 iframe[src*="youtube-nocookie"] { width: 100%; max-width: 640px; aspect-ratio: 16/9; height: auto; border: 0; border-radius: 12px; }
 picture { display: contents; }
+
+/* Wide data tables scroll inside themselves instead of widening the page */
+/* tables are wrapped by postprocess.py in .cw-table-wrap */
+.cw-table-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.cw-table-wrap:focus-visible { outline-offset: 2px; }
+.cw-table-wrap > table { margin: 0; min-width: 480px; }
+/* Social links in content: full-size touch targets */
+main a[href*="instagram.com"], main a[href*="facebook.com"], main a[href*="twitter.com"], main a[href*="t.me"] { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Long Russian/Ukrainian words must never widen the page on small screens */
+h1, h2, h3, h4, p, li, td, th, summary, figcaption { overflow-wrap: break-word; }
+h1, h2, h3 { hyphens: auto; }
+.article-container h1 { font-size: clamp(24px, 7.2vw, 32px); }

@@ -31,13 +31,15 @@
   "css/style-remaster.css",
   "css/pages/o-nas.css"
  ],
- "9a92e38b99": [
-  "css/tokens.css",
-  "css/pages/ua-index.css"
- ],
  "b2c43e0ca3": [
   "css/pages/uslugi-i-tseny.css",
   "css/page-tech.css",
   "css/style.css"
+ ],
+ "9199d5808f": [
+  "css/tokens.css",
+  "css/style-remaster.css",
+  "css/article-basic.css",
+  "css/blocks.css"
  ]
 }

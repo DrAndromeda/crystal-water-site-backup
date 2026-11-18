@@ -1,0 +1,267 @@
+TITLE: Доставка очищеної питної води в Броварах і Києві | Crystal Water
+DESC: Замовте кришталево чисту питну воду з доставкою додому й в офіс у Броварах і Києві. 8 етапів очищення, зворотний осмос та озонування. Перша пляшка …
+CRUMB: 
+===MAIN===
+<main id="main">
+<section class="hero">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1>Доставка води Бровари — кришталево чиста вода з доставкою в <span style="color:var(--cw-accent)">Бровари та Київ</span></h1>
+        <p>Якісна вода з 8-ступеневою системою очищення. Чистий смак, багатоступеневий контроль якості та доставка прямо до ваших дверей.</p>
+        <a href="uslugi-i-tseny.html" class="btn-main">Замовити першу пляшку безкоштовно!</a>
+      </div>
+      <div class="hero__bottle">
+        <picture><source type="image/avif" srcset="images/bottle_articles.min.avif"><img width="194" height="311" src="images/bottle_articles.min.webp" alt="Пляшка Crystal Water 19 л" loading="lazy" decoding="async"></picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <h2>Доставка води додому й в офіс у Броварах і Києві</h2>
+    <p><strong>Доставка води в Броварах після 20.00</strong> — Доставка води додому й в офіс по місту Бровари. «Кришталево-чиста питна вода» — це очищена вода високої якості в місті Бровари, яка підходить для регулярного вживання та приготування їжі. Щоденне вживання такої води — гарна звичка для підтримання питного режиму та загального самопочуття. Багатоступеневе очищення забезпечує стабільний склад, тому вода має приємний смак і не має запаху.</p>
+    <p>Зручний сервіс доставки води в квартири, офіси, ресторани та приватні будинки міста Бровари і Київ. Для Вашої зручності <strong>доставка води в Бровари</strong> відбувається у вечірній час після 20.00. Оптовим клієнтам виконуємо розлив води за спеціальними цінами!</p>
+  </section>
+
+  <div class="trust-banner">
+    <h2>🏆 18+ років на ринку</h2>
+    <p>Тисячі задоволених клієнтів довіряють нам якість води для своїх родин упродовж майже двох десятиліть.</p>
+  </div>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>💎 Висока якість</h3>
+      <p>Багатоступеневе очищення забезпечує стабільний склад і природну м'якість води.</p>
+    </div>
+    <div class="feature-card">
+      <h3>💰 Вигідна ціна</h3>
+      <p>Доступна вартість за високого стандарту очищення. Перша пляшка для нових клієнтів — у подарунок!</p>
+    </div>
+    <div class="feature-card">
+      <h3>🚚 Оперативний сервіс</h3>
+      <p>Точна доставка в Броварах і Києві. Ми цінуємо ваш час і привозимо воду чітко за графіком.</p>
+    </div>
+  </section>
+
+
+  <section class="seo-benefits">
+    <div class="seo-container">
+      <p class="seo-sub">якість води для доставки в Броварах</p>
+
+      <h2>Доставка води в Броварах: чому обирають нас</h2>
+      <ul class="seo-list">
+        <li>✅ Проходить <strong>8 етапів очищення та контролю якості води</strong>.</li>
+        <li>✅ Збалансований <strong>мінеральний склад</strong>, що підходить для щоденного пиття.</li>
+        <li>✅ Підходить для регулярного вживання <strong>дітям, літнім людям і тим, хто веде активний або малорухливий спосіб життя</strong>.</li>
+        <li>✅ Наша чиста, смачна вода за смаковими якостями <strong>схожа на талу воду</strong>.</li>
+      </ul>
+
+      <div class="seo-quote">
+        <p>«Кришталево-чиста питна вода» проходить очищення методом <strong>зворотного осмосу та озонової стерилізації</strong> — це одна з найретельніших технологій очищення питної води. Багатоступеневе очищення від домішок і сторонніх речовин забезпечує стабільну якість і приємний смак.</p>
+        <p>Стабільна якість і приємний смак — для щоденного пиття вдома й в офісі.</p>
+      </div>
+
+      <p class="seo-sub">склад води та доставка води Бровари</p>
+
+      <div class="seo-ph-box">
+        <p>Вода «Кришталево-чиста» завдяки <strong>високому рівню очищення</strong> має приємний чистий смак і стабільний <strong>показник pH близько 7,5</strong>.</p>
+      </div>
+
+      <div class="seo-tech-box">
+        <h3>Ми очищаємо воду перевіреними технологіями:</h3>
+        <ul>
+          <li>🔬 <strong>Система зворотного осмосу</strong> (зворотно-осмотична)</li>
+          <li>💨 <strong>Озонова стерилізація</strong> (озонування)</li>
+        </ul>
+      </div>
+
+      <div class="seo-cta-banner">
+        <h3>🏪 ТУТ ВИ МОЖЕТЕ КУПИТИ БУТИЛЬОВАНУ ВОДУ З БЕЗКОШТОВНОЮ ДОСТАВКОЮ В БРОВАРАХ</h3>
+        <p>У нас Ви можете купити воду будь-яким зручним для вас способом:</p>
+        <ul>
+          <li>🚚 Доставка води Бровари додому або в офіс</li>
+          <li>🏙️ Доставка води Київ додому або в офіс</li>
+          <li>📍 Доставка води в броварський район (за особистою домовленістю та при оптовому замовленні)</li>
+        </ul>
+      </div>
+
+      <p class="seo-sub">наші сертифікати якості доставки води Бровари</p>
+
+      <div class="seo-phone-banner">
+        <p>📞 Оформіть замовлення води додому в Броварах у будь-який зручний для Вас час</p>
+        <p class="seo-phone">+380637886880 / +380635304050</p>
+      </div>
+
+      <div class="seo-final">
+        <p>
+          <em>Вода – це основа щоденного питного режиму, тож подбайте про те, щоб вона завжди була чистою.</em><br><br>
+          <strong>Доставка води в Броварах «Кришталево-чиста» для Вашого щоденного комфорту!</strong><br><br>
+          Щоб замовити воду в місті Бровари, просто зателефонуйте нам прямо зараз!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSING INSERT -->
+  <section class="how-it-works">
+    <h2>Як замовити воду за 1 хвилину</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-icon">1</div>
+        <h3>Залиште заявку</h3>
+        <p>Зателефонуйте нам або напишіть у Telegram-бот. Ми підберемо зручний час доставки.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-icon">2</div>
+        <h3>Ми привозимо воду</h3>
+        <p>Наш кур'єр доставить пляшки точно в строк прямо у вашу квартиру або офіс.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-icon">3</div>
+        <h3>Насолоджуйтеся смаком</h3>
+        <p>Пийте чисту, якісну воду щодня.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-item">
+      <span class="number">1500+</span>
+      <span class="label">Постійних клієнтів</span>
+    </div>
+    <div class="stat-item">
+      <span class="number">50 000+</span>
+      <span class="label">Пляшок доставлено</span>
+    </div>
+    <div class="stat-item">
+      <span class="number">18+</span>
+      <span class="label">Років досвіду</span>
+    </div>
+  </section>
+
+  <section class="purification">
+    <h2>8 ступенів очищення</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>Механіка</h3>
+          <p>Видалення піску, іржі та великих завислих часточок.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>Вугільний фільтр</h3>
+          <p>Видалення хлору та органічних сполук.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Зворотний осмос</h3>
+          <p>Видалення 99% усіх розчинених домішок і солей.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <h3>Озонування</h3>
+          <p>Стерилізація від вірусів і бактерій.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-text">
+          <h3>Кисень</h3>
+          <p>Насичення води O2 для свіжості та смаку.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">6</div>
+        <div class="step-text">
+          <h3>Мінералізація</h3>
+          <p>Повернення потрібних Mg, Ca і K у точній дозі.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">7</div>
+        <div class="step-text">
+          <h3>Баланс pH</h3>
+          <p>Встановлення стабільного рівня pH 7,5.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">8</div>
+        <div class="step-text">
+          <h3>УФ-фініш</h3>
+          <p>Фінальна стерилізація перед розливом.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="product-card">
+      <div class="product-info">
+        <h2>💧 Пляшка 19 літрів</h2>
+        <p>Оптимальний вибір для дому й офісу. Екологічна багаторазова тара, що підходить для будь-якого кулера.</p>
+        <div class="product-price">100 грн <span>/ шт.</span></div>
+        <a href="tel:+380637886880" class="btn-main">Замовити доставку</a>
+      </div>
+      <picture><source type="image/avif" srcset="images/bottle_articles.min.avif"><img width="194" height="311" src="images/bottle_articles.min.webp" alt="Пляшка 19 л" class="product-img" loading="lazy" decoding="async"></picture>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="reviews-container">
+      <h2>Що про нас кажуть клієнти</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Замовляю воду Crystal Water вже два роки. Дуже зручно, що привозять увечері — мені якраз підходить за графіком роботи. Вода справді смачна!"</p>
+          <div class="review-author">
+            <div class="avatar">МН</div>
+            <span>Марина Н.</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Дуже якісний сервіс у Броварах. Завжди ввічливі кур'єри, вода чиста, жодної домішки хлору. Діти п'ють із задоволенням."</p>
+          <div class="review-author">
+            <div class="avatar">АП</div>
+            <span>Андрій П.</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Користуємося водою в офісі. Якість стабільна, ціна адекватна. Дякуємо за оперативність і першу безкоштовну пляшку!"</p>
+          <div class="review-author">
+            <div class="avatar">ОК</div>
+            <span>Ольга К.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-grid">
+    <div class="info-banner">
+      <h3>🔄 Як ми працюємо</h3>
+      <p>Залиште заявку &rarr; Ми привозимо воду в зручний час (після 20:00 в Броварах) &rarr; Ви насолоджуєтеся чистотою.</p>
+    </div>
+    <div class="info-banner">
+      <h3>📜 Гарантія якості</h3>
+      <p>Уся наша продукція сертифікована СЕС і відповідає державним стандартам якості.</p>
+    </div>
+    <div class="info-banner">
+      <h3>💎 Чистота складу</h3>
+      <p>Жодного хлору, важких металів чи сторонніх запахів. Лише чиста H2O.</p>
+    </div>
+    <div class="info-banner">
+      <h3>🧪 Оптимальний pH</h3>
+      <p>Вода зі стабільним показником pH 7,5 — для щоденного пиття.</p>
+    </div>
+  </section>
+
+      
+</main>

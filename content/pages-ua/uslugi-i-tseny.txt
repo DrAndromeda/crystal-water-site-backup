@@ -1,0 +1,115 @@
+TITLE: Ціни на воду в Броварах і Києві ❘ Crystal Water
+DESC: Ціни на доставку питної очищеної води в Броварах і Києві. Бутель 19,9 л - 100 грн. Помпа - 160 грн. Кулер - ціна за запитом. Перша бутель безкоштовно!
+CRUMB: Ціни
+===MAIN===
+<main>
+    <img class="article-hero" src="assets/images/voda.png" alt="" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:20px;display:block" loading="lazy" decoding="async">
+
+    <section class="hero">
+      <div class="container" style="max-width:700px;text-align:center;">
+        <h1 style="font-size:clamp(28px,4vw,38px);color:#1a3c59;margin:0 0 10px;">Кришталево-чиста вода - ціна та умови доставки</h1>
+        <p style="color:#5f7f99;font-size:16px;">"Кришталево-чиста питна вода" - це вода, ціна якої доступна кожному</p>
+      </div>
+    </section>
+
+<section><div class="container">
+      <div class="price-table">
+        <!-- БУТЫЛЬ -->
+        <div class="price-row free" id="part1">
+          <div class="img-col"><img src="assets/images/cena2.png" alt="Бутель 19,9 л" loading="lazy" decoding="async" /></div>
+          <div class="info-col">
+            <h3>Бутель очищеної води 19,9 л</h3>
+            <div class="price-big">100 <small>грн</small></div>
+            <p><strong>Заставна ціна за бутель - 225 грн</strong><br/>
+            Мінімальне замовлення - 2 бутелі води.<br/>
+            При замовленні понад 8 бутелів ціна значно знижується.</p>
+            <p><em>Під час першої доставки очищеної води сплачується заставна вартість за бутель. У разі припинення співпраці застава за бутель повертається в повному обсязі.</em></p>
+          </div>
+        </div>
+
+        <!-- ПОМПА -->
+        <div class="price-row" id="part2">
+          <div class="img-col"><img src="assets/images/placeholder.png" alt="Помпа Blue Rain" loading="lazy" decoding="async" /></div>
+          <div class="info-col">
+            <h3>Помпа для накачування води Blue Rain</h3>
+            <div class="price-big">160 <small>грн</small></div>
+            <p>Помпа Blue Rain - це зручний пристрій для розливу води. Виготовлена з міцного, екологічно чистого матеріалу.</p>
+            <p>Помпу для розливу води зручно й просто використовувати. Виготовлена з екологічно чистих і санітарно перевірених матеріалів. Пластик відповідає всім необхідним епідеміологічним і гігієнічним вимогам. Придатний для використання в харчових промислових цілях.</p>
+          </div>
+        </div>
+
+        <!-- АНАЛИЗ ВОДЫ -->
+        <div class="price-row free">
+          <div class="img-col"><img src="assets/images/Ekspress-analiz.png" alt="Експрес-аналіз води" loading="lazy" decoding="async" /></div>
+          <div class="info-col">
+            <h3>Експрес-аналіз води</h3>
+            <div class="price-big" style="color:#1a8b63;">БЕЗКОШТОВНО!</div>
+            <p>Перевірка будь-яких зразків води на вміст домішок, солей і жорсткість.</p>
+            <p>Вимірювач TDS визначить сумарну концентрацію іонів, що містяться у воді. Чим менший вміст солей у воді, тим опір вищий, а провідність менша. Саме з цих причин вимірювання загального вмісту солей у воді - це основний показник якості очищеної води. Чим нижчий TDS, тим менше солей міститься у воді, тим вища її якість.</p>
+          </div>
+        </div>
+
+        <!-- КУЛЕР -->
+        <div class="price-row" id="part3">
+          <div class="img-col"><img src="assets/images/kuler-dlya-vodi.png" alt="Кулер для води" loading="lazy" decoding="async" /></div>
+          <div class="info-col">
+            <h3>Кулер для нагрівання та охолодження питної води</h3>
+            <div class="price-big"><small>(ціну уточнюйте)</small></div>
+            <p>Встановлення кулера - це екологічно чистий вибір на користь здоров'я близьких і співробітників!</p>
+            <p>Сьогодні кожна солідна компанія, офіс, магазин і аптека мають у своєму залі кулер із водою. Це зручно й свідчить про вашу турботу про комфорт відвідувачів, тим самим збільшуючи довіру до вашої компанії. Також кулери зручно розміщувати в лікарнях, школах і дитячих садках.</p>
+            <p>Коли вам здійснюватимуть доставку очищеної води, ви можете уточнити всі деталі в нашого менеджера щодо наявності кулерів на складі.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ОТЗЫВЫ И ПРИВЕДИ ДРУГА -->
+      <div style="display:grid;gap:16px;margin:24px 0;">
+        <img src="assets/images/otzivi.jpg" alt="Відгуки про доставку води" style="width:100%;border-radius:14px;" loading="lazy" decoding="async" />
+        <img src="assets/images/privedi-druga.png" alt="Приведи друга" style="width:100%;border-radius:14px;" loading="lazy" decoding="async" />
+      </div>
+
+      <div style="text-align:center;margin:30px 0;">
+        <h2>"Кришталево-чиста питна вода" - це вода, ціна якої доступна кожному</h2>
+        <div style="margin-top:16px;">
+          <button class="btn btn-primary" type="button" data-open-order>Замовити воду</button>
+          <a class="btn btn-secondary" href="tel:+380637886880">Зателефонувати</a>
+          <a class="btn btn-telegram" href="https://t.me/CrystalWaterBro_bot" target="_blank">Telegram</a>
+        </div>
+      </div>
+    </div></section>
+
+    <!-- ФОРМА -->
+    <section class="order-band" id="order">
+      <div class="container order-grid">
+        <div class="order-box">
+          <h2>📦 Замовити воду</h2>
+          <p>Залиште коротку заявку - ми швидко зв'яжемося.</p>
+          <div class="inline-list">
+            <span class="chip">📞 (063) 788-68-80</span>
+            <span class="chip">📞 (063) 530-40-50</span>
+            <span class="chip">🤖 @CrystalWaterBro_bot</span>
+            <span class="chip">🚚 Дім / офіс / сад</span>
+          </div>
+        </div>
+        <div class="order-box form-side">
+          <h2>📝 Коротка заявка</h2>
+          <form id="orderForm">
+            <div class="form-row">
+              <div><label>Ім'я</label><input name="name" type="text" placeholder="Ваше ім'я" /></div>
+              <div><label>Телефон</label><input name="phone" type="tel" placeholder="Телефон" /></div>
+            </div>
+            <div><label>Адреса</label><input name="address" type="text" placeholder="Бровари, вулиця, будинок" /></div>
+            <div class="form-row">
+              <div><label>Кількість</label><select name="bottles"><option>1 бутель</option><option>2 бутелі</option><option>3 бутелі</option><option>4 бутелі</option><option>5+ бутелів</option></select></div>
+              <div><label>Час</label><input name="time" type="text" placeholder="Після 20:00" /></div>
+            </div>
+            <div><label>Коментар</label><textarea name="comment" placeholder="Поверх, код, побажання"></textarea></div>
+            <div class="cta-actions">
+              <button class="btn btn-primary" type="submit">Надіслати</button>
+              <a class="btn btn-secondary" href="tel:+380637886880">Зателефонувати</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>

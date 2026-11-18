@@ -2,7 +2,7 @@
 """Site validator. Exit code 1 if any ERROR is found.  Usage: python3 check.py [--strict]
 Checks: unique/length title+description, one H1, canonical, hreflang reciprocity, JSON-LD validity,
 internal links/images/css exist (HTML comments ignored), orphan pages, tag balance, alt text, noopener."""
-import re, glob, os, json, sys, collections
+import re, glob, os, json, sys, collections, html
 from html.parser import HTMLParser
 
 SK = re.compile(r'^(READY|actual|footer|header|hero|hreflang|json-ld|head-meta)')
@@ -84,6 +84,49 @@ for t, fs in descs.items():
     if len(fs) > 1: E(','.join(fs), 'duplicate description')
 for f in pages:
     if f != 'index.html' and f != 'ua/index.html' and links_to[f] == 0: W(f, 'orphan page (no inbound links)')
+# --- structured data (local schema.org / Google rich-result requirements) ---
+def nodes(o):
+    if isinstance(o, dict):
+        yield o
+        for k, v in o.items():
+            if k in ('itemOffered', 'provider') and isinstance(v, dict): v['@nested'] = True
+            yield from nodes(v)
+    elif isinstance(o, list):
+        for x in o: yield from nodes(x)
+def local_url_ok(u):
+    if not u.startswith('https://crystalwater.kiev.ua/'): return True
+    path = u[len('https://crystalwater.kiev.ua/'):].split('#')[0].split('?')[0]
+    return path == '' or path == 'ua/' or os.path.exists(path) or path.startswith(('assets/', 'images/'))
+for f in pages:
+    raw = strip_comments(open(f, encoding='utf-8').read())
+    vis = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', re.sub(r'<script.*?</script>|<style.*?</style>', '', raw, flags=re.S))))
+    types = collections.Counter()
+    for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', raw, re.S):
+        try: data = json.loads(b)
+        except Exception: continue
+        for n in nodes(data):
+            t = n.get('@type')
+            if not isinstance(t, str): continue
+            types[t] += 1
+            need = {'Article': ['headline', 'description', 'mainEntityOfPage', 'author', 'publisher', 'inLanguage'],
+                    'FAQPage': ['mainEntity'], 'Question': ['name', 'acceptedAnswer'], 'Answer': ['text'],
+                    'BreadcrumbList': ['itemListElement'], 'ListItem': ['position', 'name'],
+                    'LocalBusiness': ['name', 'address', 'telephone', 'openingHoursSpecification'],
+                    'PostalAddress': ['streetAddress', 'addressLocality', 'addressCountry'],
+                    'Organization': ['name'], 'Product': ['name', 'offers'], 'Offer': ['price', 'priceCurrency'], 'Service': ['serviceType', 'provider']}.get(t, [])
+            nested = (t in ('Offer', 'Service') and 'itemOffered' in n) or n.get('@nested')
+            for k in ([] if nested else need):
+                if not n.get(k): E(f, 'JSON-LD %s missing "%s"' % (t, k))
+            if t == 'BreadcrumbList':
+                pos = [i.get('position') for i in n.get('itemListElement', [])]
+                if pos != list(range(1, len(pos) + 1)): E(f, 'BreadcrumbList positions not 1..n: %s' % pos)
+            if t == 'Question':
+                q = html.unescape(n.get('name', '')).strip()
+                if q and q not in vis: E(f, 'FAQPage question not visible on page: %s' % q[:60])
+            for k in ('url', 'item', '@id'):
+                if isinstance(n.get(k), str) and not local_url_ok(n[k]): E(f, 'JSON-LD %s points to missing page: %s' % (k, n[k]))
+    if '"@type": "Article"' in raw and 'FAQPage' not in types: W(f, 'article without FAQPage')
+
 # sitemap parity (inventory): every indexable page listed, nothing listed that does not exist
 smap = set(re.findall(r'<loc>([^<]+)</loc>', open('sitemap.xml', encoding='utf-8').read())) | set(re.findall(r'<loc>([^<]+)</loc>', open('sitemap-ua.xml', encoding='utf-8').read()))
 want = {'https://crystalwater.kiev.ua/' + ('' if f == 'index.html' else f) for f in pages}

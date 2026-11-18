@@ -1,0 +1,56 @@
+TITLE: Контакти | Доставка води Crystal Water — Бровари та Київ
+DESC: Наші контакти: адреса в Броварах, телефони, графік роботи. Замовте доставку води через Telegram або за телефоном.
+CRUMB: Контакти
+===MAIN===
+<main id="main">
+<nav class="breadcrumbs">
+    <a href="./">Доставка води Бровари</a> &raquo; <span>Контакти</span>
+  </nav>
+
+  <section class="about-hero">
+    <div class="hero__content">
+          <img class="article-hero" src="assets/images/voda.png" alt="" style="max-width:100%;height:auto;border-radius:8px;margin-bottom:20px;display:block" loading="lazy" decoding="async">
+      <h1>Зв'яжіться з нами</h1>
+      <p>Ми завжди готові прийняти ваше замовлення та відповісти на запитання</p>
+    </div>
+  </section>
+
+  <div class="about-container">
+    <div class="contact-block">
+      <div class="contact-details">
+        <h2>Як з нами зв'язатися</h2>
+        <div class="contact-item">
+          <div class="icon">📍</div>
+          <div><strong>Адреса:</strong><br><a href="https://www.google.com/maps/search/Бровары+ул+Кооперативная+3А" target="_blank">вул. Кооперативна, 3 А, м. Бровари</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">📞</div>
+          <div><strong>Телефони:</strong><br><a href="tel:+380637886880">+38 (063) 788-68-80</a><br><a href="tel:+380635304050">+38 (063) 530-40-50</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">⏰</div>
+          <div><strong>Графік роботи:</strong><br>Пн—Пт: 08:00 – 20:00<br>Сб—Нд: 09:00 – 17:00</div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">✈️</div>
+          <div><strong>Telegram:</strong><br><a href="https://t.me/CrystalWaterBro_bot" target="_blank">@CrystalWaterBro_bot</a></div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <div style="text-align:center;">
+          <p>📍 вул. Кооперативна, 3 А, м. Бровари</p>
+          <p style="font-size:13px; margin-top:8px;">(Карта завантажується...)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="social-block">
+      <h3>Ми в соцмережах</h3>
+      <div class="social-links">
+        <a href="https://www.instagram.com/crystalwater.brovary/" target="_blank">📸 Instagram</a>
+        <a href="https://www.facebook.com/crystalwater.brovary/" target="_blank">👍 Facebook</a>
+        <a href="https://t.me/CrystalWaterBro_bot" target="_blank">✈️ Telegram</a>
+      </div>
+    </div>
+  </div>
+</main>

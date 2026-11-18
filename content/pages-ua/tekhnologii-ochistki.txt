@@ -1,0 +1,103 @@
+TITLE: Технології очищення води в Броварах ❘ Crystal Water
+DESC: Методи очищення води: обернений осмос, озонова стерилізація, 8 етапів фільтрації. Доставка очищеної води в Броварах і Києві.
+CRUMB: Технології очищення
+===MAIN===
+<main>
+    <section class="hero">
+      <div class="container" style="max-width:700px;text-align:center;">
+        <h1 style="font-size:clamp(28px,4vw,38px);color:#1a3c59;margin:0 0 10px;">Методи очищення води</h1>
+        <p style="color:#5f7f99;font-size:16px;">
+          Передовий спосіб очищення води, що дає змогу отримати продукт, очищений на молекулярному рівні — система оберненого осмосу та озонова стерилізація. Це найбезпечніші та найякісніші <strong>методи очищення води</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section><div class="container">
+      <nav class="breadcrumbs" style="font-size:13px;color:#3a4a57;margin-bottom:16px;">
+        <a href="./" style="color:#2d89d7;">Доставка води Бровари</a> &raquo; <span>Технології очищення</span>
+      </nav>
+    </div></section>
+
+    <section><div class="container">
+      <div class="tech-detail">
+        <div class="text-col">
+          <p>Ключовим етапом у процесі очищення питної води є проходження води крізь напівпроникну мембрану, яка пропускає лише молекулу води H₂O розміром 0,2 нм і затримує хімічні сполуки, бактерії, віруси розміром від 8 до 500 нм.</p>
+          <p>Таким чином, з одного боку опиняється очищена питна вода (структурована вода H₂O), а з іншого — концентрат забруднень: розчинені солі, органічні та неорганічні речовини, мікроорганізми, важкі метали, добрива, колоїди й інші.</p>
+
+          <h2>Ми використовуємо такі методи очищення води</h2>
+          <p>Перш ніж відбувається розлив і подальша доставка води додому чи в офіс, наша очищена вода проходить вісім етапів обробки різними методами очищення:</p>
+
+          <ul>
+            <li><strong>Очищення води механізованими фільтрами</strong> — використовується для відокремлення від води домішок піску, глини тощо.</li>
+            <li><strong>Стерилізація води (знезаражування)</strong> — необхідний етап, що дає змогу отримати очищену воду без вірусів, бактерій і спор, сірководню.</li>
+            <li><strong>Мультимедійне очищення води</strong> — етап проходження води крізь різноманітні фільтри, заповнені різними шарами фільтрувального матеріалу.</li>
+            <li><strong>Пом'якшення води</strong> — процес відбувається за рахунок іонного обміну. Це забезпечує нашій воді відсутність накипу й осаду.</li>
+            <li><strong>Фільтрація води активованим вугіллям</strong> — дає змогу сорбентам ефективно й без залишку сорбувати хлор і розчинені органічні сполуки.</li>
+            <li><strong>Ультрафіолет</strong> — дезінфікує воду. Очищена вода при цьому не змінює фізико-хімічного складу.</li>
+            <li><strong>Система оберненого осмосу</strong> — процес проходження води крізь напівпроникну мембрану під високим тиском 23 атм. Розмір отворів мембрани дорівнює діаметру молекули води H₂O — 0,0002 мкм. У результаті вода очищена на молекулярному рівні.</li>
+            <li><strong>Озонова стерилізація</strong> — чиста вода збагачується озоном. Озон створюється електричними розрядами та є нестійкою формою кисню, що перетворюється на кисень за 30 хв. Мета використання — остаточна стерилізація та знезаражування під час розливу й герметизації води в бутелях.</li>
+        </ul>
+        </div>
+        <div class="img-col">
+          <img src="assets/images/metodi-ochistki-vodi.png" alt="Методи очищення води осмосом" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div class="panel" style="padding:24px;font-size:18px;margin:20px 0;">
+        <h3>Наші методи очищення води гарантують, що вода "Кришталево-чиста питна вода" є:</h3>
+        <ul style="font-size:15px;line-height:1.7;color:#2d4a63;margin-top:12px;">
+          <li>Структурованою, чистою питною водою високої якості (за всіма своїми властивостями схожою на талу воду).</li>
+          <li>Очищеною та екологічно чистою водою — фільтрація проводиться без використання хімічних речовин, лише за допомогою природних механізмів очищення.</li>
+          <li>Рекомендованою для вживання дітьми з народження.</li>
+          <li>Такою, що сприяє швидкому надходженню в організм людини поживних речовин.</li>
+          <li>Вода, очищена через фільтр оберненого осмосу, має оздоровчі властивості. Сприяє виведенню з організму накопичених шлаків, токсинів та інших шкідливих мікроорганізмів.</li>
+        </ul>
+      </div>
+
+      <img src="assets/images/kompaniya.png" alt="Методи очищення води та підтвердження якості" style="width:100%;border-radius:14px;margin:16px 0;" loading="lazy" decoding="async" />
+
+      <div class="guarantee-box" style="margin:20px 0;">
+        <h3>Замовте воду прямо зараз!</h3>
+        <p>Оцініть справжній смак чистої води. Щоб ви могли бути впевнені — отримайте 1 бутель води на пробу <strong>БЕЗКОШТОВНО</strong>!</p>
+        <div class="cta-actions" style="justify-content:center;margin-top:14px;">
+          <button class="btn btn-primary" type="button" data-open-order>Замовити</button>
+          <a class="btn btn-secondary" href="tel:+380637886880">Зателефонувати</a>
+          <a class="btn btn-telegram" href="https://t.me/CrystalWaterBro_bot" target="_blank">Telegram</a>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="order-band" id="order">
+      <div class="container order-grid">
+        <div class="order-box">
+          <h2>📦 Замовити воду</h2>
+          <p>Залиште коротку заявку — ми швидко зв'яжемося.</p>
+          <div class="inline-list">
+            <span class="chip">📞 (063) 788-68-80</span>
+            <span class="chip">📞 (063) 530-40-50</span>
+            <span class="chip">🤖 @CrystalWaterBro_bot</span>
+            <span class="chip">🚚 Дім / офіс / сад</span>
+          </div>
+        </div>
+        <div class="order-box form-side">
+          <h2>📝 Коротка заявка</h2>
+          <form id="orderForm">
+            <div class="form-row">
+              <div><label>Ім'я</label><input name="name" type="text" placeholder="Ваше ім'я" /></div>
+              <div><label>Телефон</label><input name="phone" type="tel" placeholder="Телефон" /></div>
+            </div>
+            <div><label>Адреса</label><input name="address" type="text" placeholder="Бровари, вулиця, будинок" /></div>
+            <div class="form-row">
+              <div><label>Кількість</label><select name="bottles"><option>1 бутель</option><option>2 бутелі</option><option>3 бутелі</option><option>4 бутелі</option><option>5+ бутелів</option></select></div>
+              <div><label>Час</label><input name="time" type="text" placeholder="Після 20:00" /></div>
+            </div>
+            <div><label>Коментар</label><textarea name="comment" placeholder="Поверх, код, побажання"></textarea></div>
+            <div class="cta-actions">
+              <button class="btn btn-primary" type="submit">Надіслати</button>
+              <a class="btn btn-secondary" href="tel:+380637886880">Зателефонувати</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>

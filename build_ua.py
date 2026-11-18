@@ -23,8 +23,8 @@ DICT = [
  ('Доставка воды Бровары', 'Доставка води Бровари'), ('Доставка воды', 'Головна'),
  ('Технологии', 'Технології'), ('Статьи о воде', 'Статті про воду'), ('Статьи', 'Статті'),
  ('О нас', 'Про нас'), ('Контакты', 'Контакти'), ('Цены', 'Ціни'), ('Главная', 'Головна'),
- ('Доставка премиальной очищенной воды в Броварах и Киеве. Забота о здоровье в каждой капле.',
-  'Доставка преміальної очищеної води в Броварах і Києві. Турбота про самопочуття в кожній краплі.'),
+ ('Доставка очищенной питьевой воды в Броварах и Киеве. Чистая вода для дома и офиса.',
+  'Доставка очищеної питної води в Броварах і Києві. Чиста вода для дому та офісу.'),
  ('Свяжитесь с нами', "Зв'яжіться з нами"), ('Адрес и график', 'Адреса та графік'),
  ('ул. Кооперативная, 3 А, Бровары', 'вул. Кооперативна, 3 А, Бровари'),
  ('Пн-Пт: 08:00 - 20:00', 'Пн-Пт: 08:00 - 20:00'), ('Сб-Вс: 09:00 - 17:00', 'Сб-Нд: 09:00 - 17:00'),
@@ -88,6 +88,13 @@ def set_head_links(s, canonical, ru_page, ua_page):
     block = '  <link rel="canonical" href="%s" />\n' % canonical + hreflang(ru_page, ua_page)
     return s.replace('</head>', block + '</head>', 1)
 
+JSONLD_UA = {
+ 'Бровары': 'Бровари', 'Киев': 'Київ', 'Вода питьевая Crystal Water, 19 л': 'Питна вода Crystal Water, 19 л',
+ 'Питьевая очищенная вода в бутыли 19 л с доставкой на дом и в офис в Броварах и Киеве.': 'Питна очищена вода в бутлі 19 л з доставкою додому й в офіс у Броварах і Києві.',
+ 'Доставка питьевой воды': 'Доставка питної води', 'Доставка воды на дом': 'Доставка води додому', 'Доставка воды в офис': 'Доставка води в офіс',
+ 'Доставка воды': 'Головна', 'ул. Кооперативная, 3 А': 'вул. Кооперативна, 3 А',
+}
+
 def jsonld_fix(s, title, desc, crumb, ru_page, ua_page):
     def fix(m):
         try: data = json.loads(m.group(2))
@@ -97,7 +104,8 @@ def jsonld_fix(s, title, desc, crumb, ru_page, ua_page):
                 t = o.get('@type')
                 for k, v in list(o.items()):
                     if isinstance(v, str):
-                        if v.startswith(D) and v.endswith('.html'):
+                        if v in JSONLD_UA and k in ('name', 'serviceType', 'description', 'streetAddress', 'addressLocality'): o[k] = JSONLD_UA[v]
+                        elif v.startswith(D) and v.endswith('.html'):
                             o[k] = ua_url(ua_name(v.rsplit('/', 1)[1]))
                         elif v == D + '/':
                             o[k] = D + '/ua/index.html'
@@ -115,10 +123,24 @@ def jsonld_fix(s, title, desc, crumb, ru_page, ua_page):
         return m.group(1) + json.dumps(data, ensure_ascii=False, indent=2) + m.group(3)
     return re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)', fix, s, flags=re.S)
 
+def regen_faq(s, main):
+    """FAQPage JSON-LD must match the visible (translated) FAQ: rebuild it from the translated main."""
+    s = re.sub(r'\s*<script type="application/ld\+json">\s*\{[^<]*"@type":\s*"FAQPage".*?</script>', '', s, flags=re.S)
+    pairs = []
+    sec = re.search(r'<h2[^>]*>(?:Частые вопросы|Часті запитання)</h2>(.*?)(?=<div class="cta-block"|<aside|</main>|$)', main, re.S)
+    if sec:
+        for q, a in re.findall(r'<h3[^>]*>(.*?)</h3>\s*<p[^>]*>(.*?)</p>', sec.group(1), re.S) + re.findall(r'<summary>(.*?)</summary>\s*<p[^>]*>(.*?)</p>', sec.group(1), re.S):
+            pairs.append((html.unescape(re.sub(r'<[^>]+>', '', q)).strip(), html.unescape(re.sub(r'<[^>]+>', '', a)).strip()))
+    if pairs:
+        obj = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in pairs]}
+        s = s.replace('</head>', '\n  <script type="application/ld+json">\n%s\n  </script>\n</head>' % json.dumps(obj, ensure_ascii=False, indent=2), 1)
+    return s
+
 def build(slug, tdir):
     ru_page = slug + '.html'; ua_page = ua_name(ru_page)
     s = open(ru_page, encoding='utf-8').read()
-    t = open(os.path.join(tdir, slug + '.txt'), encoding='utf-8').read()
+    cand = [os.path.join(tdir, slug + '.ua.txt'), os.path.join(tdir, slug + '.txt')]
+    t = open(next(c for c in cand if os.path.exists(c)), encoding='utf-8').read()
     m = re.match(r'TITLE: (.*)\nDESC: (.*)\nCRUMB: (.*)\n===MAIN===\n(.*)', t, re.S)
     title, desc, crumb, main = m.group(1).strip(), m.group(2).strip(), m.group(3).strip(), m.group(4).strip()
     et, ed = html.escape(title, quote=True), html.escape(desc, quote=True)
@@ -137,6 +159,7 @@ def build(slug, tdir):
     s = re.sub(r'(<nav class="breadcrumbs"[^>]*>.*?<span>)(.*?)(</span>)', lambda x: x.group(1) + html.escape(crumb, quote=False) + x.group(3), s, 1, flags=re.S)
     if re.search(r'<main\b(?![^>]*\sid=)', s): s = re.sub(r'<main\b(?![^>]*\sid=)', '<main id="main"', s, 1)
     s = jsonld_fix(s, title, desc, crumb, ru_page, ua_page)
+    s = regen_faq(s, main)
     # language switch before link rewriting
     s = re.sub(r'<li class="nav-lang"><a href="[^"]*" class="lang-switch">UA</a></li>',
                '<li class="nav-lang"><a href="../%s" class="lang-switch">RU</a></li>' % ('' if ru_page == 'index.html' else ru_page), s)
@@ -163,7 +186,7 @@ def patch_existing_ua(ua_page):
 
 if __name__ == '__main__':
     tdir = sys.argv[1]
-    slugs = sorted(os.path.basename(f)[:-4] for f in glob.glob(os.path.join(tdir, '*.txt')))
+    slugs = sorted({re.sub(r'(\.ua)?\.txt$', '', os.path.basename(f)) for f in glob.glob(os.path.join(tdir, '*.txt')) if not f.endswith('.ru.txt')})
     for sl in slugs: build(sl, tdir)
     for ru in list(RU2UA) + [sl + '.html' for sl in slugs]:
         if os.path.exists(ru): patch_ru(ru)

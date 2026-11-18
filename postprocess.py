@@ -134,6 +134,11 @@ def a11y(s, ua):
     if ua:
         s = re.sub(r'srcset="([^"]*)"', lambda m: 'srcset="%s"' % re.sub(r'(^|, )(?=(?:assets|images)/)', r'\1../', m.group(1)), s)
     s = re.sub(r'(<img\b[^>]*bottle_real[^>]*style=")(?![^"]*object-fit)', r'\1object-fit:contain;', s)
+    def wrap_table(m):
+        before = s[max(0, m.start() - 120):m.start()]
+        if 'cw-table-wrap' in before or 'cw-price-table' in m.group(0): return m.group(0)
+        return '<div class="cw-table-wrap" role="region" tabindex="0" aria-label="%s">%s</div>' % ('Таблиця, прокрутіть убік' if ua else 'Таблица, прокрутите вбок', m.group(0))
+    s = re.sub(r'<table\b[^>]*>.*?</table>', wrap_table, s, flags=re.S)
     s = re.sub(r'<main\b(?![^>]*\sid=)', '<main id="main"', s, 1)
     if ua:
         s = s.replace('Перейти к содержимому', 'Перейти до вмісту').replace('aria-label="Главное меню"', 'aria-label="Головне меню"')
