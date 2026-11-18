@@ -21,7 +21,7 @@ function strip(html) {
 const collector = () => {
   const vh = innerHeight, vw = innerWidth;
   const fold = [document.documentElement, document.body];
-  for (const e of document.body.querySelectorAll('*')) { const r = e.getBoundingClientRect(); if (r.top < vh && r.bottom > 0 && r.left < vw) fold.push(e); }
+  for (const e of document.body.querySelectorAll('*')) { const r = e.getBoundingClientRect(); if (r.top < vh && r.bottom > 0 && r.left < vw) fold.push(e); else { const cs = getComputedStyle(e); if ((r.width === 0 && r.height === 0 && cs.display === 'contents') || cs.position === 'absolute' || cs.position === 'fixed' || e.classList.contains('skip-link')) fold.push(e); } }
   const base = s => s.replace(/::?[a-zA-Z-]+(\([^)]*\))?/g, '').replace(/\s+/g, ' ').trim();
   const match = sel => { try { return sel.split(',').some(p => { const b = base(p); return !b || b === '*' || fold.some(e => e.matches(b)); }); } catch (_) { return true; } };
   const out = [];
