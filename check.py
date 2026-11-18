@@ -56,6 +56,12 @@ for f in pages:
         if os.path.isdir(p): p = os.path.join(p, 'index.html')
         if not os.path.exists(p): E(f, 'broken link/asset: %s' % u)
         elif p.endswith('.html'): links_to[p] += 1 if p != f else 0
+    for ss in re.findall(r'srcset="([^"]+)"', s):
+        for item in ss.split(', '):
+            u = item.strip().split(' ')[0]
+            if re.match(r'^(https?:|//|data:)', u): continue
+            p = u.lstrip('/') if u.startswith('/') else os.path.normpath(os.path.join(d, u))
+            if not os.path.exists(p): E(f, 'broken srcset asset: %s' % u)
     for m in re.finditer(r'<img\b[^>]*>', s):
         if not re.search(r'\salt=', m.group(0)): E(f, 'img without alt')
     for m in re.finditer(r'<a\b[^>]*target="_blank"[^>]*>', s):

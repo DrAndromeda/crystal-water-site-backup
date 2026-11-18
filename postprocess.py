@@ -13,6 +13,17 @@ def variant(p, w):
     if not os.path.exists(out):
         im = Image.open(p); im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).save(out, 'WEBP', quality=78, method=6)
 
+def to_avif(p):
+    """AVIF sibling of a .webp file (quality tuned for size); returns path or None."""
+    a = os.path.splitext(p)[0] + '.avif'
+    if not os.path.exists(a):
+        try:
+            im = Image.open(p); im = im.convert('RGBA' if im.mode in ('P', 'RGBA', 'LA') else 'RGB')
+            im.save(a, 'AVIF', quality=55, speed=6)
+        except Exception:
+            return None
+    return a
+
 def to_webp(p):
     w = os.path.splitext(p)[0] + '.webp'
     if not os.path.exists(w):
@@ -44,7 +55,31 @@ def images(s, f):
                 sizes = '(max-width: 600px) 100vw, 330px' if in_card else '(max-width: 832px) calc(100vw - 32px), 800px'
                 t = t[:-1].rstrip('/ ').rstrip() + ' srcset="%s" sizes="%s"' % (ss, sizes) + (' />' if t.endswith('/>') else '>')
         return t
-    return re.sub(r'<img\b[^>]*>', sub, s)
+    s = re.sub(r'<img\b[^>]*>', sub, s)
+    return picturize(s, f)
+
+def picturize(s, f):
+    """Wrap local .webp <img> in <picture> with AVIF source (same srcset/sizes), once."""
+    base = os.path.dirname(f)
+    def wrap(m):
+        t = m.group(0); pos = m.start()
+        before = s[max(0, pos - 400):pos]
+        if before.rfind('<picture') > before.rfind('</picture>'): return t
+        src = re.search(r'\ssrc="([^"]+\.webp)"', t)
+        if not src or src.group(1).startswith(('http', '//')): return t
+        u = src.group(1); p = u.lstrip('/') if u.startswith('/') else os.path.normpath(os.path.join(base, u))
+        if not os.path.exists(p) or not to_avif(p): return t
+        ss = re.search(r'\ssrcset="([^"]*)"', t); sz = re.search(r'\ssizes="([^"]*)"', t)
+        if ss:
+            parts = []
+            for item in ss.group(1).split(', '):
+                url, _, w = item.partition(' ')
+                q = url.lstrip('/') if url.startswith('/') else os.path.normpath(os.path.join(base, url))
+                if os.path.exists(q) and to_avif(q): parts.append(url[:-5] + '.avif ' + w)
+            avif_set = ', '.join(parts) if parts else u[:-5] + '.avif'
+        else: avif_set = u[:-5] + '.avif'
+        return '<picture><source type="image/avif" srcset="%s"%s>%s</picture>' % (avif_set, (' sizes="%s"' % sz.group(1)) if sz else '', t)
+    return re.sub(r'<img\b[^>]*>', wrap, s)
 
 def headings(s):
     spans = [(m.start(), m.end()) for m in re.finditer(r'<script.*?</script>|<style.*?</style>|<!--.*?-->', s, re.S)]

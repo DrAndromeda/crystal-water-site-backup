@@ -15,7 +15,7 @@ Quality gates (run `python3 check.py`): 154 pages, 0 errors, 0 warnings. Local L
 - [x] 5 Design system & blocks — `css/tokens.css` (single palette), `css/blocks.css` + `blocks.html`: HowItWorks, PriceTable (cards on mobile), ServiceCard, OrderForm (existing, with noscript fallback), FAQBlock (native `<details>`, no JS), WhyUs, ReviewCarousel (CSS scroll-snap), FooterMap; hover/focus/active states
 - [x] 6 Core pages content — home ≈ 860+ words, prices/tech/about ≥ 500, contacts with map+FAQ, cooler/filter/delivery pages upgraded to 800+
 - [x] 7 Articles — all 71 articles (63 upgraded + 8 new) in RU and UA: 800+ words (all 142 pages incl. delivery article, checked by script), Direct Answer 50-80 words, FAQ + FAQPage JSON-LD, internal links
-- [x] 8 Performance — WebP for all used images (~13 MB saved), width/height (CLS), srcset 480/800w, lazy-load, YouTube click-to-load facade (no third-party cookies/requests until click), CSS minified + bundled into 9 files, deferred scripts, cache/compression rules in `.htaccess`
+- [x] 8 Performance — critical CSS inlined (6.6 KB avg) + full bundle non-blocking, WebP + AVIF (`<picture>`) for all used images (~13 MB saved vs originals), , width/height (CLS), srcset 480/800w, lazy-load, YouTube click-to-load facade (no third-party cookies/requests until click), CSS minified + bundled into 9 files, deferred scripts, cache/compression rules in `.htaccess`
 - [x] 9 Responsive & a11y — verified widths above, skip links, landmarks, focus-visible, AA contrast, labels, iframe titles, 44 px targets, reduced-motion
 - [x] 10 QA — `check.py` (links, assets, orphans, tag balance, sitemap parity, hreflang, JSON-LD)
 - [ ] 11 Deploy — see blocked list
@@ -27,4 +27,3 @@ Quality gates (run `python3 check.py`): 154 pages, 0 errors, 0 warnings. Local L
 4. Real figures for extra facts (TDS values, delivery zones/fees) — not invented; add when provided.
 5. Upload to SherlockHost, enable `.htaccess`, submit sitemaps in Search Console, client sign-off.
 6. Missing source image `infographic-water-benefits.webp` (referenced only inside a comment in `infografik-o-neobxodimosti-i-polze-vodyi.html`).
-7. Optional: AVIF variants (need `<picture>` wrappers; WebP already covers modern browsers).
