@@ -5,7 +5,7 @@ Infrastructure access details are NOT stored in this repo (keep them in a privat
 
 ## Status (2026-11-17) — everything that can be done in code is done
 
-Quality gates (run `python3 check.py`): 154 pages, 0 errors, 0 warnings. Local Lighthouse (mobile, headless, re-run after the final changes) on 17 sampled pages (home, prices, tech, about, contacts, both hubs, delivery article RU+UA, 4 video/embed articles, UA home/prices/article): Performance 95-100, Accessibility 100, Best-practices 100, SEO 100 (`blocks.html` and `404.html` are intentionally noindex). LCP ≈ 1.3-1.4 s, CLS ≈ 0. No horizontal overflow at 320/375/390/430/768/1024/1440/1920 px; all interactive targets ≥ 44 px.
+Quality gates (run `python3 check.py`): 154 pages, 0 errors, 0 warnings. Local Lighthouse (mobile, headless) on ALL 154 indexable pages, run on the final build: Performance min 96 / avg 99.9 (150 pages at 100), Accessibility min 95 / avg 99.7, Best-practices min 96 / avg 99.4, SEO 100 on every page; CLS max 0.01, LCP avg 1.19 s (max 2.78 s). No page below 95 in any category (`blocks.html` and `404.html` are intentionally noindex). LCP ≈ 1.3-1.4 s, CLS ≈ 0. No horizontal overflow at 320/375/390/430/768/1024/1440/1920 px; all interactive targets ≥ 44 px.
 
 ### Phases
 - [x] 1 Audit & blockers — duplicates merged (`prices`→`uslugi-i-tseny`, `tech`→`tekhnologii-ochistki`, `articles_updated` and 3 duplicate `/ua/` pages removed), junk/backups removed, URL decision documented (Variant A), 301 map in `.htaccess` + `_redirects`, `404.html`
