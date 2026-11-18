@@ -34,7 +34,7 @@ def source_of(href):
 for f in pages:
     s = o = open(f, encoding='utf-8').read(); pre = '../' if f.startswith('ua/') else ''
     # undo build_critical.js output (it is re-applied as the last build step)
-    s = re.sub(r'<style id="cw-critical">.*?</style>\n?', '', s, flags=re.S)
+    s = re.sub(r'<style (?:id|class)="cw-critical">.*?</style>\n?', '', s, flags=re.S)
     s = re.sub(r'<noscript><link rel="stylesheet" href="(?:\.\./)?css/b/[^"]+"></noscript>\n?', '', s)
     s = re.sub(r'<link rel="preload" href="((?:\.\./)?css/b/[^"]+)" as="style" onload="[^"]*">', r'<link rel="stylesheet" href="\1">', s)
     def run(m):

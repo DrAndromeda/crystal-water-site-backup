@@ -46,6 +46,14 @@ def images(s, f):
         if not re.search(r'\swidth=', t) and not re.search(r'\sheight=', t) and p.endswith(('.webp', '.png', '.jpg', '.jpeg', '.gif')):
             try: W, H = Image.open(p).size; t = t.replace('<img', '<img width="%d" height="%d"' % (W, H), 1)
             except Exception: pass
+        # ratio mismatch: stale width/height attrs reserve the wrong box -> layout shift; use the real file size
+        wa, ha = re.search(r'\swidth="(\d+)"', t), re.search(r'\sheight="(\d+)"', t)
+        if wa and ha and p.endswith(('.webp', '.png', '.jpg', '.jpeg', '.gif')):
+            try:
+                W0, H0 = Image.open(p).size
+                if abs(int(wa.group(1)) / int(ha.group(1)) - W0 / H0) / (W0 / H0) > 0.03:
+                    t = re.sub(r'\swidth="\d+"', ' width="%d"' % W0, t, 1); t = re.sub(r'\sheight="\d+"', ' height="%d"' % H0, t, 1)
+            except Exception: pass
         in_card = 'article-card' in s[max(0, m.start() - 400):m.start()]
         if 'srcset=' not in t and p.endswith('.webp') and not re.search(r'-\d+\.webp$', u) and (art or in_card):
             W = Image.open(p).size[0]; ws = [w for w in (480, 800) if w < W - 100]

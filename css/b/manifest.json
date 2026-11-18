@@ -34,5 +34,10 @@
  "9a92e38b99": [
   "css/tokens.css",
   "css/pages/ua-index.css"
+ ],
+ "b2c43e0ca3": [
+  "css/pages/uslugi-i-tseny.css",
+  "css/page-tech.css",
+  "css/style.css"
  ]
 }
